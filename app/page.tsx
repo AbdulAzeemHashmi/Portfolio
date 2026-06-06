@@ -1,9 +1,144 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+
+interface FluidParticle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  radius: number;
+  alpha: number;
+  color: string;
+  decay: number;
+}
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  // Fluid Simulation Effect Hook
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let animationFrameId: number;
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    const handleResize = () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    };
+    window.addEventListener("resize", handleResize);
+
+    const particles: FluidParticle[] = [];
+    let hue = 0;
+    let lastX = 0;
+    let lastY = 0;
+    let isMoving = false;
+
+    const spawnFluid = (clientX: number, clientY: number) => {
+      if (!isMoving) {
+        lastX = clientX;
+        lastY = clientY;
+        isMoving = true;
+        return;
+      }
+
+      const vx = clientX - lastX;
+      const vy = clientY - lastY;
+      const speed = Math.sqrt(vx * vx + vy * vy);
+
+      // Spawn colorful fluid chunks based on movement velocity
+      if (speed > 1) {
+        const spawnCount = Math.min(speed * 0.5, 8); 
+        for (let i = 0; i < spawnCount; i++) {
+          particles.push({
+            x: clientX,
+            y: clientY,
+            // Fluid vector calculations + slight dispersion
+            vx: vx * 0.15 + (Math.random() - 0.5) * 3,
+            vy: vy * 0.15 + (Math.random() - 0.5) * 3,
+            radius: Math.random() * 50 + 30, // Large glowing gas stamps
+            alpha: 0.7,
+            color: `hsla(${hue}, 95%, 60%`,
+            decay: Math.random() * 0.008 + 0.004,
+          });
+        }
+      }
+
+      lastX = clientX;
+      lastY = clientY;
+      hue = (hue + 1.5) % 360; // Shifting multi-color fluid spectrum
+    };
+
+    const handleMouseMove = (e: MouseEvent) => spawnFluid(e.clientX, e.clientY);
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        spawnFluid(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    };
+    const handleTouchStart = () => { isMoving = false; };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchstart", handleTouchStart);
+
+    // Animation Loop
+    const animate = () => {
+      // Semi-clear background frame creates the fluid smoke bleeding/trailing look
+      ctx.fillStyle = "rgba(2, 6, 23, 0.08)"; 
+      ctx.fillRect(0, 0, width, height);
+
+      // Use lighter composite operation for the neon glow stacking effect
+      ctx.globalCompositeOperation = "lighter";
+
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        
+        // Fluid drag/friction dynamics
+        p.vx *= 0.97;
+        p.vy *= 0.97;
+        
+        p.alpha -= p.decay;
+        p.radius += 0.6; // Smoke expansion factor
+
+        if (p.alpha <= 0) {
+          particles.splice(i, 1);
+          continue;
+        }
+
+        // Radial gradient stamping to emulate dynamic physical fluid density
+        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
+        gradient.addColorStop(0, `${p.color}, ${p.alpha})`);
+        gradient.addColorStop(0.3, `${p.color}, ${p.alpha * 0.4})`);
+        gradient.addColorStop(1, "rgba(0,0,0,0)");
+
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      ctx.globalCompositeOperation = "source-over";
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchstart", handleTouchStart);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   const navLinks = ["About", "Services", "Skills", "Projects", "Contact"];
 
@@ -53,10 +188,16 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 scroll-smooth">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 scroll-smooth relative">
       
+      {/* Interactive Fluid Simulation Background Layer */}
+      <canvas 
+        ref={canvasRef} 
+        className="fixed inset-0 -z-10 pointer-events-none"
+      />
+
       {/* Sticky Navigation Bar */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/60 backdrop-blur-md border-b border-slate-900/60">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between md:justify-end">
           <span className="text-cyan-400 font-bold tracking-widest md:hidden">AAH.</span>
           
@@ -77,8 +218,8 @@ export default function Home() {
       </nav>
 
       {/* About / Hero Section */}
-      <header id="about" className="relative overflow-hidden pt-40 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center border-b border-slate-900">
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none" />
+      <header id="about" className="relative overflow-hidden pt-40 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center border-b border-slate-900/40">
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full pointer-events-none" />
         
         {/* Profile Image Addition */}
         <div className="mb-8 relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-cyan-500/20 mx-auto z-10 bg-slate-900">
@@ -89,7 +230,7 @@ export default function Home() {
           />
         </div>
 
-        <span className="text-cyan-400 bg-cyan-950/50 border border-cyan-800/60 px-3 py-1 rounded-full text-xs font-semibold tracking-wider mb-6 uppercase z-10">
+        <span className="text-cyan-400 bg-cyan-950/40 border border-cyan-800/40 px-3 py-1 rounded-full text-xs font-semibold tracking-wider mb-6 uppercase z-10 backdrop-blur-sm">
           FAST NUCES Islamabad • Batch '24
         </span>
         
@@ -105,14 +246,14 @@ export default function Home() {
           <a href="#projects" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-indigo-500 text-slate-950 font-semibold rounded-lg hover:opacity-90 transition shadow-lg shadow-cyan-500/20">
             View My Projects
           </a>
-          <a href="#contact" className="px-6 py-3 bg-slate-900 border border-slate-800 rounded-lg hover:bg-slate-800 transition text-slate-300 font-medium">
+          <a href="#contact" className="px-6 py-3 bg-slate-900/80 border border-slate-800 rounded-lg hover:bg-slate-800 transition text-slate-300 font-medium backdrop-blur-sm">
             Contact Me
           </a>
         </div>
       </header>
 
       {/* Services Section */}
-      <section id="services" className="max-w-6xl mx-auto py-24 px-6 border-b border-slate-900">
+      <section id="services" className="max-w-6xl mx-auto py-24 px-6 border-b border-slate-900/40">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4 flex justify-center items-center gap-3">
             <span className="text-indigo-500">❖</span> Services
@@ -122,15 +263,15 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((srv, i) => (
-            <div key={i} className="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 hover:-translate-y-2 hover:border-indigo-500/50 transition-all duration-300 group shadow-lg shadow-black/50">
-              <div className="text-5xl mb-6 bg-slate-950 w-16 h-16 flex items-center justify-center rounded-xl border border-slate-800 group-hover:border-indigo-500 transition-colors">
+            <div key={i} className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/60 rounded-2xl p-8 hover:-translate-y-2 hover:border-indigo-500/50 transition-all duration-300 group shadow-lg shadow-black/30">
+              <div className="text-5xl mb-6 bg-slate-950/80 w-16 h-16 flex items-center justify-center rounded-xl border border-slate-800 group-hover:border-indigo-500 transition-colors">
                 {srv.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-4 tracking-wide">{srv.title}</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 {srv.desc}
               </p>
-              <p className="text-xs font-semibold text-indigo-400 bg-indigo-950/30 p-3 rounded-lg border border-indigo-900/30">
+              <p className="text-xs font-semibold text-indigo-400 bg-indigo-950/20 p-3 rounded-lg border border-indigo-900/30">
                 {srv.highlight}
               </p>
             </div>
@@ -139,7 +280,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="max-w-6xl mx-auto py-24 px-6 border-b border-slate-900">
+      <section id="skills" className="max-w-6xl mx-auto py-24 px-6 border-b border-slate-900/40">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight flex items-center gap-3">
             <span className="text-cyan-500">⚡</span> Skills
@@ -149,7 +290,7 @@ export default function Home() {
         
         <div className="grid md:grid-cols-2 gap-6">
           {skills.map((skill, i) => (
-            <div key={i} className="bg-slate-900/40 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition group">
+            <div key={i} className="bg-slate-900/30 backdrop-blur-sm border border-slate-800/60 p-6 rounded-xl hover:border-cyan-500/50 transition group">
               <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">{skill.icon}</span>
                 <h3 className="text-lg font-bold text-slate-100 group-hover:text-cyan-400 transition">
@@ -159,7 +300,7 @@ export default function Home() {
               <p className="text-slate-400 text-sm mb-4 font-light">{skill.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {skill.list.map((item, idx) => (
-                  <span key={idx} className="bg-slate-950 border border-slate-800 text-cyan-300 px-3 py-1.5 rounded-md text-xs font-medium">
+                  <span key={idx} className="bg-slate-950/80 border border-slate-800 text-cyan-300 px-3 py-1.5 rounded-md text-xs font-medium">
                     {item}
                   </span>
                 ))}
@@ -170,7 +311,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="max-w-6xl mx-auto py-24 px-6 border-b border-slate-900">
+      <section id="projects" className="max-w-6xl mx-auto py-24 px-6 border-b border-slate-900/40">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight flex items-center gap-3">
@@ -179,7 +320,7 @@ export default function Home() {
             <p className="text-slate-400 mt-2">Filtered codebase architectures mapping specialized domains.</p>
           </div>
           
-          <div className="flex flex-wrap gap-2 bg-slate-900/80 border border-slate-800 p-1.5 rounded-xl">
+          <div className="flex flex-wrap gap-2 bg-slate-900/60 backdrop-blur-sm border border-slate-800/80 p-1.5 rounded-xl">
             {["All", "AI", "Web Development", "Game Development", "Database"].map((cat) => (
               <button
                 key={cat}
@@ -198,9 +339,9 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, idx) => (
-            <div key={idx} className="bg-slate-900/30 border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-emerald-500/50 hover:bg-slate-900/80 transition-all duration-300 group relative">
+            <div key={idx} className="bg-slate-900/20 backdrop-blur-sm border border-slate-800/60 rounded-xl p-6 flex flex-col justify-between hover:border-emerald-500/50 hover:bg-slate-900/60 transition-all duration-300 group relative">
               <div>
-                <span className="text-[10px] uppercase tracking-widest text-emerald-400 font-bold bg-emerald-950/40 border border-emerald-900/50 px-2 py-1 rounded mb-4 inline-block">
+                <span className="text-[10px] uppercase tracking-widest text-emerald-400 font-bold bg-emerald-950/30 border border-emerald-900/40 px-2 py-1 rounded mb-4 inline-block">
                   {project.category}
                 </span>
                 <h3 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition">
@@ -213,12 +354,12 @@ export default function Home() {
               <div>
                 <div className="flex flex-wrap gap-1.5 mb-6">
                   {project.tags.map((tag, tIdx) => (
-                    <span key={tIdx} className="text-[10px] bg-slate-950 text-slate-400 px-2 py-1 rounded border border-slate-800">
+                    <span key={tIdx} className="text-[10px] bg-slate-950/80 text-slate-400 px-2 py-1 rounded border border-slate-800">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <a href={project.link} target="_blank" rel="noreferrer" className="w-full text-center block px-4 py-2 bg-slate-950 hover:bg-emerald-500 hover:text-slate-950 rounded-lg text-xs font-bold tracking-wide text-slate-300 transition-all border border-slate-800 hover:border-emerald-500">
+                <a href={project.link} target="_blank" rel="noreferrer" className="w-full text-center block px-4 py-2 bg-slate-950/80 hover:bg-emerald-500 hover:text-slate-950 rounded-lg text-xs font-bold tracking-wide text-slate-300 transition-all border border-slate-800 hover:border-emerald-500">
                   Inspect Source Code ↗
                 </a>
               </div>
@@ -236,29 +377,29 @@ export default function Home() {
           <p className="text-slate-400 mt-2">Currently open for technical deep dives or custom engineering solutions.</p>
         </div>
 
-        <form action="https://formsubmit.co/abdulazeem7982@gmail.com" method="POST" className="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl shadow-xl">
+        <form action="https://formsubmit.co/abdulazeem7982@gmail.com" method="POST" className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/60 p-8 rounded-2xl shadow-xl">
           <input type="hidden" name="_subject" value="New submission from Portfolio!" />
           <input type="hidden" name="_captcha" value="false" />
           
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div>
               <label className="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
-              <input type="text" name="name" required className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition" placeholder="John Doe"/>
+              <input type="text" name="name" required className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition" placeholder="John Doe"/>
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
-              <input type="email" name="email" required className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" placeholder="john@example.com"/>
+              <input type="email" name="email" required className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition" placeholder="john@example.com"/>
             </div>
           </div>
 
           <div className="mb-6">
             <label className="block text-sm font-medium text-slate-300 mb-2">Subject</label>
-            <input type="text" name="subject" required className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition" placeholder="Project Inquiry"/>
+            <input type="text" name="subject" required className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition" placeholder="Project Inquiry"/>
           </div>
 
           <div className="mb-6">
             <label className="block text-sm font-medium text-slate-300 mb-2">Message</label>
-            <textarea name="message" required rows={5} className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition resize-y" placeholder="Write your message here..."></textarea>
+            <textarea name="message" required rows={5} className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition resize-y" placeholder="Write your message here..."></textarea>
           </div>
 
           <button type="submit" className="w-full py-4 rounded-lg text-white font-bold tracking-wide text-lg bg-gradient-to-r from-blue-400 to-pink-500 hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2">
@@ -269,7 +410,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 border-t border-slate-900 py-12 px-6 text-center">
+      <footer className="bg-slate-950/40 backdrop-blur-sm border-t border-slate-900 py-12 px-6 text-center">
         <div className="flex justify-center gap-6 mb-8">
           <a href="https://github.com/AbdulAzeemHashmi" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-cyan-400 transition" title="GitHub">
             <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
