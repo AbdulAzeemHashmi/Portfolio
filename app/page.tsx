@@ -83,7 +83,7 @@ export default function Home() {
         {/* Profile Image Addition */}
         <div className="mb-8 relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-cyan-500/20 mx-auto z-10 bg-slate-900">
           <img
-            src="/Gemini_Generated_Image_8bhv2i8bhv2i8bhv.jpg"
+            src="/Gemini_Generated_Image_8bhv2i8bhv2i8bhv.png"
             alt="Abdul Azeem Hashmi"
             className="w-full h-full object-cover"
           />
