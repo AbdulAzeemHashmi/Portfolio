@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Abdul Azeem Hashmi | Portfolio
+
+A personal portfolio website built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. It showcases projects, skills, and contact information in a clean, fast, and responsive interface.
+
+**Live Site:** [abdulazeemhashmi.vercel.app](https://abdulazeemhashmi.vercel.app)
+
+---
+
+## Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org)
+- **UI Library:** [React 19](https://react.dev)
+- **Language:** [TypeScript](https://www.typescriptlang.org)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com)
+- **Linting:** ESLint with Next.js config
+- **Deployment:** [Vercel](https://vercel.com)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have **Node.js** installed on your machine.
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/AbdulAzeemHashmi/Portfolio.git
+cd Portfolio
+npm install
+```
+
+### Running the Development Server
 
 ```bash
 npm run dev
@@ -14,23 +45,48 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the site. The page hot-reloads as you edit files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+Portfolio/
+├── app/          # Next.js App Router pages and layouts
+├── public/       # Static assets (images, icons, etc.)
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+└── tsconfig.json
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Available Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the app for production |
+| `npm run start` | Start the production server |
+| `npm run lint` | Run ESLint to check for code issues |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This portfolio is deployed on [Vercel](https://vercel.com). Every push to the `main` branch triggers an automatic deployment.
+
+To deploy your own fork, import the repository into Vercel and it will detect the Next.js setup automatically. See the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## Contact
+
+Feel free to reach out or connect:
+
+- **Portfolio:** [abdulazeemhashmi.vercel.app](https://abdulazeemhashmi.vercel.app)
+- **GitHub:** [@AbdulAzeemHashmi](https://github.com/AbdulAzeemHashmi)
