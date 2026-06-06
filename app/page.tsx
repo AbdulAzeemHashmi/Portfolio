@@ -81,7 +81,7 @@ export default function Home() {
         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none" />
         
         {/* Profile Image Addition */}
-        <div className="mb-8 relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-cyan-500/20 mx-auto z-10">
+        <div className="mb-8 relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-cyan-500/20 mx-auto z-10 bg-slate-900">
           <img
             src="/Gemini_Generated_Image_8bhv2i8bhv2i8bhv.jpg"
             alt="Abdul Azeem Hashmi"
