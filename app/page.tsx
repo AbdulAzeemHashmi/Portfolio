@@ -29,6 +29,7 @@ export default function Home() {
   ];
 
   const projects = [
+    { title: "Artificial Intelligence Open Ended Lab", category: "AI", description: "Advanced open-ended laboratory project focusing on the implementation and optimization of artificial intelligence algorithms and search heuristics.", link: "https://github.com/AbdulAzeemHashmi/Artificial-Intelligence-Open-Ended-Lab", tags: ["Python", "AI Algorithms", "Search Trees"] },
     { title: "Self-Driving RC Car", category: "AI", description: "An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.", link: "https://github.com/AbdulAzeemHashmi/RC-CAR", tags: ["Python", "AI", "Computer Vision"] },
     { title: "Probability & Statistics Analyzer", category: "AI", description: "Data analysis platform leveraging mathematical and statistical models for predictive analytics and computational insights.", link: "https://github.com/AbdulAzeemHashmi/Probability-and-Statistics-Project", tags: ["Python", "Pandas", "Matplotlib", "Statistics"] },
     { title: "Database Systems Open Ended Lab", category: "AI", description: "Advanced query building and logical database architecture specialized for intelligent data processing pipelines.", link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Open-Ended-/Lab", tags: ["SQL", "Data Pipeline", "Database Design"] },
@@ -57,7 +58,6 @@ export default function Home() {
       {/* Sticky Navigation Bar */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between md:justify-end">
-          {/* Mobile logo placeholder (hidden on md screens) */}
           <span className="text-cyan-400 font-bold tracking-widest md:hidden">AAH.</span>
           
           <ul className="hidden md:flex gap-8 text-sm font-medium">
@@ -80,19 +80,28 @@ export default function Home() {
       <header id="about" className="relative overflow-hidden pt-40 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center border-b border-slate-900">
         <div className="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none" />
         
-        <span className="text-cyan-400 bg-cyan-950/50 border border-cyan-800/60 px-3 py-1 rounded-full text-xs font-semibold tracking-wider mb-6 uppercase">
+        {/* Profile Image Addition */}
+        <div className="mb-8 relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-cyan-500/20 mx-auto z-10">
+          <img
+            src="/Gemini_Generated_Image_8bhv2i8bhv2i8bhv.jpg"
+            alt="Abdul Azeem Hashmi"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <span className="text-cyan-400 bg-cyan-950/50 border border-cyan-800/60 px-3 py-1 rounded-full text-xs font-semibold tracking-wider mb-6 uppercase z-10">
           FAST NUCES Islamabad • Batch '24
         </span>
         
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white z-10">
           Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Abdul Azeem Hashmi</span>
         </h1>
         
-        <p className="text-lg md:text-xl text-slate-400 max-w-2xl font-light leading-relaxed mb-8">
+        <p className="text-lg md:text-xl text-slate-400 max-w-2xl font-light leading-relaxed mb-8 z-10">
           A passionate <span className="text-cyan-300 font-medium">BS Artificial Intelligence</span> student building clean backend architectures, relational data pipelines, performant low-level engines, and interactive web tools.
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-wrap gap-4 justify-center z-10">
           <a href="#projects" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-indigo-500 text-slate-950 font-semibold rounded-lg hover:opacity-90 transition shadow-lg shadow-cyan-500/20">
             View My Projects
           </a>
@@ -102,7 +111,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Services Section (New!) */}
+      {/* Services Section */}
       <section id="services" className="max-w-6xl mx-auto py-24 px-6 border-b border-slate-900">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4 flex justify-center items-center gap-3">
