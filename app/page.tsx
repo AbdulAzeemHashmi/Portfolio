@@ -9,7 +9,8 @@ interface FluidParticle {
   vy: number;
   radius: number;
   alpha: number;
-  color: string;
+  hue: number;
+  frequency: number;
   decay: number;
 }
 
@@ -38,7 +39,7 @@ export default function Home() {
     window.addEventListener("resize", handleResize);
 
     const particles: FluidParticle[] = [];
-    let hue = 0;
+    let baseHue = 0;
     let lastX = 0;
     let lastY = 0;
     let isMoving = false;
@@ -55,30 +56,38 @@ export default function Home() {
       const vy = clientY - lastY;
       const speed = Math.sqrt(vx * vx + vy * vy);
 
-      // Spawn colorful fluid chunks based on movement velocity
       if (speed > 1) {
-        // Lower spawn limit on mobile to avoid performance issues
-        const maxSpawn = isMobile ? 3 : 8;
-        const spawnCount = Math.min(speed * 0.3, maxSpawn); 
+        const maxSpawn = isMobile ? 4 : 12;
+        const spawnCount = Math.min(speed * 0.4, maxSpawn);
+        
+        // Dynamically alter frequency based on cursor velocity and spatial coordinates
+        const currentFrequency = 1.5 + (speed * 0.1) + Math.sin(clientX * 0.01) * 0.5;
+
         for (let i = 0; i < spawnCount; i++) {
+          // Angle dispersion for realistic fluid blooming
+          const angle = Math.random() * Math.PI * 2;
+          const force = Math.random() * speed * 0.1;
+
           particles.push({
             x: clientX,
             y: clientY,
-            // Fluid vector calculations + slight dispersion
-            vx: vx * 0.15 + (Math.random() - 0.5) * 3,
-            vy: vy * 0.15 + (Math.random() - 0.5) * 3,
-            // Scale particle radius down on mobile viewports
-            radius: Math.random() * (isMobile ? 25 : 50) + (isMobile ? 15 : 30),
-            alpha: 0.7,
-            color: `hsla(${hue}, 95%, 60%`,
-            decay: Math.random() * 0.008 + 0.004,
+            vx: vx * 0.12 + Math.cos(angle) * force,
+            vy: vy * 0.12 + Math.sin(angle) * force,
+            radius: Math.random() * (isMobile ? 30 : 65) + (isMobile ? 15 : 30),
+            alpha: 0.85,
+            // Assign a local wave frequency offset to this batch of particles
+            hue: (baseHue + (i * currentFrequency)) % 360,
+            frequency: currentFrequency,
+            decay: Math.random() * 0.006 + 0.003,
           });
         }
       }
 
       lastX = clientX;
       lastY = clientY;
-      hue = (hue + 1.5) % 360; // Shifting multi-color fluid spectrum
+      
+      // Step the base spectrum frequency relative to movement speed
+      baseHue = (baseHue + 1.2 + (speed * 0.05)) % 360;
     };
 
     const handleMouseMove = (e: MouseEvent) => spawnFluid(e.clientX, e.clientY);
@@ -95,34 +104,47 @@ export default function Home() {
 
     // Animation Loop
     const animate = () => {
-      // Semi-clear background frame creates the fluid smoke bleeding/trailing look
-      ctx.fillStyle = "rgba(2, 6, 23, 0.08)"; 
+      // Keeps the tail trailing beautifully like high-density fluid smoke
+      ctx.fillStyle = "rgba(2, 6, 23, 0.06)"; 
       ctx.fillRect(0, 0, width, height);
 
-      // Use lighter composite operation for the neon glow stacking effect
       ctx.globalCompositeOperation = "lighter";
+      const time = Date.now() * 0.002;
 
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i];
+
+        // Advanced fluid turbulence / curl noise equations
+        // Modulates directional velocity dynamically over space and time vectors
+        const curlX = Math.sin(p.y * 0.004 + time) * 0.25;
+        const curlY = Math.cos(p.x * 0.004 + time) * 0.25;
+        
+        p.vx += curlX;
+        p.vy += curlY;
+        
+        // Fluid drag/viscosity friction
+        p.vx *= 0.96;
+        p.vy *= 0.96;
+        
         p.x += p.vx;
         p.y += p.vy;
         
-        // Fluid drag/friction dynamics
-        p.vx *= 0.97;
-        p.vy *= 0.97;
-        
         p.alpha -= p.decay;
-        p.radius += 0.6; // Smoke expansion factor
+        p.radius += 0.85; // Smoke dissipation rate
+
+        // Dynamically evolve individual particle frequencies while active
+        p.hue = (p.hue + p.frequency * 0.4) % 360;
 
         if (p.alpha <= 0) {
           particles.splice(i, 1);
           continue;
         }
 
-        // Radial gradient stamping to emulate dynamic physical fluid density
+        // Fluid density stamping via rich multi-tiered radial gradients
         const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
-        gradient.addColorStop(0, `${p.color}, ${p.alpha})`);
-        gradient.addColorStop(0.3, `${p.color}, ${p.alpha * 0.4})`);
+        gradient.addColorStop(0, `hsla(${p.hue}, 95%, 55%, ${p.alpha})`);
+        gradient.addColorStop(0.25, `hsla(${p.hue}, 90%, 50%, ${p.alpha * 0.35})`);
+        gradient.addColorStop(0.6, `hsla(${p.hue}, 85%, 45%, ${p.alpha * 0.08})`);
         gradient.addColorStop(1, "rgba(0,0,0,0)");
 
         ctx.fillStyle = gradient;
