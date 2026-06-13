@@ -2,7 +2,7 @@
 
 A personal portfolio website built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. It showcases projects, skills, and contact information in a clean, fast, and responsive interface.
 
-**Live Site:** [abdulazeemhashmi.vercel.app](https://abdulazeemhashmi.vercel.app)
+**Live Site:** 
 
 ---
 
