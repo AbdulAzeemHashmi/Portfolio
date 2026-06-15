@@ -41,6 +41,14 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
+  { 
+    title: "AI Image Verifier", 
+    category: "AI", 
+    description: "An intelligent image verification system leveraging vision models to analyze, authenticate, and process image content with precision.", 
+    link: "https://github.com/AbdulAzeemHashmi/AI-Image-Verifier", 
+    liveLink: "https://ai-image-verifier.vercel.app/",
+    tags: ["Next.js", "AI", "Hugging Face", "Supabase", "TypeScript"] 
+  },
   { title: "Artificial Intelligence Open Ended Lab", category: "AI", description: "Advanced open-ended laboratory project focusing on the implementation and optimization of artificial intelligence algorithms and search heuristics.", link: "https://github.com/AbdulAzeemHashmi/Artificial-Intelligence-Open-Ended-Lab", tags: ["Python", "AI Algorithms", "Search Trees"] },
   { title: "Self-Driving RC Car", category: "AI", description: "An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.", link: "https://github.com/AbdulAzeemHashmi/RC-CAR", tags: ["Python", "AI", "Computer Vision"] },
   { title: "Probability & Statistics Analyzer", category: "AI", description: "Data analysis platform leveraging mathematical and statistical models for predictive analytics and computational insights.", link: "https://github.com/AbdulAzeemHashmi/Probability-and-Statistics-Project", tags: ["Python", "Pandas", "Matplotlib", "Statistics"] },
@@ -56,9 +64,9 @@ const PROJECTS = [
 ];
 
 const SKILLS = [
-  { category: "Programming Languages", icon: "💻", list: ["Python", "C++", "SQL", "JavaScript", "HTML", "CSS"], desc: "Core languages used for building logic, algorithms, and interfaces." },
-  { category: "Data & Artificial Intelligence", icon: "🧠", list: ["NumPy", "Pandas", "Matplotlib", "Scikit-Learn", "EDA", "Machine Learning"], desc: "Libraries and workflows for extracting insights and training predictive models." },
-  { category: "Databases & Architecture", icon: "🗄️", list: ["MySQL", "MongoDB", "Relational Database Design", "ERD Modeling", "Query Optimization"], desc: "Designing secure, scalable, and efficient data storage solutions." },
+  { category: "Programming Languages", icon: "💻", list: ["Python", "C++", "SQL", "JavaScript"], desc: "Core languages used for building logic, algorithms, and interfaces." },
+  { category: "Data & Artificial Intelligence", icon: "🧠", list: ["NumPy", "Pandas", "Matplotlib", "Scikit-Learn", "Hugging Face", "EDA", "Machine Learning"], desc: "Libraries and workflows for extracting insights and training predictive models." },
+  { category: "Databases & Architecture", icon: "🗄️", list: ["MySQL", "MongoDB", "Supabase", "Relational Database Design", "ERD Modeling", "Query Optimization"], desc: "Designing secure, scalable, and efficient data storage solutions." },
   { category: "Tools & Environments", icon: "🛠️", list: ["Linux (Ubuntu)", "Node.js", "Git / GitHub", "VS Code", "Jupyter / Colab"], desc: "Professional environments and version control for seamless development." }
 ];
 
@@ -68,14 +76,12 @@ function BackgroundMusic() {
   const playerRef = useRef<any>(null);
 
   useEffect(() => {
-    // 1. Inject the YouTube Iframe Player API script dynamically if not present
     if (!(window as any).YT) {
       const tag = document.createElement("script");
       tag.src = "https://www.youtube.com/iframe_api";
       const firstScriptTag = document.getElementsByTagName("script")[0];
       firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
 
-      // 2. This trigger event acts automatically when the script initialization completes
       (window as any).onYouTubeIframeAPIReady = () => {
         initPlayer();
       };
@@ -87,13 +93,13 @@ function BackgroundMusic() {
       playerRef.current = new (window as any).YT.Player("youtube-audio-pipeline", {
         height: "0",
         width: "0",
-        videoId: "dhYOPzcsbGM", // "On My Way" Youtube ID
+        videoId: "dhYOPzcsbGM",
         playerVars: {
-          autoplay: 0,           // Starts paused to strictly obey browser UI policies
-          loop: 1,               // Loop track endlessly
-          playlist: "dhYOPzcsbGM", // Required by YouTube iframe parameter schema to loop standalone clips
-          controls: 0,           // Strip native YouTube controls player canvas
-          disablekb: 1,          // Terminate keyboard frame listeners
+          autoplay: 0,
+          loop: 1,
+          playlist: "dhYOPzcsbGM",
+          controls: 0,
+          disablekb: 1,
         },
       });
     }
@@ -113,10 +119,7 @@ function BackgroundMusic() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      {/* Invisible YouTube Pipeline Frame Node Container */}
       <div id="youtube-audio-pipeline" className="hidden" />
-
-      {/* Floating Action Soundtrack Interaction Toggle */}
       <button
         onClick={toggleMusic}
         className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-950/80 hover:bg-slate-900 text-cyan-400 border border-slate-800/80 hover:border-cyan-500/50 rounded-full shadow-2xl shadow-cyan-950/40 transition-all duration-300 backdrop-blur-md text-[11px] font-bold tracking-widest uppercase group pointer-events-auto"
@@ -131,7 +134,6 @@ function BackgroundMusic() {
         
         <span>{isPlaying ? "Music On" : "Music Off"}</span>
         
-        {/* Dynamic Visualizer Waveform Effect */}
         {isPlaying ? (
           <div className="flex items-end gap-0.5 h-3 w-3 mb-0.5">
             <span className="bg-cyan-400 w-0.5 animate-[pulse_0.8s_infinite_alternate] h-full" />
@@ -152,11 +154,9 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Form Submission Async States
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [formStatus, setFormStatus] = useState<"IDLE" | "SUBMITTING" | "SUCCESS" | "ERROR">("IDLE");
 
-  // Scrollspy Feature using IntersectionObserver
   useEffect(() => {
     const observerOptions = { root: null, rootMargin: "-20% 0px -60% 0px", threshold: 0 };
     
@@ -177,7 +177,6 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  // Fluid Simulation Effect Hook
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -254,7 +253,6 @@ export default function Home() {
     window.addEventListener("touchmove", handleTouchMove, { passive: true });
     window.addEventListener("touchstart", handleTouchStart, { passive: true });
 
-    // Animation Loop
     const animate = () => {
       ctx.fillStyle = "rgba(2, 6, 23, 0.06)"; 
       ctx.fillRect(0, 0, width, height);
@@ -311,7 +309,6 @@ export default function Home() {
     };
   }, []);
 
-  // Async FormSubmit Handler via Fetch API
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus("SUBMITTING");
@@ -345,23 +342,18 @@ export default function Home() {
   return (
     <div className="min-h-screen text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 scroll-smooth relative overflow-x-hidden">
       
-      {/* Dynamic Fluid Simulation Canvas Background */}
       <canvas 
         ref={canvasRef} 
         className="fixed inset-0 z-0 pointer-events-none bg-slate-950"
       />
 
-      {/* Floating Background Track Controller Engine */}
       <BackgroundMusic />
 
-      {/* Content Layer Wrapper */}
       <div className="relative z-10 pointer-events-auto">
-        {/* Sticky Adaptive Navigation Bar */}
         <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/70 backdrop-blur-md border-b border-slate-900/60">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <span className="text-cyan-400 font-bold tracking-widest">AAH.</span>
             
-            {/* Desktop Navigation Link Loop with Active Scroll Highlight */}
             <ul className="hidden md:flex gap-8 text-sm font-medium">
               {NAV_LINKS.map((link) => {
                 const lowerLink = link.toLowerCase();
@@ -384,7 +376,6 @@ export default function Home() {
               })}
             </ul>
 
-            {/* Mobile Navigation Trigger Button */}
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-slate-300 hover:text-cyan-400 focus:outline-none p-2 z-50 relative"
@@ -402,7 +393,6 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Mobile Navigation Dropdown Overlay Menu */}
           <div className={`fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${
             isMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"
           }`}>
@@ -422,11 +412,9 @@ export default function Home() {
           </div>
         </nav>
 
-        {/* Hero & Profile Section */}
         <header id="about" className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col items-center text-center border-b border-slate-900/40">
           <div className="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full pointer-events-none" />
           
-          {/* Profile Image - Extension set to .png as specified */}
           <div className="mb-6 md:mb-8 relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-cyan-500/20 mx-auto z-10 bg-slate-900">
             <Image
               src="/Gemini_Generated_Image_8bhv2i8bhv2i8bhv.png"
@@ -460,7 +448,6 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Services Section */}
         <section id="services" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6 border-b border-slate-900/40">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight mb-3 flex justify-center items-center gap-3">
@@ -489,7 +476,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills Section */}
         <section id="skills" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6 border-b border-slate-900/40">
           <div className="mb-10 text-center sm:text-left">
             <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight flex items-center justify-center sm:justify-start gap-3">
@@ -520,7 +506,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects Showcase Section */}
         <section id="projects" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6 border-b border-slate-900/40">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-10 gap-6">
             <div className="text-center lg:text-left w-full lg:w-auto">
@@ -569,16 +554,32 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <a href={project.link} target="_blank" rel="noreferrer" className="w-full text-center block px-4 py-2 bg-slate-950/80 hover:bg-emerald-500 hover:text-slate-950 rounded-lg text-xs font-bold tracking-wide text-slate-300 transition-all border border-slate-800 hover:border-emerald-500">
-                    Inspect Source Code ↗
-                  </a>
+                  <div className="flex gap-2">
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className={`text-center block px-4 py-2 bg-slate-950/80 hover:bg-emerald-500 hover:text-slate-950 rounded-lg text-xs font-bold tracking-wide text-slate-300 transition-all border border-slate-800 hover:border-emerald-500 ${"liveLink" in project ? "flex-1" : "w-full"}`}
+                    >
+                      {"liveLink" in project ? "Source Code ↗" : "Inspect Source Code ↗"}
+                    </a>
+                    {"liveLink" in project && (
+                      <a 
+                        href={(project as any).liveLink} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="flex-1 text-center block px-4 py-2 bg-gradient-to-r from-cyan-500 to-indigo-500 text-slate-950 hover:opacity-90 rounded-lg text-xs font-bold tracking-wide transition-all shadow-md shadow-cyan-500/10"
+                      >
+                        Live Demo ↗
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="max-w-3xl mx-auto py-16 md:py-24 px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
@@ -652,7 +653,6 @@ export default function Home() {
               </svg>
             </button>
 
-            {/* Form Response Feedback Statuses */}
             {formStatus === "SUCCESS" && (
               <p className="mt-4 text-center text-sm font-medium text-emerald-400 bg-emerald-950/30 border border-emerald-900/50 p-3 rounded-lg animate-fade-in">
                 ✓ Message dispatched cleanly! I will reach out to you shortly.
@@ -666,7 +666,6 @@ export default function Home() {
           </form>
         </section>
 
-        {/* Accessible Footer Section */}
         <footer className="bg-slate-950/40 backdrop-blur-sm border-t border-slate-900 py-10 px-4 text-center">
           <div className="flex justify-center gap-6 mb-6">
             <a href="https://github.com/AbdulAzeemHashmi" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-cyan-400 transition" aria-label="GitHub Profile Pipeline Lookup">
@@ -676,7 +675,7 @@ export default function Home() {
               <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.42 1.453 5.532 0 10.032-4.502 10.035-10.037.002-2.68-1.038-5.198-2.93-7.094C17.228 1.58 14.72 .54 12.01 .54 6.478.54 1.98 5.04 1.977 10.577c-.001 1.97.513 3.897 1.49 5.588L2.43 21.39l5.311-1.394z"/></svg>
             </a>
             <a href="https://www.instagram.com/abdulazeemhash" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-pink-400 transition" aria-label="Instagram Lifecycle Handle Feed Lookup">
-              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 0text-slate-500.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919 4.919zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 0C12 5.013 11.987 5.013 11.987 4.849zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
           </div>
           <p className="text-[11px] md:text-xs text-slate-600 font-mono">
