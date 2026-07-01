@@ -80,7 +80,7 @@ const SKILLS = [
 
 // Floating Background Music Pipeline Engine
 function BackgroundMusic() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const playerRef = useRef<any>(null);
 
   useEffect(() => {
@@ -103,11 +103,19 @@ function BackgroundMusic() {
         width: "0",
         videoId: "QXJyMpxd210",
         playerVars: {
-          autoplay: 0,
+          autoplay: 1,
           loop: 1,
           playlist: "RDQXJyMpxd210",
           controls: 0,
           disablekb: 1,
+          modestbranding: 1,
+          rel: 0,
+        },
+        events: {
+          onReady: () => {
+            playerRef.current?.playVideo();
+            setIsPlaying(true);
+          },
         },
       });
     }
@@ -140,7 +148,7 @@ function BackgroundMusic() {
           <span className={`relative inline-flex rounded-full h-2 w-2 ${isPlaying ? "bg-cyan-400" : "bg-slate-500"}`}></span>
         </span>
 
-        <span>{isPlaying ? "Music On" : "Music Off"}</span>
+        <span>{isPlaying ? "Ve Kamleya • On" : "Ve Kamleya • Off"}</span>
 
         {isPlaying ? (
           <div className="flex items-end gap-0.5 h-3 w-3 mb-0.5">
@@ -322,7 +330,7 @@ export default function Home() {
     setFormStatus("SUBMITTING");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/abdulazeem7982@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/abdulazeemhashmi29@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
@@ -590,6 +598,16 @@ export default function Home() {
               <span className="text-pink-500">✉</span> Contact
             </h2>
             <p className="text-slate-400 text-sm md:text-base mt-2">Currently open for technical deep dives or custom engineering solutions.</p>
+          </div>
+
+          <div className="mb-6 rounded-2xl border border-slate-800/70 bg-slate-900/40 p-4 text-sm text-slate-300 backdrop-blur-sm">
+            <p className="mb-3 font-semibold text-cyan-300">Quick links</p>
+            <div className="flex flex-col gap-2">
+              <a href="https://abdulazeemhashmi.vercel.app/" target="_blank" rel="noreferrer" className="transition hover:text-cyan-400">Portfolio: AbdulAzeemHashmi</a>
+              <a href="https://github.com/AbdulAzeemHashmi" target="_blank" rel="noreferrer" className="transition hover:text-cyan-400">GitHub Profile: AbdulAzeemHashmi</a>
+              <a href="https://github.com/AbdulAzeemHashmi/Portfolio" target="_blank" rel="noreferrer" className="transition hover:text-cyan-400">GitHub Repository: Portfolio</a>
+              <a href="mailto:abdulazeemhashmi29@gmail.com" className="transition hover:text-cyan-400">Email: abdulazeemhashmi29@gmail.com</a>
+            </div>
           </div>
 
           <form onSubmit={handleFormSubmit} className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/60 p-5 sm:p-8 rounded-2xl shadow-xl transition-all">
