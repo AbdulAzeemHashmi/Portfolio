@@ -85,6 +85,8 @@ function BackgroundMusic() {
 
   useEffect(() => {
     const initPlayer = () => {
+      if (playerRef.current) return;
+      
       playerRef.current = new (window as any).YT.Player("youtube-audio-pipeline", {
         height: "0",
         width: "0",
@@ -92,17 +94,25 @@ function BackgroundMusic() {
         playerVars: {
           autoplay: 0,
           loop: 1,
-          playlist: "RDQXJyMpxd210",
+          playlist: "QXJyMpxd210",
           controls: 0,
           disablekb: 1,
           modestbranding: 1,
           rel: 0,
           playsinline: 1,
+          fs: 0,
         },
         events: {
-          onReady: () => {
-            playerRef.current?.setVolume(100);
-            playerRef.current?.unMute();
+          onReady: (event: any) => {
+            event.target.setVolume(100);
+            event.target.unMute();
+          },
+          onStateChange: (event: any) => {
+            if (event.data === (window as any).YT.PlayerState.PLAYING) {
+              setIsPlaying(true);
+            } else if (event.data === (window as any).YT.PlayerState.PAUSED) {
+              setIsPlaying(false);
+            }
           },
         },
       });
@@ -111,53 +121,66 @@ function BackgroundMusic() {
     if (!(window as any).YT) {
       const tag = document.createElement("script");
       tag.src = "https://www.youtube.com/iframe_api";
-      const firstScriptTag = document.getElementsByTagName("script")[0];
-      firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+      document.head.appendChild(tag);
 
       (window as any).onYouTubeIframeAPIReady = () => {
         initPlayer();
       };
     } else {
-      initPlayer();
+      setTimeout(initPlayer, 100);
     }
 
-    const tryStartPlayback = () => {
-      if (!playerRef.current) return;
-
-      try {
-        playerRef.current.setVolume(100);
-        playerRef.current.unMute();
-        playerRef.current.playVideo();
-        setIsPlaying(true);
-      } catch {
-        // Ignore browser autoplay restrictions until the user interacts again.
+    const attemptAutoplay = () => {
+      if (playerRef.current?.playVideo) {
+        try {
+          playerRef.current.setVolume(100);
+          playerRef.current.unMute();
+          playerRef.current.playVideo();
+          setIsPlaying(true);
+        } catch (e) {
+          console.log("Autoplay restricted, waiting for user interaction");
+        }
       }
     };
 
-    window.addEventListener("pointerdown", tryStartPlayback, { once: true, passive: true });
-    window.addEventListener("keydown", tryStartPlayback, { once: true });
+    // Try autoplay after a short delay
+    const timer1 = setTimeout(attemptAutoplay, 2000);
+
+    // Also try on first user interaction
+    const handleInteraction = () => {
+      attemptAutoplay();
+      window.removeEventListener("click", handleInteraction);
+      window.removeEventListener("touchstart", handleInteraction);
+      window.removeEventListener("keydown", handleInteraction);
+    };
+
+    window.addEventListener("click", handleInteraction);
+    window.addEventListener("touchstart", handleInteraction);
+    window.addEventListener("keydown", handleInteraction);
 
     return () => {
-      window.removeEventListener("pointerdown", tryStartPlayback);
-      window.removeEventListener("keydown", tryStartPlayback);
+      clearTimeout(timer1);
+      window.removeEventListener("click", handleInteraction);
+      window.removeEventListener("touchstart", handleInteraction);
+      window.removeEventListener("keydown", handleInteraction);
     };
   }, []);
 
   const toggleMusic = () => {
     if (!playerRef.current) return;
 
-    if (isPlaying) {
-      playerRef.current.pauseVideo();
-      setIsPlaying(false);
-    } else {
-      try {
+    try {
+      if (isPlaying) {
+        playerRef.current.pauseVideo();
+        setIsPlaying(false);
+      } else {
         playerRef.current.setVolume(100);
         playerRef.current.unMute();
         playerRef.current.playVideo();
         setIsPlaying(true);
-      } catch {
-        // Ignore browser autoplay restrictions until the user interacts again.
       }
+    } catch (e) {
+      console.error("Error toggling music:", e);
     }
   };
 
