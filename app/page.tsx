@@ -80,10 +80,34 @@ const SKILLS = [
 
 // Floating Background Music Pipeline Engine
 function BackgroundMusic() {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const playerRef = useRef<any>(null);
 
   useEffect(() => {
+    const initPlayer = () => {
+      playerRef.current = new (window as any).YT.Player("youtube-audio-pipeline", {
+        height: "0",
+        width: "0",
+        videoId: "QXJyMpxd210",
+        playerVars: {
+          autoplay: 0,
+          loop: 1,
+          playlist: "RDQXJyMpxd210",
+          controls: 0,
+          disablekb: 1,
+          modestbranding: 1,
+          rel: 0,
+          playsinline: 1,
+        },
+        events: {
+          onReady: () => {
+            playerRef.current?.setVolume(100);
+            playerRef.current?.unMute();
+          },
+        },
+      });
+    };
+
     if (!(window as any).YT) {
       const tag = document.createElement("script");
       tag.src = "https://www.youtube.com/iframe_api";
@@ -97,28 +121,26 @@ function BackgroundMusic() {
       initPlayer();
     }
 
-    function initPlayer() {
-      playerRef.current = new (window as any).YT.Player("youtube-audio-pipeline", {
-        height: "0",
-        width: "0",
-        videoId: "QXJyMpxd210",
-        playerVars: {
-          autoplay: 1,
-          loop: 1,
-          playlist: "RDQXJyMpxd210",
-          controls: 0,
-          disablekb: 1,
-          modestbranding: 1,
-          rel: 0,
-        },
-        events: {
-          onReady: () => {
-            playerRef.current?.playVideo();
-            setIsPlaying(true);
-          },
-        },
-      });
-    }
+    const tryStartPlayback = () => {
+      if (!playerRef.current) return;
+
+      try {
+        playerRef.current.setVolume(100);
+        playerRef.current.unMute();
+        playerRef.current.playVideo();
+        setIsPlaying(true);
+      } catch {
+        // Ignore browser autoplay restrictions until the user interacts again.
+      }
+    };
+
+    window.addEventListener("pointerdown", tryStartPlayback, { once: true, passive: true });
+    window.addEventListener("keydown", tryStartPlayback, { once: true });
+
+    return () => {
+      window.removeEventListener("pointerdown", tryStartPlayback);
+      window.removeEventListener("keydown", tryStartPlayback);
+    };
   }, []);
 
   const toggleMusic = () => {
@@ -128,8 +150,14 @@ function BackgroundMusic() {
       playerRef.current.pauseVideo();
       setIsPlaying(false);
     } else {
-      playerRef.current.playVideo();
-      setIsPlaying(true);
+      try {
+        playerRef.current.setVolume(100);
+        playerRef.current.unMute();
+        playerRef.current.playVideo();
+        setIsPlaying(true);
+      } catch {
+        // Ignore browser autoplay restrictions until the user interacts again.
+      }
     }
   };
 
@@ -598,16 +626,6 @@ export default function Home() {
               <span className="text-pink-500">✉</span> Contact
             </h2>
             <p className="text-slate-400 text-sm md:text-base mt-2">Currently open for technical deep dives or custom engineering solutions.</p>
-          </div>
-
-          <div className="mb-6 rounded-2xl border border-slate-800/70 bg-slate-900/40 p-4 text-sm text-slate-300 backdrop-blur-sm">
-            <p className="mb-3 font-semibold text-cyan-300">Quick links</p>
-            <div className="flex flex-col gap-2">
-              <a href="https://abdulazeemhashmi.vercel.app/" target="_blank" rel="noreferrer" className="transition hover:text-cyan-400">Portfolio: AbdulAzeemHashmi</a>
-              <a href="https://github.com/AbdulAzeemHashmi" target="_blank" rel="noreferrer" className="transition hover:text-cyan-400">GitHub Profile: AbdulAzeemHashmi</a>
-              <a href="https://github.com/AbdulAzeemHashmi/Portfolio" target="_blank" rel="noreferrer" className="transition hover:text-cyan-400">GitHub Repository: Portfolio</a>
-              <a href="mailto:abdulazeemhashmi29@gmail.com" className="transition hover:text-cyan-400">Email: abdulazeemhashmi29@gmail.com</a>
-            </div>
           </div>
 
           <form onSubmit={handleFormSubmit} className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/60 p-5 sm:p-8 rounded-2xl shadow-xl transition-all">
