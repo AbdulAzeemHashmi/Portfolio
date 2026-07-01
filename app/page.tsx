@@ -41,13 +41,21 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
-  { 
-    title: "AI Image Verifier", 
-    category: "AI", 
-    description: "An intelligent image verification system leveraging vision models to analyze, authenticate, and process image content with precision.", 
-    link: "https://github.com/AbdulAzeemHashmi/AI-Image-Verifier", 
+  {
+    title: "AI Chatbot",
+    category: "AI",
+    description: "A production-ready full-stack AI Chatbot application featuring a fast Python FastAPI backend and a responsive Next.js frontend, powered by the Google Gemini API.",
+    link: "https://github.com/AbdulAzeemHashmi/AI-Chatbot",
+    liveLink: "https://ai-chatbot-aah18751.vercel.app/",
+    tags: ["Next.js", "FastAPI", "Python", "Gemini API", "TypeScript"]
+  },
+  {
+    title: "AI Image Verifier",
+    category: "AI",
+    description: "An intelligent image verification system leveraging vision models to analyze, authenticate, and process image content with precision.",
+    link: "https://github.com/AbdulAzeemHashmi/AI-Image-Verifier",
     liveLink: "https://ai-image-verifier.vercel.app/",
-    tags: ["Next.js", "AI", "Hugging Face", "Supabase", "TypeScript"] 
+    tags: ["Next.js", "AI", "Hugging Face", "Supabase", "TypeScript"]
   },
   { title: "Artificial Intelligence Open Ended Lab", category: "AI", description: "Advanced open-ended laboratory project focusing on the implementation and optimization of artificial intelligence algorithms and search heuristics.", link: "https://github.com/AbdulAzeemHashmi/Artificial-Intelligence-Open-Ended-Lab", tags: ["Python", "AI Algorithms", "Search Trees"] },
   { title: "Self-Driving RC Car", category: "AI", description: "An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.", link: "https://github.com/AbdulAzeemHashmi/RC-CAR", tags: ["Python", "AI", "Computer Vision"] },
@@ -93,11 +101,11 @@ function BackgroundMusic() {
       playerRef.current = new (window as any).YT.Player("youtube-audio-pipeline", {
         height: "0",
         width: "0",
-        videoId: "mRD0-GxqHVo",
+        videoId: "QXJyMpxd210",
         playerVars: {
           autoplay: 0,
           loop: 1,
-          playlist: "mRD0-GxqHVo",
+          playlist: "RDQXJyMpxd210",
           controls: 0,
           disablekb: 1,
         },
@@ -107,7 +115,7 @@ function BackgroundMusic() {
 
   const toggleMusic = () => {
     if (!playerRef.current) return;
-    
+
     if (isPlaying) {
       playerRef.current.pauseVideo();
       setIsPlaying(false);
@@ -131,9 +139,9 @@ function BackgroundMusic() {
           )}
           <span className={`relative inline-flex rounded-full h-2 w-2 ${isPlaying ? "bg-cyan-400" : "bg-slate-500"}`}></span>
         </span>
-        
+
         <span>{isPlaying ? "Music On" : "Music Off"}</span>
-        
+
         {isPlaying ? (
           <div className="flex items-end gap-0.5 h-3 w-3 mb-0.5">
             <span className="bg-cyan-400 w-0.5 animate-[pulse_0.8s_infinite_alternate] h-full" />
@@ -159,7 +167,7 @@ export default function Home() {
 
   useEffect(() => {
     const observerOptions = { root: null, rootMargin: "-20% 0px -60% 0px", threshold: 0 };
-    
+
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -254,7 +262,7 @@ export default function Home() {
     window.addEventListener("touchstart", handleTouchStart, { passive: true });
 
     const animate = () => {
-      ctx.fillStyle = "rgba(2, 6, 23, 0.06)"; 
+      ctx.fillStyle = "rgba(2, 6, 23, 0.06)";
       ctx.fillRect(0, 0, width, height);
 
       ctx.globalCompositeOperation = "lighter";
@@ -265,7 +273,7 @@ export default function Home() {
 
         const curlX = Math.sin(p.y * 0.004 + time) * 0.25;
         const curlY = Math.cos(p.x * 0.004 + time) * 0.25;
-        
+
         p.vx += curlX;
         p.vy += curlY;
         p.vx *= 0.96;
@@ -341,9 +349,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 scroll-smooth relative overflow-x-hidden">
-      
-      <canvas 
-        ref={canvasRef} 
+
+      <canvas
+        ref={canvasRef}
         className="fixed inset-0 z-0 pointer-events-none bg-slate-950"
       />
 
@@ -353,30 +361,28 @@ export default function Home() {
         <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/70 backdrop-blur-md border-b border-slate-900/60">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <span className="text-cyan-400 font-bold tracking-widest">AAH.</span>
-            
+
             <ul className="hidden md:flex gap-8 text-sm font-medium">
               {NAV_LINKS.map((link) => {
                 const lowerLink = link.toLowerCase();
                 const isActive = activeSection === lowerLink;
                 return (
                   <li key={link}>
-                    <a 
-                      href={`#${lowerLink}`} 
-                      className={`transition-colors duration-300 uppercase tracking-wider relative group ${
-                        isActive ? "text-cyan-400 font-semibold" : "text-slate-300 hover:text-cyan-400"
-                      }`}
+                    <a
+                      href={`#${lowerLink}`}
+                      className={`transition-colors duration-300 uppercase tracking-wider relative group ${isActive ? "text-cyan-400 font-semibold" : "text-slate-300 hover:text-cyan-400"
+                        }`}
                     >
                       {link}
-                      <span className={`absolute -bottom-2 left-0 h-0.5 bg-cyan-400 transition-all duration-300 ${
-                        isActive ? "w-full" : "w-0 group-hover:w-full"
-                      }`}></span>
+                      <span className={`absolute -bottom-2 left-0 h-0.5 bg-cyan-400 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                        }`}></span>
                     </a>
                   </li>
                 );
               })}
             </ul>
 
-            <button 
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden text-slate-300 hover:text-cyan-400 focus:outline-none p-2 z-50 relative"
               aria-label="Toggle Navigation Menu"
@@ -393,14 +399,13 @@ export default function Home() {
             </button>
           </div>
 
-          <div className={`fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${
-            isMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"
-          }`}>
+          <div className={`fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${isMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"
+            }`}>
             <ul className="flex flex-col items-center gap-8 text-xl font-bold tracking-widest">
               {NAV_LINKS.map((link) => (
                 <li key={link}>
-                  <a 
-                    href={`#${link.toLowerCase()}`} 
+                  <a
+                    href={`#${link.toLowerCase()}`}
                     onClick={() => setIsMenuOpen(false)}
                     className="text-slate-200 hover:text-cyan-400 active:text-cyan-400 transition-colors uppercase block p-2"
                   >
@@ -414,7 +419,7 @@ export default function Home() {
 
         <header id="about" className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col items-center text-center border-b border-slate-900/40">
           <div className="absolute top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-cyan-500/5 blur-3xl rounded-full pointer-events-none" />
-          
+
           <div className="mb-6 md:mb-8 relative w-36 h-36 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl shadow-cyan-500/20 mx-auto z-10 bg-slate-900">
             <Image
               src="/Gemini_Generated_Image_8bhv2i8bhv2i8bhv.png"
@@ -429,11 +434,11 @@ export default function Home() {
           <span className="text-cyan-400 bg-cyan-950/40 border border-cyan-800/40 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider mb-6 uppercase z-10 backdrop-blur-sm">
             FAST NUCES Islamabad • Batch '24
           </span>
-          
+
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white z-10 max-w-3xl leading-tight">
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Abdul Azeem Hashmi</span>
           </h1>
-          
+
           <p className="text-base md:text-xl text-slate-400 max-w-2xl font-light leading-relaxed mb-8 z-10 px-2">
             A passionate <span className="text-cyan-300 font-medium">BS Artificial Intelligence</span> student building clean backend architectures, relational data pipelines, performant low-level engines, and interactive web tools.
           </p>
@@ -483,7 +488,7 @@ export default function Home() {
             </h2>
             <p className="text-slate-400 text-sm md:text-base mt-2">My core competencies and technology stack.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {SKILLS.map((skill, i) => (
               <div key={i} className="bg-slate-900/30 backdrop-blur-sm border border-slate-800/60 p-5 md:p-6 rounded-xl hover:border-cyan-500/50 transition group">
@@ -514,17 +519,16 @@ export default function Home() {
               </h2>
               <p className="text-slate-400 text-sm md:text-base mt-2">Filtered codebase architectures mapping specialized domains.</p>
             </div>
-            
+
             <div className="flex flex-wrap gap-1.5 bg-slate-900/60 backdrop-blur-sm border border-slate-800/80 p-1.5 rounded-xl justify-center w-full lg:w-auto">
               {["All", "AI", "Web Development", "Game Development", "Database"].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-3 py-2 rounded-lg text-[10px] md:text-xs font-semibold tracking-wide transition uppercase whitespace-nowrap ${
-                    activeCategory === cat
-                      ? "bg-gradient-to-r from-cyan-500 to-indigo-500 text-slate-950"
-                      : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
-                  }`}
+                  className={`px-3 py-2 rounded-lg text-[10px] md:text-xs font-semibold tracking-wide transition uppercase whitespace-nowrap ${activeCategory === cat
+                    ? "bg-gradient-to-r from-cyan-500 to-indigo-500 text-slate-950"
+                    : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
+                    }`}
                 >
                   {cat === "Web Development" ? "Web" : cat === "Game Development" ? "Games" : cat}
                 </button>
@@ -555,19 +559,19 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="flex gap-2">
-                    <a 
-                      href={project.link} 
-                      target="_blank" 
-                      rel="noreferrer" 
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
                       className={`text-center block px-4 py-2 bg-slate-950/80 hover:bg-emerald-500 hover:text-slate-950 rounded-lg text-xs font-bold tracking-wide text-slate-300 transition-all border border-slate-800 hover:border-emerald-500 ${"liveLink" in project ? "flex-1" : "w-full"}`}
                     >
                       {"liveLink" in project ? "Source Code ↗" : "Inspect Source Code ↗"}
                     </a>
                     {"liveLink" in project && (
-                      <a 
-                        href={(project as any).liveLink} 
-                        target="_blank" 
-                        rel="noreferrer" 
+                      <a
+                        href={(project as any).liveLink}
+                        target="_blank"
+                        rel="noreferrer"
                         className="flex-1 text-center block px-4 py-2 bg-gradient-to-r from-cyan-500 to-indigo-500 text-slate-950 hover:opacity-90 rounded-lg text-xs font-bold tracking-wide transition-all shadow-md shadow-cyan-500/10"
                       >
                         Live Demo ↗
@@ -592,25 +596,25 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
               <div>
                 <label className="block text-xs md:text-sm font-medium text-slate-300 mb-2">Your Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required 
+                  required
                   disabled={formStatus === "SUBMITTING"}
-                  className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition disabled:opacity-50" 
+                  className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition disabled:opacity-50"
                   placeholder="John Doe"
                 />
               </div>
               <div>
                 <label className="block text-xs md:text-sm font-medium text-slate-300 mb-2">Your Email</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required 
+                  required
                   disabled={formStatus === "SUBMITTING"}
-                  className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition disabled:opacity-50" 
+                  className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition disabled:opacity-50"
                   placeholder="john@example.com"
                 />
               </div>
@@ -618,32 +622,32 @@ export default function Home() {
 
             <div className="mb-4 sm:mb-6">
               <label className="block text-xs md:text-sm font-medium text-slate-300 mb-2">Subject</label>
-              <input 
-                type="text" 
+              <input
+                type="text"
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                required 
+                required
                 disabled={formStatus === "SUBMITTING"}
-                className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition disabled:opacity-50" 
+                className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition disabled:opacity-50"
                 placeholder="Project Inquiry"
               />
             </div>
 
             <div className="mb-6">
               <label className="block text-xs md:text-sm font-medium text-slate-300 mb-2">Message</label>
-              <textarea 
+              <textarea
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                required 
-                rows={5} 
+                required
+                rows={5}
                 disabled={formStatus === "SUBMITTING"}
-                className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition resize-y disabled:opacity-50" 
+                className="w-full bg-slate-950/80 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition resize-y disabled:opacity-50"
                 placeholder="Write your message here..."
               ></textarea>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={formStatus === "SUBMITTING"}
               className="w-full py-3.5 rounded-lg text-white font-bold tracking-wide text-sm md:text-base bg-gradient-to-r from-blue-400 to-pink-500 hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2 disabled:opacity-50"
             >
@@ -669,16 +673,13 @@ export default function Home() {
         <footer className="bg-slate-950/40 backdrop-blur-sm border-t border-slate-900 py-10 px-4 text-center">
           <div className="flex justify-center gap-6 mb-6">
             <a href="https://github.com/AbdulAzeemHashmi" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-cyan-400 transition" aria-label="GitHub Profile Pipeline Lookup">
-              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/abdul-azeem-8a5540416/" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-blue-400 transition" aria-label="LinkedIn Professional Network Pipeline Lookup">
-              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
             </a>
             <a href="https://wa.me/923228535002" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-emerald-400 transition" aria-label="Direct Chat via WhatsApp Connection Channel">
-              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.42 1.453 5.532 0 10.032-4.502 10.035-10.037.002-2.68-1.038-5.198-2.93-7.094C17.228 1.58 14.72 .54 12.01 .54 6.478.54 1.98 5.04 1.977 10.577c-.001 1.97.513 3.897 1.49 5.588L2.43 21.39l5.311-1.394z"/></svg>
+              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.42 1.453 5.532 0 10.032-4.502 10.035-10.037.002-2.68-1.038-5.198-2.93-7.094C17.228 1.58 14.72 .54 12.01 .54 6.478.54 1.98 5.04 1.977 10.577c-.001 1.97.513 3.897 1.49 5.588L2.43 21.39l5.311-1.394z" /></svg>
             </a>
             <a href="https://www.instagram.com/abdulazeemhash" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-pink-400 transition" aria-label="Instagram Lifecycle Handle Feed Lookup">
-              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 0C12 5.013 11.987 5.013 11.987 4.849zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 0C12 5.013 11.987 5.013 11.987 4.849zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
             </a>
           </div>
           <p className="text-[11px] md:text-xs text-slate-600 font-mono">
