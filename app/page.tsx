@@ -57,18 +57,84 @@ const PROJECTS = [
     liveLink: "https://ai-image-verifier.vercel.app/",
     tags: ["Next.js", "AI", "Hugging Face", "Supabase", "TypeScript"]
   },
-  { title: "Artificial Intelligence Open Ended Lab", category: "AI", description: "Advanced open-ended laboratory project focusing on the implementation and optimization of artificial intelligence algorithms and search heuristics.", link: "https://github.com/AbdulAzeemHashmi/Artificial-Intelligence-Open-Ended-Lab", tags: ["Python", "AI Algorithms", "Search Trees"] },
-  { title: "Self-Driving RC Car", category: "AI", description: "An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.", link: "https://github.com/AbdulAzeemHashmi/RC-CAR", tags: ["Python", "AI", "Computer Vision"] },
-  { title: "Probability & Statistics Analyzer", category: "AI", description: "Data analysis platform leveraging mathematical and statistical models for predictive analytics and computational insights.", link: "https://github.com/AbdulAzeemHashmi/Probability-and-Statistics-Project", tags: ["Python", "Pandas", "Matplotlib", "Statistics"] },
-  { title: "Database Systems Open Ended Lab", category: "AI", description: "Advanced query building and logical database architecture specialized for intelligent data processing pipelines.", link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Open-Ended-/Lab", tags: ["SQL", "Data Pipeline", "Database Design"] },
-  { title: "Aether Student Portal", category: "Web Development", description: "Full-stack educational management portal featuring secure user roles, interactive dashboards, and scalable architectures.", link: "https://github.com/AbdulAzeemHashmi/Aether-Student-Portal", tags: ["HTML/CSS", "JavaScript", "Node.js", "Backend Design"] },
-  { title: "Personal Next.js Portfolio", category: "Web Development", description: "The source code of this modern, lightning-fast portfolio built with Next.js and Tailwind CSS, fully deployed to Vercel.", link: "https://github.com/AbdulAzeemHashmi/Portfolio", tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"] },
-  { title: "Database Systems Lab Project", category: "Web Development", description: "Dynamic web application seamlessly integrating front-end user experience with fully optimized relational databases.", link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Lab-Project", tags: ["Web App", "MySQL", "Relational Mapping"] },
-  { title: "Rush Hour Traffic Game", category: "Game Development", description: "A logic-heavy strategic puzzle game built with algorithmic board state validations and optimized state evaluation.", link: "https://github.com/AbdulAzeemHashmi/Rush-Hour-Game", tags: ["C++", "Data Structures", "Game Loop"] },
-  { title: "Word Shooter Arcade Game", category: "Game Development", description: "Fast-paced interactive application with dynamic collision handling, scoring algorithms, and clean asset execution.", link: "https://github.com/AbdulAzeemHashmi/Word-Shooter-Game", tags: ["C++", "OOP", "Arcade Architecture"] },
-  { title: "Classic Retro Snake Game", category: "Game Development", description: "Pure C++ logic implementation of the classical snake game incorporating dynamic arrays and precise console rendering.", link: "https://github.com/AbdulAzeemHashmi/Snake-Game", tags: ["C++", "Data Structures", "Memory Management"] },
-  { title: "911 Emergency Data Analysis", category: "Database", description: "Exploratory analysis on massive datasets of 911 emergency calls utilizing document schemas inside MongoDB.", link: "https://github.com/AbdulAzeemHashmi/911-Emergency-Analysis-Mongo-DB", tags: ["MongoDB", "NoSQL", "Data Cleaning", "JSON Schemas"] },
-  { title: "Instagram Lifestyle DB Analysis", category: "Database", description: "Complex relational model analyzing user actions, trends, and lifecycle data metrics inside modern social frameworks.", link: "https://github.com/AbdulAzeemHashmi/Instagram-Lifestyle-DB-Analysis", tags: ["MySQL", "Relational Schema", "Complex Queries"] },
+  { 
+    title: "Artificial Intelligence Open Ended Lab",
+    category: "AI",
+    description: "Open-ended laboratory project focused on building an AI video processing pipeline using object detection, image captioning, and scene impact scoring techniques.",
+    link: "https://github.com/AbdulAzeemHashmi/Artificial-Intelligence-Open-Ended-Lab",
+    tags: ["Python", "Numpy","Scikit-Learn","Machine Learning", "Matplotlib", "Data Visualization","Computer Vision"] 
+  },
+  { 
+    title: "Self-Driving RC Car", 
+    category: "AI", 
+    description: "An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.", 
+    link: "https://github.com/AbdulAzeemHashmi/RC-CAR", 
+    tags: ["ESP32", "C++", "Python", "AI", "Computer Vision"] 
+  },
+  { 
+    title: "Probability & Statistics Analyzer", 
+    category: "AI", 
+    description: "Data analysis platform leveraging mathematical and statistical models for predictive analytics and computational insights.", 
+    link: "https://github.com/AbdulAzeemHashmi/Probability-and-Statistics-Project", 
+    tags: ["Python", "Pandas", "Matplotlib", "Scikit-Learn", "Statistics"] 
+  },
+  { 
+    title: "Database Systems Open Ended Lab", 
+    category: "AI", 
+    description: "Open-ended laboratory project exploring vector databases, covering embeddings, similarity search, and indexing for intelligent data retrieval.", 
+    link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Open-Ended-/Lab", 
+    tags: ["Python", "Pinecone", "Numpy", "Matplotlib", "KNN"] 
+  },
+  { 
+    title: "Aether Student Portal", 
+    category: "Web Development",
+    description: "Full-stack educational management portal featuring secure user roles, interactive dashboards, and scalable architectures.", 
+    link: "https://github.com/AbdulAzeemHashmi/Aether-Student-Portal", 
+    tags: ["HTML/CSS", "JavaScript", "Node.js", "Backend Design"] 
+  },
+  { 
+    title: "Personal Next.js Portfolio", 
+    category: "Web Development", 
+    description: "The source code of this modern, lightning-fast portfolio built with Next.js and Tailwind CSS, fully deployed to Vercel.", 
+    link: "https://github.com/AbdulAzeemHashmi/Portfolio",
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"] 
+  },
+  { 
+    title: "Database Systems Lab Project", 
+    category: "Web Development", 
+    description: "Dynamic web application seamlessly integrating front-end user experience with fully optimized relational databases.", link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Lab-Project", 
+    tags: ["Web App", "MySQL", "Relational Mapping"]
+  },
+  { 
+    title: "Rush Hour Traffic Game", 
+    category: "Game Development", 
+    description: "A logic-heavy strategic puzzle game built with algorithmic board state validations and optimized state evaluation.", link: "https://github.com/AbdulAzeemHashmi/Rush-Hour-Game", 
+    tags: ["C++", "Data Structures", "Game Loop"] 
+  },
+  { 
+    title: "Word Shooter Arcade Game", 
+    category: "Game Development", 
+    description: "Fast-paced interactive application with dynamic collision handling, scoring algorithms, and clean asset execution.", link: "https://github.com/AbdulAzeemHashmi/Word-Shooter-Game", 
+    tags: ["C++", "OOP", "Arcade Architecture"] 
+  },
+  { 
+    title: "Classic Retro Snake Game", 
+    category: "Game Development", 
+    description: "Pure C++ logic implementation of the classical snake game incorporating dynamic arrays and precise console rendering.", link: "https://github.com/AbdulAzeemHashmi/Snake-Game", 
+    tags: ["C++", "Data Structures", "Memory Management"] 
+  },
+  { 
+    title: "911 Emergency Data Analysis", 
+    category: "Database", 
+    description: "Exploratory analysis on massive datasets of 911 emergency calls utilizing document schemas inside MongoDB.", link: "https://github.com/AbdulAzeemHashmi/911-Emergency-Analysis-Mongo-DB", 
+    tags: ["MongoDB", "NoSQL", "Data Cleaning", "JSON Schemas"] 
+  },
+  { 
+    title: "Instagram Lifestyle DB Analysis", 
+    category: "Database", 
+    description: "Complex relational model analyzing user actions, trends, and lifecycle data metrics inside modern social frameworks.", link: "https://github.com/AbdulAzeemHashmi/Instagram-Lifestyle-DB-Analysis", 
+    tags: ["MySQL", "Relational Schema", "Complex Queries"] 
+  },
 ];
 
 const SKILLS = [
