@@ -50,19 +50,12 @@ const PROJECTS = [
     tags: ["Next.js", "FastAPI", "LangChain", "Gemini API", "Supabase"]
   },
   {
-    title: "Agentic UAV Mission Planner",
+    title: "AI Image Verifier",
     category: "AI",
-    description: "An end-to-end mission planning simulator that processes natural language requests, generates optimized waypoint routes, and enforces multi-rule airspace compliance.",
-    link: "https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner",
-    tags: ["Python", "Streamlit", "Google Gemini", "Folium", "SQLite"]
-  },
-  {
-    title: "AI Resume Analyzer",
-    category: "AI",
-    description: "An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using OpenAI, and provides download options in PDF/DOCX format.",
-    link: "https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer",
-    liveLink: "https://ai-resume-analyzer-aah18751.vercel.app/",
-    tags: ["TypeScript", "Tailwind CSS", "Python", "Flask", "OpenAI API"]
+    description: "An intelligent image verification system leveraging vision models to analyze, authenticate, and process image content with precision.",
+    link: "https://github.com/AbdulAzeemHashmi/AI-Image-Verifier",
+    liveLink: "https://ai-image-verifier.vercel.app/",
+    tags: ["Next.js", "AI", "Hugging Face", "Supabase", "TypeScript"]
   },
   {
     title: "AI Chatbot",
@@ -73,40 +66,55 @@ const PROJECTS = [
     tags: ["Next.js", "FastAPI", "Python", "Gemini API", "TypeScript"]
   },
   {
-    title: "AI Image Verifier",
+    title: "AI Resume Analyzer",
     category: "AI",
-    description: "An intelligent image verification system leveraging vision models to analyze, authenticate, and process image content with precision.",
-    link: "https://github.com/AbdulAzeemHashmi/AI-Image-Verifier",
-    liveLink: "https://ai-image-verifier.vercel.app/",
-    tags: ["Next.js", "AI", "Hugging Face", "Supabase", "TypeScript"]
+    description: "An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using OpenAI, and provides download options in PDF/DOCX format.",
+    link: "https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer",
+    liveLink: "https://ai-resume-analyzer-aah18751.vercel.app/",
+    tags: ["TypeScript", "Tailwind CSS", "Python", "Flask", "OpenAI API"]
   },
-  { 
+  {
+    title: "Agentic UAV Mission Planner",
+    category: "AI",
+    description: "An end-to-end mission planning simulator that processes natural language requests, generates optimized waypoint routes, and enforces multi-rule airspace compliance.",
+    link: "https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner",
+    tags: ["Python", "Streamlit", "Google Gemini", "Folium", "SQLite"]
+  },
+  {
     title: "Artificial Intelligence Open Ended Lab",
     category: "AI",
     description: "Open-ended laboratory project focused on building an AI video processing pipeline using object detection, image captioning, and scene impact scoring techniques.",
     link: "https://github.com/AbdulAzeemHashmi/Artificial-Intelligence-Open-Ended-Lab",
-    tags: ["Python", "Numpy","Scikit-Learn","Machine Learning", "Matplotlib", "Data Visualization","Computer Vision"] 
+    tags: ["Python", "Numpy", "Scikit-Learn", "Machine Learning", "Matplotlib", "Data Visualization", "Computer Vision"]
   },
-  { 
-    title: "Self-Driving RC Car", 
-    category: "AI", 
-    description: "An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.", 
-    link: "https://github.com/AbdulAzeemHashmi/RC-CAR", 
-    tags: ["ESP32", "C++", "Python", "AI", "Computer Vision"] 
+  {
+    title: "RC Car",
+    category: "AI",
+    description: "An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.",
+    link: "https://github.com/AbdulAzeemHashmi/RC-CAR",
+    tags: ["ESP32", "C++", "Python", "AI", "Computer Vision"]
   },
-  { 
-    title: "Probability & Statistics Analyzer", 
-    category: "AI", 
-    description: "Data analysis platform leveraging mathematical and statistical models for predictive analytics and computational insights.", 
-    link: "https://github.com/AbdulAzeemHashmi/Probability-and-Statistics-Project", 
-    tags: ["Python", "Pandas", "Matplotlib", "Scikit-Learn", "Statistics"] 
+  {
+    title: "Probability & Statistics Analyzer",
+    category: "AI",
+    description: "Data analysis platform leveraging mathematical and statistical models for predictive analytics and computational insights.",
+    link: "https://github.com/AbdulAzeemHashmi/Probability-and-Statistics-Project",
+    tags: ["Python", "Pandas", "Matplotlib", "Scikit-Learn", "Statistics"]
   },
-  { 
-    title: "Database Systems Open Ended Lab", 
-    category: "AI", 
-    description: "Open-ended laboratory project exploring vector databases, covering embeddings, similarity search, and indexing for intelligent data retrieval.", 
-    link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Open-Ended-/Lab", 
-    tags: ["Python", "Pinecone", "Numpy", "Matplotlib", "KNN"] 
+  {
+    title: "Database Systems Open Ended Lab",
+    category: "AI",
+    description: "Open-ended laboratory project exploring vector databases, covering embeddings, similarity search, and indexing for intelligent data retrieval.",
+    link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Open-Ended-/Lab",
+    tags: ["Python", "Pinecone", "Numpy", "Matplotlib", "KNN"]
+  },
+  {
+    title: "Personal Portfolio",
+    category: "Web Development",
+    description: "The source code of this modern, lightning-fast portfolio built with Next.js and Tailwind CSS, fully deployed to Vercel.",
+    link: "https://github.com/AbdulAzeemHashmi/Portfolio",
+    liveLink: "https://abdulazeemhashmi.vercel.app/",
+    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"]
   },
   {
     title: "Support Ticket Management System",
@@ -123,55 +131,48 @@ const PROJECTS = [
     liveLink: "https://assignment-2-static-webpage-silk.vercel.app/",
     tags: ["HTML/CSS", "JavaScript", "Vercel", "Responsive Design"]
   },
-  { 
-    title: "Aether Student Portal", 
+  {
+    title: "Aether Student Portal",
     category: "Web Development",
-    description: "Full-stack educational management portal featuring secure user roles, interactive dashboards, and scalable architectures.", 
-    link: "https://github.com/AbdulAzeemHashmi/Aether-Student-Portal", 
-    tags: ["HTML/CSS", "JavaScript", "Node.js", "Backend Design"] 
+    description: "Full-stack educational management portal featuring secure user roles, interactive dashboards, and scalable architectures.",
+    link: "https://github.com/AbdulAzeemHashmi/Aether-Student-Portal",
+    tags: ["HTML/CSS", "JavaScript", "Node.js", "Backend Design"]
   },
-  { 
-    title: "Personal Next.js Portfolio", 
-    category: "Web Development", 
-    description: "The source code of this modern, lightning-fast portfolio built with Next.js and Tailwind CSS, fully deployed to Vercel.", 
-    link: "https://github.com/AbdulAzeemHashmi/Portfolio",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"] 
-  },
-  { 
-    title: "Database Systems Lab Project", 
-    category: "Web Development", 
-    description: "Dynamic web application seamlessly integrating front-end user experience with fully optimized relational databases.", link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Lab-Project", 
+  {
+    title: "Database Systems Lab Project",
+    category: "Web Development",
+    description: "Dynamic web application seamlessly integrating front-end user experience with fully optimized relational databases.", link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Lab-Project",
     tags: ["Web App", "MySQL", "Relational Mapping"]
   },
-  { 
-    title: "Rush Hour Traffic Game", 
-    category: "Game Development", 
-    description: "A logic-heavy strategic puzzle game built with algorithmic board state validations and optimized state evaluation.", link: "https://github.com/AbdulAzeemHashmi/Rush-Hour-Game", 
-    tags: ["C++", "Data Structures", "Game Loop"] 
+  {
+    title: "Rush Hour Game",
+    category: "Game Development",
+    description: "A logic-heavy strategic puzzle game built with algorithmic board state validations and optimized state evaluation.", link: "https://github.com/AbdulAzeemHashmi/Rush-Hour-Game",
+    tags: ["C++", "Data Structures", "Game Loop"]
   },
-  { 
-    title: "Word Shooter Arcade Game", 
-    category: "Game Development", 
-    description: "Fast-paced interactive application with dynamic collision handling, scoring algorithms, and clean asset execution.", link: "https://github.com/AbdulAzeemHashmi/Word-Shooter-Game", 
-    tags: ["C++", "OOP", "Arcade Architecture"] 
+  {
+    title: "Word Shooter Game",
+    category: "Game Development",
+    description: "Fast-paced interactive application with dynamic collision handling, scoring algorithms, and clean asset execution.", link: "https://github.com/AbdulAzeemHashmi/Word-Shooter-Game",
+    tags: ["C++", "OOP", "Arcade Architecture"]
   },
-  { 
-    title: "Classic Retro Snake Game", 
-    category: "Game Development", 
-    description: "Pure C++ logic implementation of the classical snake game incorporating dynamic arrays and precise console rendering.", link: "https://github.com/AbdulAzeemHashmi/Snake-Game", 
-    tags: ["C++", "Data Structures", "Memory Management"] 
+  {
+    title: "Snake Game",
+    category: "Game Development",
+    description: "Pure C++ logic implementation of the classical snake game incorporating dynamic arrays and precise console rendering.", link: "https://github.com/AbdulAzeemHashmi/Snake-Game",
+    tags: ["C++", "Data Structures", "Memory Management"]
   },
-  { 
-    title: "911 Emergency Data Analysis", 
-    category: "Database", 
-    description: "Exploratory analysis on massive datasets of 911 emergency calls utilizing document schemas inside MongoDB.", link: "https://github.com/AbdulAzeemHashmi/911-Emergency-Analysis-Mongo-DB", 
-    tags: ["MongoDB", "NoSQL", "Data Cleaning", "JSON Schemas"] 
+  {
+    title: "911 Emergency Data Analysis",
+    category: "Database",
+    description: "Exploratory analysis on massive datasets of 911 emergency calls utilizing document schemas inside MongoDB.", link: "https://github.com/AbdulAzeemHashmi/911-Emergency-Analysis-Mongo-DB",
+    tags: ["MongoDB", "NoSQL", "Data Cleaning", "JSON Schemas"]
   },
-  { 
-    title: "Instagram Lifestyle DB Analysis", 
-    category: "Database", 
-    description: "Complex relational model analyzing user actions, trends, and lifecycle data metrics inside modern social frameworks.", link: "https://github.com/AbdulAzeemHashmi/Instagram-Lifestyle-DB-Analysis", 
-    tags: ["MySQL", "Relational Schema", "Complex Queries"] 
+  {
+    title: "Instagram Lifestyle DB Analysis",
+    category: "Database",
+    description: "Complex relational model analyzing user actions, trends, and lifecycle data metrics inside modern social frameworks.", link: "https://github.com/AbdulAzeemHashmi/Instagram-Lifestyle-DB-Analysis",
+    tags: ["MySQL", "Relational Schema", "Complex Queries"]
   },
 ];
 
@@ -190,7 +191,7 @@ function BackgroundMusic() {
   useEffect(() => {
     const initPlayer = () => {
       if (playerRef.current) return;
-      
+
       playerRef.current = new (window as any).YT.Player("youtube-audio-pipeline", {
         height: "0",
         width: "0",
