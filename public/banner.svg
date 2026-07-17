@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020205" />
+      <stop offset="50%" stop-color="#08071a" />
+      <stop offset="100%" stop-color="#050b14" />
+    </linearGradient>
+
+    <!-- Text Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a2be2">
+        <animate attributeName="stop-color" values="#8a2be2;#ff007f;#00f2fe;#8a2be2" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#8a2be2;#ff007f;#00f2fe" dur="10s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Glowing Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Subtitle Glow -->
+    <filter id="glow-sub" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      fill: url(#textGrad);
+      filter: url(#glow);
+      letter-spacing: 3px;
+    }
+    .subtitle {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      fill: #a0aec0;
+      letter-spacing: 5px;
+    }
+    .tagline {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      fill: #4a5568;
+      letter-spacing: 2px;
+    }
+    .particle {
+      animation: float 8s indefinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+      50% { transform: translateY(-20px) translateX(10px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <!-- Grid Pattern Overlay -->
+  <g opacity="0.07">
+    <path d="M 0,50 L 800,50 M 0,100 L 800,100 M 0,150 L 800,150 M 0,200 L 800,200 M 0,250 L 800,250" stroke="#00f2fe" stroke-width="1" />
+    <path d="M 100,0 L 100,300 M 200,0 L 200,300 M 300,0 L 300,300 M 400,0 L 400,300 M 500,0 L 500,300 M 600,0 L 600,300 M 700,0 L 700,300" stroke="#00f2fe" stroke-width="1" />
+  </g>
+
+  <!-- Glowing Particles / Nodes with Keyframe Animations -->
+  <!-- Particle 1 -->
+  <circle cx="120" cy="80" r="4" fill="#00f2fe" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.2;0.9;0.2" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="80;70;80" dur="8s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Particle 2 -->
+  <circle cx="680" cy="220" r="3" fill="#ff007f" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="680;690;680" dur="10s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Particle 3 -->
+  <circle cx="250" cy="240" r="5" fill="#8a2be2" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="7s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="240;225;240" dur="9s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Particle 4 -->
+  <circle cx="580" cy="70" r="4.5" fill="#00f2fe" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="cy" values="70;85;70" dur="7s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Animated Glowing Lines (Neural Net / Circuit Style) -->
+  <path d="M -50,150 Q 150,80 300,150 T 650,150 T 850,150" fill="none" stroke="url(#textGrad)" stroke-width="2" opacity="0.25" stroke-dasharray="10 15">
+    <animate attributeName="stroke-dashoffset" values="0;100" dur="15s" repeatCount="indefinite" />
+  </path>
+  
+  <path d="M -50,150 Q 200,220 400,150 T 850,150" fill="none" stroke="#00f2fe" stroke-width="1.5" opacity="0.15" stroke-dasharray="5 10">
+    <animate attributeName="stroke-dashoffset" values="100;0" dur="12s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Center Text and Info -->
+  <g transform="translate(400, 135)" text-anchor="middle">
+    <!-- Main Title -->
+    <text y="0" class="title">ABDUL AZEEM HASHMI</text>
+    
+    <!-- Subtitle (No hyphens or en/em dashes) -->
+    <text y="45" class="subtitle">AI ENGINEER * FULL STACK DEVELOPER</text>
+    
+    <!-- Tagline / Focus areas -->
+    <text y="80" class="tagline">Data Science * Low-Level Programming * Interactive Systems</text>
+  </g>
+
+  <!-- Sleek Glowing Borders -->
+  <rect x="15" y="15" width="770" height="270" rx="10" fill="none" stroke="url(#textGrad)" stroke-width="1.5" opacity="0.3" filter="url(#glow-sub)">
+    <animate attributeName="stroke-opacity" values="0.1;0.4;0.1" dur="4s" repeatCount="indefinite" />
+  </rect>
+
+</svg>
