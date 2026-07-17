@@ -108,6 +108,21 @@ const PROJECTS = [
     link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Open-Ended-/Lab", 
     tags: ["Python", "Pinecone", "Numpy", "Matplotlib", "KNN"] 
   },
+  {
+    title: "Support Ticket Management System",
+    category: "Web Development",
+    description: "A full-stack support ticket management system featuring CRUD dashboards, live statistics, form validation, and persistent SQLite storage.",
+    link: "https://github.com/AbdulAzeemHashmi/support-ticket-management-system",
+    tags: ["Node.js", "Express", "SQLite", "JavaScript", "HTML/CSS"]
+  },
+  {
+    title: "Assignment & Project Services",
+    category: "Web Development",
+    description: "A fully responsive static web page offering assignment and project services with an instant PKR price calculator and direct contact options.",
+    link: "https://github.com/AbdulAzeemHashmi/assignment-2-static-webpage",
+    liveLink: "https://assignment-2-static-webpage-silk.vercel.app/",
+    tags: ["HTML/CSS", "JavaScript", "Vercel", "Responsive Design"]
+  },
   { 
     title: "Aether Student Portal", 
     category: "Web Development",
