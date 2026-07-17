@@ -13,6 +13,11 @@
   transition: color 0.15s linear;
 }
 
+/* Subtle shadow for hero description text */
+.hero-desc-shadow {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

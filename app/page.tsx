@@ -613,8 +613,8 @@ export default function Home() {
             <span className="dynamic-text-contrast">Hi, I'm </span><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Abdul Azeem Hashmi</span>
           </h1>
 
-          <p className="text-base md:text-xl text-slate-300 max-w-2xl font-light leading-relaxed mb-8 z-10 px-2">
-            A passionate <span className="text-cyan-300 font-medium">BS Artificial Intelligence</span> student building clean backend architectures, relational data pipelines, performant low-level engines, and interactive web tools.
+          <p className="text-base md:text-xl text-slate-200 max-w-2xl leading-relaxed mb-8 z-10 px-6 py-4 rounded-2xl bg-slate-950/50 backdrop-blur-sm border border-slate-900/40 shadow-xl font-normal hero-desc-shadow">
+            A passionate <span className="text-cyan-300 font-semibold">BS Artificial Intelligence</span> student building clean backend architectures, relational data pipelines, performant low-level engines, and interactive web tools.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center z-10 w-full sm:w-auto px-4 sm:px-0">
