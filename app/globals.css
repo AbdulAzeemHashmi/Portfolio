@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --animation-hue: 0;
+}
+
+/* Dynamic text utility class to always contrast with canvas fluid particles */
+.dynamic-text-contrast {
+  color: hsl(calc(var(--animation-hue) + 180), 100%, 85%) !important;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.9);
+  transition: color 0.15s linear;
 }
 
 @theme inline {

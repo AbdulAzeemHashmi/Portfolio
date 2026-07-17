@@ -435,6 +435,10 @@ export default function Home() {
       ctx.fillStyle = "rgba(2, 6, 23, 0.06)";
       ctx.fillRect(0, 0, width, height);
 
+      // Increment hue slowly on each frame and update CSS custom property
+      baseHue = (baseHue + 0.3) % 360;
+      document.documentElement.style.setProperty('--animation-hue', baseHue.toFixed(1));
+
       ctx.globalCompositeOperation = "lighter";
       const time = Date.now() * 0.002;
 
@@ -605,8 +609,8 @@ export default function Home() {
             FAST NUCES Islamabad • Batch '24
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white z-10 max-w-3xl leading-tight">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Abdul Azeem Hashmi</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4 z-10 max-w-3xl leading-tight text-white">
+            <span className="dynamic-text-contrast">Hi, I'm </span><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Abdul Azeem Hashmi</span>
           </h1>
 
           <p className="text-base md:text-xl text-slate-400 max-w-2xl font-light leading-relaxed mb-8 z-10 px-2">
@@ -625,7 +629,7 @@ export default function Home() {
 
         <section id="services" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6 border-b border-slate-900/40">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight mb-3 flex justify-center items-center gap-3">
+            <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight mb-3 flex justify-center items-center gap-3">
               <span className="text-indigo-500">❖</span> Services
             </h2>
             <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto px-2">Specialized technical solutions tailored for modern digital challenges.</p>
@@ -638,7 +642,7 @@ export default function Home() {
                   <div className="text-4xl md:text-5xl mb-4 md:mb-6 bg-slate-950/80 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-xl border border-slate-800 group-hover:border-indigo-500 transition-colors">
                     {srv.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 tracking-wide">{srv.title}</h3>
+                  <h3 className="text-lg md:text-xl font-bold dynamic-text-contrast mb-3 tracking-wide">{srv.title}</h3>
                   <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
                     {srv.desc}
                   </p>
@@ -653,7 +657,7 @@ export default function Home() {
 
         <section id="skills" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6 border-b border-slate-900/40">
           <div className="mb-10 text-center sm:text-left">
-            <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight flex items-center justify-center sm:justify-start gap-3">
+            <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight flex items-center justify-center sm:justify-start gap-3">
               <span className="text-cyan-500">⚡</span> Skills
             </h2>
             <p className="text-slate-400 text-sm md:text-base mt-2">My core competencies and technology stack.</p>
@@ -684,7 +688,7 @@ export default function Home() {
         <section id="projects" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6 border-b border-slate-900/40">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-10 gap-6">
             <div className="text-center lg:text-left w-full lg:w-auto">
-              <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight flex items-center justify-center lg:justify-start gap-3">
+              <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight flex items-center justify-center lg:justify-start gap-3">
                 <span className="text-emerald-500">⌘</span> Projects
               </h2>
               <p className="text-slate-400 text-sm md:text-base mt-2">Filtered codebase architectures mapping specialized domains.</p>
@@ -756,7 +760,7 @@ export default function Home() {
 
         <section id="contact" className="max-w-3xl mx-auto py-16 md:py-24 px-4 sm:px-6">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight flex items-center justify-center gap-3">
+            <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight flex items-center justify-center gap-3">
               <span className="text-pink-500">✉</span> Contact
             </h2>
             <p className="text-slate-400 text-sm md:text-base mt-2">Currently open for technical deep dives or custom engineering solutions.</p>
