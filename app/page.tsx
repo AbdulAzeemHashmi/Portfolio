@@ -117,19 +117,19 @@ const PROJECTS = [
     tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"]
   },
   {
-    title: "Support Ticket Management System",
-    category: "Web Development",
-    description: "A full-stack support ticket management system featuring CRUD dashboards, live statistics, form validation, and persistent SQLite storage.",
-    link: "https://github.com/AbdulAzeemHashmi/support-ticket-management-system",
-    tags: ["Node.js", "Express", "SQLite", "JavaScript", "HTML/CSS"]
-  },
-  {
     title: "Assignment & Project Services",
     category: "Web Development",
     description: "A fully responsive static web page offering assignment and project services with an instant PKR price calculator and direct contact options.",
     link: "https://github.com/AbdulAzeemHashmi/assignment-2-static-webpage",
     liveLink: "https://assignment-2-static-webpage-silk.vercel.app/",
     tags: ["HTML/CSS", "JavaScript", "Vercel", "Responsive Design"]
+  },
+  {
+    title: "Support Ticket Management System",
+    category: "Web Development",
+    description: "A full-stack support ticket management system featuring CRUD dashboards, live statistics, form validation, and persistent SQLite storage.",
+    link: "https://github.com/AbdulAzeemHashmi/support-ticket-management-system",
+    tags: ["Node.js", "Express", "SQLite", "JavaScript", "HTML/CSS"]
   },
   {
     title: "Aether Student Portal",
@@ -141,37 +141,43 @@ const PROJECTS = [
   {
     title: "Database Systems Lab Project",
     category: "Web Development",
-    description: "Dynamic web application seamlessly integrating front-end user experience with fully optimized relational databases.", link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Lab-Project",
+    description: "Dynamic web application seamlessly integrating front-end user experience with fully optimized relational databases.",
+    link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Lab-Project",
     tags: ["Web App", "MySQL", "Relational Mapping"]
   },
   {
     title: "Rush Hour Game",
     category: "Game Development",
-    description: "A logic-heavy strategic puzzle game built with algorithmic board state validations and optimized state evaluation.", link: "https://github.com/AbdulAzeemHashmi/Rush-Hour-Game",
+    description: "A logic-heavy strategic puzzle game built with algorithmic board state validations and optimized state evaluation.",
+    link: "https://github.com/AbdulAzeemHashmi/Rush-Hour-Game",
     tags: ["C++", "Data Structures", "Game Loop"]
   },
   {
     title: "Word Shooter Game",
     category: "Game Development",
-    description: "Fast-paced interactive application with dynamic collision handling, scoring algorithms, and clean asset execution.", link: "https://github.com/AbdulAzeemHashmi/Word-Shooter-Game",
+    description: "Fast-paced interactive application with dynamic collision handling, scoring algorithms, and clean asset execution.",
+    link: "https://github.com/AbdulAzeemHashmi/Word-Shooter-Game",
     tags: ["C++", "OOP", "Arcade Architecture"]
   },
   {
     title: "Snake Game",
     category: "Game Development",
-    description: "Pure C++ logic implementation of the classical snake game incorporating dynamic arrays and precise console rendering.", link: "https://github.com/AbdulAzeemHashmi/Snake-Game",
+    description: "Pure C++ logic implementation of the classical snake game incorporating dynamic arrays and precise console rendering.",
+    link: "https://github.com/AbdulAzeemHashmi/Snake-Game",
     tags: ["C++", "Data Structures", "Memory Management"]
   },
   {
     title: "911 Emergency Data Analysis",
     category: "Database",
-    description: "Exploratory analysis on massive datasets of 911 emergency calls utilizing document schemas inside MongoDB.", link: "https://github.com/AbdulAzeemHashmi/911-Emergency-Analysis-Mongo-DB",
+    description: "Exploratory analysis on massive datasets of 911 emergency calls utilizing document schemas inside MongoDB.",
+    link: "https://github.com/AbdulAzeemHashmi/911-Emergency-Analysis-Mongo-DB",
     tags: ["MongoDB", "NoSQL", "Data Cleaning", "JSON Schemas"]
   },
   {
     title: "Instagram Lifestyle DB Analysis",
     category: "Database",
-    description: "Complex relational model analyzing user actions, trends, and lifecycle data metrics inside modern social frameworks.", link: "https://github.com/AbdulAzeemHashmi/Instagram-Lifestyle-DB-Analysis",
+    description: "Complex relational model analyzing user actions, trends, and lifecycle data metrics inside modern social frameworks.",
+    link: "https://github.com/AbdulAzeemHashmi/Instagram-Lifestyle-DB-Analysis",
     tags: ["MySQL", "Relational Schema", "Complex Queries"]
   },
 ];
