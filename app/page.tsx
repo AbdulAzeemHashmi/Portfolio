@@ -632,7 +632,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight mb-3 flex justify-center items-center gap-3">
               <span className="text-indigo-500">❖</span> Services
             </h2>
-            <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto px-2">Specialized technical solutions tailored for modern digital challenges.</p>
+            <p className="text-slate-200 text-sm md:text-base max-w-2xl mx-auto px-2 font-medium hero-desc-shadow">Specialized technical solutions tailored for modern digital challenges.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
