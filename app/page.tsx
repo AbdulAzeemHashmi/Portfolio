@@ -465,9 +465,9 @@ export default function Home() {
         }
 
         const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
-        gradient.addColorStop(0, `hsla(${p.hue}, 95%, 55%, ${p.alpha})`);
-        gradient.addColorStop(0.25, `hsla(${p.hue}, 90%, 50%, ${p.alpha * 0.35})`);
-        gradient.addColorStop(0.6, `hsla(${p.hue}, 85%, 45%, ${p.alpha * 0.08})`);
+        gradient.addColorStop(0, `hsla(${p.hue}, 95%, 55%, ${p.alpha * 0.4})`);
+        gradient.addColorStop(0.25, `hsla(${p.hue}, 90%, 50%, ${p.alpha * 0.15})`);
+        gradient.addColorStop(0.6, `hsla(${p.hue}, 85%, 45%, ${p.alpha * 0.03})`);
         gradient.addColorStop(1, "rgba(0,0,0,0)");
 
         ctx.fillStyle = gradient;
@@ -532,7 +532,7 @@ export default function Home() {
       <BackgroundMusic />
 
       <div className="relative z-10 pointer-events-auto">
-        <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/70 backdrop-blur-md border-b border-slate-900/60">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-900/60">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <span className="text-cyan-400 font-bold tracking-widest">AAH.</span>
 
@@ -613,7 +613,7 @@ export default function Home() {
             <span className="dynamic-text-contrast">Hi, I'm </span><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">Abdul Azeem Hashmi</span>
           </h1>
 
-          <p className="text-base md:text-xl text-slate-400 max-w-2xl font-light leading-relaxed mb-8 z-10 px-2">
+          <p className="text-base md:text-xl text-slate-300 max-w-2xl font-light leading-relaxed mb-8 z-10 px-2">
             A passionate <span className="text-cyan-300 font-medium">BS Artificial Intelligence</span> student building clean backend architectures, relational data pipelines, performant low-level engines, and interactive web tools.
           </p>
 
@@ -632,22 +632,22 @@ export default function Home() {
             <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight mb-3 flex justify-center items-center gap-3">
               <span className="text-indigo-500">❖</span> Services
             </h2>
-            <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto px-2">Specialized technical solutions tailored for modern digital challenges.</p>
+            <p className="text-slate-300 text-sm md:text-base max-w-2xl mx-auto px-2">Specialized technical solutions tailored for modern digital challenges.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {SERVICES.map((srv, i) => (
-              <div key={i} className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/60 rounded-2xl p-6 md:p-8 hover:-translate-y-1 hover:border-indigo-500/50 transition-all duration-300 group shadow-lg shadow-black/30 flex flex-col justify-between">
+              <div key={i} className="bg-slate-950/80 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 md:p-8 hover:-translate-y-1 hover:border-indigo-500/50 transition-all duration-300 group shadow-lg shadow-black/30 flex flex-col justify-between">
                 <div>
                   <div className="text-4xl md:text-5xl mb-4 md:mb-6 bg-slate-950/80 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-xl border border-slate-800 group-hover:border-indigo-500 transition-colors">
                     {srv.icon}
                   </div>
                   <h3 className="text-lg md:text-xl font-bold dynamic-text-contrast mb-3 tracking-wide">{srv.title}</h3>
-                  <p className="text-slate-400 text-xs md:text-sm leading-relaxed mb-6">
+                  <p className="text-slate-300 text-xs md:text-sm leading-relaxed mb-6">
                     {srv.desc}
                   </p>
                 </div>
-                <p className="text-[11px] md:text-xs font-semibold text-indigo-400 bg-indigo-950/20 p-3 rounded-lg border border-indigo-900/30">
+                <p className="text-[11px] md:text-xs font-semibold text-indigo-300 bg-indigo-950/50 p-3 rounded-lg border border-indigo-900/50">
                   {srv.highlight}
                 </p>
               </div>
@@ -660,19 +660,19 @@ export default function Home() {
             <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight flex items-center justify-center sm:justify-start gap-3">
               <span className="text-cyan-500">⚡</span> Skills
             </h2>
-            <p className="text-slate-400 text-sm md:text-base mt-2">My core competencies and technology stack.</p>
+            <p className="text-slate-300 text-sm md:text-base mt-2">My core competencies and technology stack.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {SKILLS.map((skill, i) => (
-              <div key={i} className="bg-slate-900/30 backdrop-blur-sm border border-slate-800/60 p-5 md:p-6 rounded-xl hover:border-cyan-500/50 transition group">
+              <div key={i} className="bg-slate-950/80 backdrop-blur-md border border-slate-800/80 p-5 md:p-6 rounded-xl hover:border-cyan-500/50 transition group">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-xl md:text-2xl">{skill.icon}</span>
                   <h3 className="text-base md:text-lg font-bold text-slate-100 group-hover:text-cyan-400 transition">
                     {skill.category}
                   </h3>
                 </div>
-                <p className="text-slate-400 text-xs md:text-sm mb-4 font-light">{skill.desc}</p>
+                <p className="text-slate-300 text-xs md:text-sm mb-4 font-light">{skill.desc}</p>
                 <div className="flex flex-wrap gap-1.5 md:gap-2">
                   {skill.list.map((item, idx) => (
                     <span key={idx} className="bg-slate-950/80 border border-slate-800 text-cyan-300 px-2.5 py-1 rounded-md text-[11px] font-medium">
@@ -691,7 +691,7 @@ export default function Home() {
               <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight flex items-center justify-center lg:justify-start gap-3">
                 <span className="text-emerald-500">⌘</span> Projects
               </h2>
-              <p className="text-slate-400 text-sm md:text-base mt-2">Filtered codebase architectures mapping specialized domains.</p>
+              <p className="text-slate-300 text-sm md:text-base mt-2">Filtered codebase architectures mapping specialized domains.</p>
             </div>
 
             <div className="flex flex-wrap gap-1.5 bg-slate-900/60 backdrop-blur-sm border border-slate-800/80 p-1.5 rounded-xl justify-center w-full lg:w-auto">
@@ -712,7 +712,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {filteredProjects.map((project, idx) => (
-              <div key={idx} className="bg-slate-900/20 backdrop-blur-sm border border-slate-800/60 rounded-xl p-5 md:p-6 flex flex-col justify-between hover:border-emerald-500/50 hover:bg-slate-900/60 transition-all duration-300 group relative">
+              <div key={idx} className="bg-slate-950/80 backdrop-blur-md border border-slate-800/80 rounded-xl p-5 md:p-6 flex flex-col justify-between hover:border-emerald-500/50 hover:bg-slate-950/95 transition-all duration-300 group relative">
                 <div>
                   <span className="text-[9px] uppercase tracking-widest text-emerald-400 font-bold bg-emerald-950/30 border border-emerald-900/40 px-2 py-0.5 rounded mb-3 inline-block">
                     {project.category}
@@ -720,14 +720,14 @@ export default function Home() {
                   <h3 className="text-base md:text-lg font-bold text-slate-100 mb-2 group-hover:text-cyan-400 transition">
                     {project.title}
                   </h3>
-                  <p className="text-slate-400 text-xs font-light leading-relaxed mb-6">
+                  <p className="text-slate-300 text-xs font-light leading-relaxed mb-6">
                     {project.description}
                   </p>
                 </div>
                 <div>
                   <div className="flex flex-wrap gap-1.5 mb-5">
                     {project.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="text-[10px] bg-slate-950/80 text-slate-400 px-2 py-0.5 rounded border border-slate-800">
+                      <span key={tIdx} className="text-[10px] bg-slate-950/80 text-slate-300 px-2 py-0.5 rounded border border-slate-800">
                         {tag}
                       </span>
                     ))}
@@ -763,10 +763,10 @@ export default function Home() {
             <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight flex items-center justify-center gap-3">
               <span className="text-pink-500">✉</span> Contact
             </h2>
-            <p className="text-slate-400 text-sm md:text-base mt-2">Currently open for technical deep dives or custom engineering solutions.</p>
+            <p className="text-slate-300 text-sm md:text-base mt-2">Currently open for technical deep dives or custom engineering solutions.</p>
           </div>
 
-          <form onSubmit={handleFormSubmit} className="bg-slate-900/40 backdrop-blur-sm border border-slate-800/60 p-5 sm:p-8 rounded-2xl shadow-xl transition-all">
+          <form onSubmit={handleFormSubmit} className="bg-slate-950/80 backdrop-blur-md border border-slate-800/80 p-5 sm:p-8 rounded-2xl shadow-xl transition-all">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
               <div>
                 <label className="block text-xs md:text-sm font-medium text-slate-300 mb-2">Your Name</label>
@@ -844,7 +844,7 @@ export default function Home() {
           </form>
         </section>
 
-        <footer className="bg-slate-950/40 backdrop-blur-sm border-t border-slate-900 py-10 px-4 text-center">
+        <footer className="bg-slate-950/80 backdrop-blur-md border-t border-slate-900 py-10 px-4 text-center">
           <div className="flex justify-center gap-6 mb-6">
             <a href="https://github.com/AbdulAzeemHashmi" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-cyan-400 transition" aria-label="GitHub Profile Pipeline Lookup">
               <svg className="w-5 h-5 md:w-6 md:h-6 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
