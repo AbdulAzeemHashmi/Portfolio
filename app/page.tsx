@@ -42,6 +42,29 @@ const SERVICES = [
 
 const PROJECTS = [
   {
+    title: "Autonomous Digital Employee",
+    category: "AI",
+    description: "An AI-powered full-stack workstation enabling users to delegate complex tasks to an autonomous digital agent with real-time database logging and Google Gemini primary integration.",
+    link: "https://github.com/AbdulAzeemHashmi/autonomous-digital-employee",
+    liveLink: "https://autonomous-digital-employee-zeta.vercel.app/",
+    tags: ["Next.js", "FastAPI", "LangChain", "Gemini API", "Supabase"]
+  },
+  {
+    title: "Agentic UAV Mission Planner",
+    category: "AI",
+    description: "An end-to-end mission planning simulator that processes natural language requests, generates optimized waypoint routes, and enforces multi-rule airspace compliance.",
+    link: "https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner",
+    tags: ["Python", "Streamlit", "Google Gemini", "Folium", "SQLite"]
+  },
+  {
+    title: "AI Resume Analyzer",
+    category: "AI",
+    description: "An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using OpenAI, and provides download options in PDF/DOCX format.",
+    link: "https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer",
+    liveLink: "https://ai-resume-analyzer-aah18751.vercel.app/",
+    tags: ["TypeScript", "Tailwind CSS", "Python", "Flask", "OpenAI API"]
+  },
+  {
     title: "AI Chatbot",
     category: "AI",
     description: "A production-ready full-stack AI Chatbot application featuring a fast Python FastAPI backend and a responsive Next.js frontend, powered by the Google Gemini API.",
