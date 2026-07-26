@@ -255,7 +255,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to explore t
 <a href="https://github.com/AbdulAzeemHashmi">
   <img src="https://img.shields.io/badge/GitHub-@AbdulAzeemHashmi-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
-<a href="mailto:abdulazeemhashmi29@gmail.com">
+<a href="mailto:abdulazeem7982@gmail.com">
   <img src="https://img.shields.io/badge/Email-abdulazeemhashmi29%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
 
