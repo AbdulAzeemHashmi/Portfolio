@@ -37,10 +37,10 @@ Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This w
 
 ```
        ┌─────────────────────────────────────────────────────────────┐
-       │                 🌌 ABDUL AZEEM HASHMI 🌌                    │
+       │                 🌌 ABDUL AZEEM HASHMI 🌌                   │
        ├─────────────────────────────────────────────────────────────┤
-       │  🧠 AI & Data Science   |   ⚙️ Backend & DB Architecture     │
-       │  🚀 Low-Level Logic     |   💻 Modern Web App (Next.js 16)   │
+       │  🧠 AI & Data Science   |  ⚙️ Backend & DB Architecture    │
+       │  🚀 Low-Level Logic     |  💻 Modern Web App (Next.js 16)  │
        └─────────────────────────────────────────────────────────────┘
 ```
 
