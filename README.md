@@ -99,9 +99,9 @@ Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This w
    * 🛠️ `Next.js` `FastAPI` `Python` `Gemini API` `TypeScript`
 
 4. **AI Resume Analyzer**
-   * An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using OpenAI, and provides download options in PDF/DOCX format.
+   * An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using Gemini, and provides download options in PDF/DOCX format.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer) | [Live Demo](https://ai-resume-analyzer-aah18751.vercel.app/)
-   * 🛠️ `TypeScript` `Tailwind CSS` `Python` `Flask` `OpenAI API`
+   * 🛠️ `TypeScript` `Tailwind CSS` `Python` `Flask` `Gemini API`
 
 5. **Agentic UAV Mission Planner**
    * An end-to-end mission planning simulator that processes natural language requests, generates optimized waypoint routes, and enforces multi-rule airspace compliance.
