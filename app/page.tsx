@@ -17,26 +17,45 @@ interface FluidParticle {
 }
 
 // Static Configurations & Dataset Moves Outside Component to Prevent Re-allocation
-const NAV_LINKS = ["About", "Services", "Skills", "Projects", "Contact"];
+const NAV_LINKS = ["About", "Services", "Experience", "Skills", "Projects", "Contact"];
 
 const SERVICES = [
   {
-    title: "AI & Data Science",
+    title: "Autonomous AI & Agentic Systems",
     icon: "🧠",
-    desc: "Building predictive models, exploratory data analysis (EDA), and intelligent systems using Python, Scikit-Learn, and custom AI logic.",
-    highlight: "Expert in Pandas, NumPy, and Data Pipelines.",
+    desc: "Developing autonomous digital agents, multi-tool AI workstations, and natural language mission planners powered by Gemini, OpenAI, and LangChain.",
+    highlight: "Expert in Gemini API, LangChain, and Agentic Workflows.",
   },
   {
-    title: "Backend & Database Architecture",
+    title: "Full-Stack Web & API Engineering",
+    icon: "⚡",
+    desc: "Building performant, responsive web applications and backend microservices using Next.js, FastAPI, Flask, and Tailwind CSS.",
+    highlight: "Proficient in Next.js, TypeScript, Python, and FastAPI.",
+  },
+  {
+    title: "Database Architecture & Cloud Data",
     icon: "⚙️",
-    desc: "Developing robust server-side logic and highly optimized relational/NoSQL databases to power complex web applications seamlessly.",
-    highlight: "Proficient in SQL, MongoDB, Node.js, and ERD Modeling.",
+    desc: "Designing robust relational and document database schemas with seamless persistence and real-time logging.",
+    highlight: "Comprehensive Supabase, SQLite, MySQL, and MongoDB.",
+  }
+];
+
+const INTERNSHIPS = [
+  {
+    title: "Software Engineering Intern",
+    company: "CODOC PVT LTD",
+    period: "July 2026 - Present",
+    status: "Present",
+    description: "Architecting and implementing scalable software solutions, optimizing full-stack application performance, and collaborating on modern software engineering workflows.",
+    skills: ["Software Engineering", "Full-Stack Development", "TypeScript", "Next.js", "API Design"]
   },
   {
-    title: "Low-Level & Logic Engineering",
-    icon: "🚀",
-    desc: "Crafting performant, logic-heavy applications, algorithms, and game loops with advanced data structures and memory management.",
-    highlight: "Comprehensive C++ and Object-Oriented Programming (OOP).",
+    title: "AI Intern",
+    company: "UAV Dependability Research Lab",
+    period: "June 2026 - August 2026",
+    status: "Completed",
+    description: "Researched and engineered AI logic models for autonomous UAV systems, conducting dependability evaluations, waypoint route optimization, and rule compliance testing.",
+    skills: ["Artificial Intelligence", "Autonomous Systems", "UAV Engineering", "Python", "Model Evaluation"]
   }
 ];
 
@@ -50,20 +69,20 @@ const PROJECTS = [
     tags: ["Next.js", "FastAPI", "LangChain", "Gemini API", "Supabase"]
   },
   {
-    title: "AI Image Verifier",
-    category: "AI",
-    description: "An intelligent image verification system leveraging vision models to analyze, authenticate, and process image content with precision.",
-    link: "https://github.com/AbdulAzeemHashmi/AI-Image-Verifier",
-    liveLink: "https://ai-image-verifier.vercel.app/",
-    tags: ["Next.js", "AI", "Hugging Face", "Supabase", "TypeScript"]
+    title: "Awaaz Pakistan",
+    category: "Web Development",
+    description: "An advocacy and petition platform empowering professionals with AI-generated appeals, multi-lingual voice/document inputs, and automated sign-on workflows.",
+    link: "https://github.com/AbdulAzeemHashmi/Awaaz-Pakistan",
+    liveLink: "https://awaaz-pakistan.vercel.app/",
+    tags: ["Next.js", "AI", "Tailwind CSS", "TypeScript", "Vercel"]
   },
   {
-    title: "AI Chatbot",
+    title: "README AI Enhancer",
     category: "AI",
-    description: "A production-ready full-stack AI Chatbot application featuring a fast Python FastAPI backend and a responsive Next.js frontend, powered by the Google Gemini API.",
-    link: "https://github.com/AbdulAzeemHashmi/AI-Chatbot",
-    liveLink: "https://ai-chatbot-aah18751.vercel.app/",
-    tags: ["Next.js", "FastAPI", "Python", "Gemini API", "TypeScript"]
+    description: "An AI-powered documentation platform leveraging Google Gemini to analyze README weaknesses, detect missing technical sections, and generate polished rewrites.",
+    link: "https://github.com/AbdulAzeemHashmi/readme-ai-enhancer",
+    liveLink: "https://readme-ai-enhancer.vercel.app/",
+    tags: ["Next.js", "Gemini API", "AI", "Tailwind CSS", "TypeScript"]
   },
   {
     title: "AI Resume Analyzer",
@@ -79,114 +98,14 @@ const PROJECTS = [
     description: "An end-to-end mission planning simulator that processes natural language requests, generates optimized waypoint routes, and enforces multi-rule airspace compliance.",
     link: "https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner",
     tags: ["Python", "Streamlit", "Google Gemini", "Folium", "SQLite"]
-  },
-  {
-    title: "Artificial Intelligence Open Ended Lab",
-    category: "AI",
-    description: "Open-ended laboratory project focused on building an AI video processing pipeline using object detection, image captioning, and scene impact scoring techniques.",
-    link: "https://github.com/AbdulAzeemHashmi/Artificial-Intelligence-Open-Ended-Lab",
-    tags: ["Python", "Numpy", "Scikit-Learn", "Machine Learning", "Matplotlib", "Data Visualization", "Computer Vision"]
-  },
-  {
-    title: "RC Car",
-    category: "AI",
-    description: "An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.",
-    link: "https://github.com/AbdulAzeemHashmi/RC-CAR",
-    tags: ["ESP32", "C++", "Python", "AI", "Computer Vision"]
-  },
-  {
-    title: "Probability & Statistics Analyzer",
-    category: "AI",
-    description: "Data analysis platform leveraging mathematical and statistical models for predictive analytics and computational insights.",
-    link: "https://github.com/AbdulAzeemHashmi/Probability-and-Statistics-Project",
-    tags: ["Python", "Pandas", "Matplotlib", "Scikit-Learn", "Statistics"]
-  },
-  {
-    title: "Database Systems Open Ended Lab",
-    category: "AI",
-    description: "Open-ended laboratory project exploring vector databases, covering embeddings, similarity search, and indexing for intelligent data retrieval.",
-    link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Open-Ended-/Lab",
-    tags: ["Python", "Pinecone", "Numpy", "Matplotlib", "KNN"]
-  },
-  {
-    title: "Personal Portfolio",
-    category: "Web Development",
-    description: "The source code of this modern, lightning-fast portfolio built with Next.js and Tailwind CSS, fully deployed to Vercel.",
-    link: "https://github.com/AbdulAzeemHashmi/Portfolio",
-    liveLink: "https://abdulazeemhashmi.vercel.app/",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"]
-  },
-  {
-    title: "Assignment & Project Services",
-    category: "Web Development",
-    description: "A fully responsive static web page offering assignment and project services with an instant PKR price calculator and direct contact options.",
-    link: "https://github.com/AbdulAzeemHashmi/assignment-2-static-webpage",
-    liveLink: "https://assignment-2-static-webpage-silk.vercel.app/",
-    tags: ["HTML/CSS", "JavaScript", "Vercel", "Responsive Design"]
-  },
-  {
-    title: "Support Ticket Management System",
-    category: "Web Development",
-    description: "A full-stack support ticket management system featuring CRUD dashboards, live statistics, form validation, and persistent SQLite storage.",
-    link: "https://github.com/AbdulAzeemHashmi/support-ticket-management-system",
-    tags: ["Node.js", "Express", "SQLite", "JavaScript", "HTML/CSS"]
-  },
-  {
-    title: "Aether Student Portal",
-    category: "Web Development",
-    description: "Full-stack educational management portal featuring secure user roles, interactive dashboards, and scalable architectures.",
-    link: "https://github.com/AbdulAzeemHashmi/Aether-Student-Portal",
-    tags: ["HTML/CSS", "JavaScript", "Node.js", "Backend Design"]
-  },
-  {
-    title: "Database Systems Lab Project",
-    category: "Web Development",
-    description: "Dynamic web application seamlessly integrating front-end user experience with fully optimized relational databases.",
-    link: "https://github.com/AbdulAzeemHashmi/Database-Systems-Lab-Project",
-    tags: ["Web App", "MySQL", "Relational Mapping"]
-  },
-  {
-    title: "Rush Hour Game",
-    category: "Game Development",
-    description: "A logic-heavy strategic puzzle game built with algorithmic board state validations and optimized state evaluation.",
-    link: "https://github.com/AbdulAzeemHashmi/Rush-Hour-Game",
-    tags: ["C++", "Data Structures", "Game Loop"]
-  },
-  {
-    title: "Word Shooter Game",
-    category: "Game Development",
-    description: "Fast-paced interactive application with dynamic collision handling, scoring algorithms, and clean asset execution.",
-    link: "https://github.com/AbdulAzeemHashmi/Word-Shooter-Game",
-    tags: ["C++", "OOP", "Arcade Architecture"]
-  },
-  {
-    title: "Snake Game",
-    category: "Game Development",
-    description: "Pure C++ logic implementation of the classical snake game incorporating dynamic arrays and precise console rendering.",
-    link: "https://github.com/AbdulAzeemHashmi/Snake-Game",
-    tags: ["C++", "Data Structures", "Memory Management"]
-  },
-  {
-    title: "911 Emergency Data Analysis",
-    category: "Database",
-    description: "Exploratory analysis on massive datasets of 911 emergency calls utilizing document schemas inside MongoDB.",
-    link: "https://github.com/AbdulAzeemHashmi/911-Emergency-Analysis-Mongo-DB",
-    tags: ["MongoDB", "NoSQL", "Data Cleaning", "JSON Schemas"]
-  },
-  {
-    title: "Instagram Lifestyle DB Analysis",
-    category: "Database",
-    description: "Complex relational model analyzing user actions, trends, and lifecycle data metrics inside modern social frameworks.",
-    link: "https://github.com/AbdulAzeemHashmi/Instagram-Lifestyle-DB-Analysis",
-    tags: ["MySQL", "Relational Schema", "Complex Queries"]
-  },
+  }
 ];
 
 const SKILLS = [
-  { category: "Programming Languages", icon: "💻", list: ["Python", "C++", "SQL", "JavaScript"], desc: "Core languages used for building logic, algorithms, and interfaces." },
-  { category: "Data & Artificial Intelligence", icon: "🧠", list: ["NumPy", "Pandas", "Matplotlib", "Scikit-Learn", "Hugging Face", "EDA", "Machine Learning"], desc: "Libraries and workflows for extracting insights and training predictive models." },
-  { category: "Databases & Architecture", icon: "🗄️", list: ["MySQL", "MongoDB", "Supabase", "Relational Database Design", "ERD Modeling", "Query Optimization"], desc: "Designing secure, scalable, and efficient data storage solutions." },
-  { category: "Tools & Environments", icon: "🛠️", list: ["Linux (Ubuntu)", "Node.js", "Git / GitHub", "VS Code", "Jupyter / Colab"], desc: "Professional environments and version control for seamless development." }
+  { category: "Programming Languages", icon: "💻", list: ["Python", "TypeScript", "JavaScript", "C++", "SQL"], desc: "Core languages used for building autonomous logic, backend APIs, and web interfaces." },
+  { category: "Artificial Intelligence & Agents", icon: "🧠", list: ["Google Gemini API", "OpenAI API", "LangChain", "Autonomous Agents", "Prompt Engineering", "Streamlit"], desc: "Frameworks and APIs for building agentic workflows, LLM applications, and intelligent systems." },
+  { category: "Full-Stack & Web Frameworks", icon: "⚡", list: ["Next.js", "React", "FastAPI", "Flask", "Tailwind CSS", "Node.js", "Vercel"], desc: "Modern frontend and backend frameworks for building fast, responsive full-stack applications." },
+  { category: "Databases & Cloud Infrastructure", icon: "🗄️", list: ["Supabase", "SQLite", "MongoDB", "MySQL", "Relational Mapping", "Git / GitHub"], desc: "Database architectures and cloud integration tools for scalable data persistence." }
 ];
 
 // Floating Background Music Pipeline Engine
@@ -614,7 +533,7 @@ export default function Home() {
           </h1>
 
           <p className="text-base md:text-xl text-slate-200 max-w-2xl leading-relaxed mb-8 z-10 px-6 py-4 rounded-2xl bg-slate-950/50 backdrop-blur-sm border border-slate-900/40 shadow-xl font-normal hero-desc-shadow">
-            A passionate <span className="text-cyan-300 font-semibold">BS Artificial Intelligence</span> student building clean backend architectures, relational data pipelines, performant low-level engines, and interactive web tools.
+            A passionate <span className="text-cyan-300 font-semibold">BS Artificial Intelligence</span> student engineering autonomous digital agents, AI-powered web applications, LLM document enhancers, and full-stack software systems.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center z-10 w-full sm:w-auto px-4 sm:px-0">
@@ -650,6 +569,50 @@ export default function Home() {
                 <p className="text-[11px] md:text-xs font-semibold text-indigo-300 bg-indigo-950/50 p-3 rounded-lg border border-indigo-900/50">
                   {srv.highlight}
                 </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="experience" className="max-w-6xl mx-auto py-16 md:py-24 px-4 sm:px-6 border-b border-slate-900/40">
+          <div className="mb-10 text-center sm:text-left">
+            <h2 className="text-2xl md:text-4xl font-bold dynamic-text-contrast tracking-tight flex items-center justify-center sm:justify-start gap-3">
+              <span className="text-purple-400">💼</span> Experience & Internships
+            </h2>
+            <p className="text-slate-200 text-sm md:text-base mt-2 font-medium hero-desc-shadow">My industry and research internship track record.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {INTERNSHIPS.map((exp, i) => (
+              <div key={i} className="bg-slate-950/80 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 md:p-8 hover:border-purple-500/50 transition-all duration-300 group flex flex-col justify-between shadow-lg shadow-black/30">
+                <div>
+                  <div className="flex items-center justify-between gap-3 mb-4 flex-wrap">
+                    <span className="text-xs font-bold text-purple-300 bg-purple-950/50 border border-purple-800/40 px-3 py-1 rounded-full uppercase tracking-wider">
+                      {exp.period}
+                    </span>
+                    <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full border ${exp.status === "Present" ? "bg-emerald-950/60 border-emerald-800/60 text-emerald-400" : "bg-slate-900 border-slate-700 text-slate-400"}`}>
+                      {exp.status === "Present" ? "• Active" : "Completed"}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-slate-100 group-hover:text-purple-300 transition mb-1">
+                    {exp.title}
+                  </h3>
+                  <p className="text-cyan-400 text-sm font-semibold mb-4 flex items-center gap-1.5">
+                    <span>🏢</span> {exp.company}
+                  </p>
+                  <p className="text-slate-300 text-xs md:text-sm leading-relaxed mb-6 font-light">
+                    {exp.description}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-900">
+                  {exp.skills.map((skill, sIdx) => (
+                    <span key={sIdx} className="text-[10px] bg-slate-950/80 text-purple-300 px-2.5 py-1 rounded-md border border-purple-950/80 font-medium">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -695,7 +658,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap gap-1.5 bg-slate-900/60 backdrop-blur-sm border border-slate-800/80 p-1.5 rounded-xl justify-center w-full lg:w-auto">
-              {["All", "AI", "Web Development", "Game Development", "Database"].map((cat) => (
+              {["All", "AI", "Web Development"].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
@@ -704,7 +667,7 @@ export default function Home() {
                     : "text-slate-400 hover:text-slate-200 hover:bg-slate-800"
                     }`}
                 >
-                  {cat === "Web Development" ? "Web" : cat === "Game Development" ? "Games" : cat}
+                  {cat === "Web Development" ? "Web" : cat}
                 </button>
               ))}
             </div>

@@ -33,14 +33,14 @@
 
 ## 💫 Overview & Visual Preview
 
-Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This web application serves as an interactive showcase of projects, computational expertise, and engineering skills across Artificial Intelligence, Full-Stack Web Development, Low-Level Systems, and Database Architectures.
+Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This web application serves as an interactive showcase of projects, computational expertise, and engineering skills across Autonomous AI Agents, LLM-Powered Applications, Full-Stack Web Development, and Cloud Data Architectures.
 
 ```
        ┌─────────────────────────────────────────────────────────────┐
        │                 🌌 ABDUL AZEEM HASHMI 🌌                   │
        ├─────────────────────────────────────────────────────────────┤
-       │  🧠 AI & Data Science   |  ⚙️ Backend & DB Architecture    │
-       │  🚀 Low-Level Logic     |  💻 Modern Web App (Next.js 16)  │
+       │  🧠 Autonomous AI & Agents |  ⚡ Full-Stack Web Engineering  │
+       │  🤖 LLM & Prompt Tools     |  💻 Modern Web App (Next.js)  │
        └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -62,10 +62,10 @@ Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This w
 
 | Category | Technologies & Tools |
 | :--- | :--- |
-| **Languages** | <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" /> |
-| **Frameworks & UI** | <img src="https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white" /> <img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black" /> <img src="https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/WebGL-990000?style=flat-square&logo=webgl&logoColor=white" /> |
-| **AI & Machine Learning** | <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" /> <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" /> <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" /> <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" /> <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" /> |
-| **Databases & Cloud** | <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" /> <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" /> <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" /> |
+| **Languages** | <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" /> |
+| **AI & Agents** | <img src="https://img.shields.io/badge/Gemini_API-8E44AD?style=flat-square&logo=google&logoColor=white" /> <img src="https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white" /> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=chainlink&logoColor=white" /> <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" /> |
+| **Frameworks & UI** | <img src="https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white" /> <img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" /> <img src="https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" /> |
+| **Databases & Cloud** | <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" /> <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" /> <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" /> |
 
 </div>
 
@@ -73,122 +73,50 @@ Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This w
 
 ## 🧠 Services & Expertise
 
-* **🧠 AI & Data Science**: Building predictive models, exploratory data analysis (EDA), and intelligent systems using Python, Scikit-Learn, and custom AI logic. Highlighting proficiency in Pandas, NumPy, and data pipelines.
-* **⚙️ Backend & Database Architecture**: Developing robust server-side logic and highly optimized relational/NoSQL databases to power complex web applications seamlessly. Proficient in SQL, MongoDB, Node.js, and ERD modeling.
-* **🚀 Low-Level & Logic Engineering**: Crafting performant, logic-heavy applications, algorithms, and game loops with advanced data structures and memory management. Focused on C++ and Object-Oriented Programming (OOP).
+* **🧠 Autonomous AI & Agentic Systems**: Developing autonomous digital agents, multi-tool AI workstations, and natural language mission planners powered by Gemini, OpenAI, and LangChain. Expert in Gemini API, LangChain, and agentic workflows.
+* **⚡ Full-Stack Web & API Engineering**: Building performant, responsive web applications and backend microservices using Next.js, FastAPI, Flask, and Tailwind CSS. Proficient in Next.js, TypeScript, Python, and FastAPI.
+* **⚙️ Database Architecture & Cloud Data**: Designing robust relational and document database schemas with seamless persistence and real-time logging. Comprehensive Supabase, SQLite, MySQL, and MongoDB.
+
+---
+
+## 💼 Industry & Research Internships
+
+1. **Software Engineering Intern** at **CODOC PVT LTD** *(July 2026 - Present)*
+   * Architecting and implementing scalable software solutions, optimizing full-stack application performance, and collaborating on modern software engineering workflows.
+   * 🛠️ `Software Engineering` `Full-Stack Development` `TypeScript` `Next.js` `API Design`
+
+2. **AI Intern** at **UAV Dependability Research Lab** *(June 2026 - August 2026)*
+   * Researched and engineered AI logic models for autonomous UAV systems, conducting dependability evaluations, waypoint route optimization, and rule compliance testing.
+   * 🛠️ `Artificial Intelligence` `Autonomous Systems` `UAV Engineering` `Python` `Model Evaluation`
 
 ---
 
 ## 📂 Featured Projects Showcase
-
-### 🤖 AI & Intelligent Systems
 
 1. **Autonomous Digital Employee**
    * An AI-powered full-stack workstation enabling users to delegate complex tasks to an autonomous digital agent with real-time database logging and Google Gemini primary integration.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/autonomous-digital-employee) | [Live Demo](https://autonomous-digital-employee-zeta.vercel.app/)
    * 🛠️ `Next.js` `FastAPI` `LangChain` `Gemini API` `Supabase`
 
-2. **AI Image Verifier**
-   * An intelligent image verification system leveraging vision models to analyze, authenticate, and process image content with precision.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/AI-Image-Verifier) | [Live Demo](https://ai-image-verifier.vercel.app/)
-   * 🛠️ `Next.js` `AI` `Hugging Face` `Supabase` `TypeScript`
+2. **Awaaz Pakistan**
+   * An advocacy and petition platform empowering professionals with AI-generated appeals, multi-lingual voice/document inputs, and automated sign-on workflows.
+   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Awaaz-Pakistan) | [Live Demo](https://awaaz-pakistan.vercel.app/)
+   * 🛠️ `Next.js` `AI` `Tailwind CSS` `TypeScript` `Vercel`
 
-3. **AI Chatbot**
-   * A production-ready full-stack AI Chatbot application featuring a fast Python FastAPI backend and a responsive Next.js frontend, powered by the Google Gemini API.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/AI-Chatbot) | [Live Demo](https://ai-chatbot-aah18751.vercel.app/)
-   * 🛠️ `Next.js` `FastAPI` `Python` `Gemini API` `TypeScript`
+3. **README AI Enhancer**
+   * An AI-powered documentation platform leveraging Google Gemini to analyze README weaknesses, detect missing technical sections, and generate polished rewrites.
+   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/readme-ai-enhancer) | [Live Demo](https://readme-ai-enhancer.vercel.app/)
+   * 🛠️ `Next.js` `Gemini API` `AI` `Tailwind CSS` `TypeScript`
 
 4. **AI Resume Analyzer**
-   * An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using Gemini, and provides download options in PDF/DOCX format.
+   * An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using OpenAI, and provides download options in PDF/DOCX format.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer) | [Live Demo](https://ai-resume-analyzer-aah18751.vercel.app/)
-   * 🛠️ `TypeScript` `Tailwind CSS` `Python` `Flask` `Gemini API`
+   * 🛠️ `TypeScript` `Tailwind CSS` `Python` `Flask` `OpenAI API`
 
 5. **Agentic UAV Mission Planner**
    * An end-to-end mission planning simulator that processes natural language requests, generates optimized waypoint routes, and enforces multi-rule airspace compliance.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner)
    * 🛠️ `Python` `Streamlit` `Google Gemini` `Folium` `SQLite`
-
-6. **Artificial Intelligence Open Ended Lab**
-   * Open-ended laboratory project focused on building an AI video processing pipeline using object detection, image captioning, and scene impact scoring techniques.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Artificial-Intelligence-Open-Ended-Lab)
-   * 🛠️ `Python` `Numpy` `Scikit-Learn` `Matplotlib` `Computer Vision`
-
-7. **RC Car**
-   * An intelligent remote-controlled vehicle powered by vision or AI logic models, combining software with automated hardware engineering.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/RC-CAR)
-   * 🛠️ `ESP32` `C++` `Python` `AI` `Computer Vision`
-
-8. **Probability & Statistics Analyzer**
-   * Data analysis platform leveraging mathematical and statistical models for predictive analytics and computational insights.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Probability-and-Statistics-Project)
-   * 🛠️ `Python` `Pandas` `Matplotlib` `Scikit-Learn` `Statistics`
-
-9. **Database Systems Open Ended Lab**
-   * Open-ended laboratory project exploring vector databases, covering embeddings, similarity search, and indexing for intelligent data retrieval.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Database-Systems-Open-Ended-Lab)
-   * 🛠️ `Python` `Pinecone` `Numpy` `Matplotlib` `KNN`
-
----
-
-### 🌐 Web Development & Databases
-
-1. **Personal Portfolio**
-   * The source code of this modern, lightning-fast portfolio built with Next.js and Tailwind CSS, fully deployed to Vercel.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Portfolio) | [Live Demo](https://abdulazeemhashmi.vercel.app/)
-   * 🛠️ `Next.js` `React` `Tailwind CSS` `TypeScript`
-
-2. **Support Ticket Management System**
-   * A full-stack support ticket management system featuring CRUD dashboards, live statistics, form validation, and persistent SQLite storage.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/support-ticket-management-system)
-   * 🛠️ `Node.js` `Express` `SQLite` `JavaScript` `HTML/CSS`
-
-3. **Aether Student Portal**
-   * Full-stack educational management portal featuring secure user roles, interactive dashboards, and scalable database schemas.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Aether-Student-Portal)
-   * 🛠️ `HTML/CSS` `JavaScript` `Node.js` `Backend Design`
-
-4. **Assignment & Project Services**
-   * A responsive web page offering academic and project services with an instant price calculator and contact options.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/assignment-2-static-webpage) | [Live Demo](https://assignment-2-static-webpage-silk.silk.vercel.app/)
-   * 🛠️ `HTML/CSS` `JavaScript` `Vercel` `Responsive Design`
-
-5. **Database Systems Lab Project**
-   * Dynamic web application integrating front-end user interfaces with fully optimized relational MySQL databases.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Database-Systems-Lab-Project)
-   * 🛠️ `Web App` `MySQL` `Relational Mapping`
-
----
-
-### 🎮 Game Development & Console Systems
-
-1. **Rush Hour Game**
-   * A logic-heavy strategic puzzle game built with algorithmic board state validations and optimized state evaluation.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Rush-Hour-Game)
-   * 🛠️ `C++` `Data Structures` `Game Loop`
-
-2. **Word Shooter Game**
-   * Fast-paced interactive console application with dynamic collision handling, scoring algorithms, and clean asset execution.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Word-Shooter-Game)
-   * 🛠️ `C++` `OOP` `Arcade Architecture`
-
-3. **Snake Game**
-   * Pure C++ logic implementation of the classical snake game incorporating dynamic arrays and precise console rendering.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Snake-Game)
-   * 🛠️ `C++` `Data Structures` `Memory Management`
-
----
-
-### 📊 Database Analysis
-
-1. **911 Emergency Data Analysis**
-   * Exploratory analysis on massive datasets of 911 emergency calls utilizing document schemas inside MongoDB.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/911-Emergency-Analysis-Mongo-DB)
-   * 🛠️ `MongoDB` `NoSQL` `Data Cleaning` `JSON Schemas`
-
-2. **Instagram Lifestyle DB Analysis**
-   * Complex relational model analyzing user actions, trends, and lifecycle data metrics inside modern social database frameworks.
-   * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Instagram-Lifestyle-DB-Analysis)
-   * 🛠️ `MySQL` `Relational Schema` `Complex Queries`
 
 ---
 
