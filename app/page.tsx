@@ -42,20 +42,20 @@ const SERVICES = [
 
 const INTERNSHIPS = [
   {
-    title: "Software Engineering Intern",
-    company: "CODOC PVT LTD",
-    period: "July 2026 - Present",
-    status: "Present",
-    description: "Architecting and implementing scalable software solutions, optimizing full-stack application performance, and collaborating on modern software engineering workflows.",
-    skills: ["Software Engineering", "Full-Stack Development", "TypeScript", "Next.js", "API Design"]
-  },
-  {
     title: "AI Intern",
     company: "UAV Dependability Research Lab",
     period: "June 2026 - August 2026",
     status: "Completed",
     description: "Researched and engineered AI logic models for autonomous UAV systems, conducting dependability evaluations, waypoint route optimization, and rule compliance testing.",
     skills: ["Artificial Intelligence", "Autonomous Systems", "UAV Engineering", "Python", "Model Evaluation"]
+  },
+  {
+    title: "Software Engineering Intern",
+    company: "CODOC PVT LTD",
+    period: "July 2026 - August 2026",
+    status: "Completed",
+    description: "Architecting and implementing scalable software solutions, optimizing full-stack application performance, and collaborating on modern software engineering workflows.",
+    skills: ["Software Engineering", "Full-Stack Development", "TypeScript", "Next.js", "API Design"]
   }
 ];
 
