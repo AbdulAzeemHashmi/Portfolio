@@ -39,13 +39,13 @@
 Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This web application serves as an interactive showcase of projects, computational expertise, and engineering skills across Autonomous AI Agents, LLM-Powered Applications, Full-Stack Web Development, and Cloud Data Architectures.
 
 ```
-       ┌─────────────────────────────────────────────────────────────┐
-       │                 🌌 ABDUL AZEEM HASHMI 🌌                   │
-       ├─────────────────────────────────────────────────────────────┤
+       ┌───────────────────────────────────────────────────────────────┐
+       │                 🌌 ABDUL AZEEM HASHMI 🌌                     │
+       ├───────────────────────────────────────────────────────────────┤
        │  🧠 Autonomous AI & Agents |  ⚡ Full-Stack Web Engineering  │
-       │  🤖 LLM & Prompt Tools     |  💻 Modern Web App (Next.js)  │
-       │  📄 Interactive CV Viewer  |  🎵 Dynamic Audio Controller  │
-       └─────────────────────────────────────────────────────────────┘
+       │  🤖 LLM & Prompt Tools     |  💻 Modern Web App (Next.js)    │
+       │  📄 Interactive CV Viewer  |  🎵 Dynamic Audio Controller    │
+       └───────────────────────────────────────────────────────────────┘
 ```
 
 ---
