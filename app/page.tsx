@@ -85,10 +85,10 @@ const PROJECTS = [
   {
     title: "AI Resume Analyzer",
     category: "AI",
-    description: "An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using OpenAI, and provides download options in PDF/DOCX format.",
+    description: "An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using Gemini, and provides download options in PDF/DOCX format.",
     link: "https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer",
     liveLink: "https://ai-resume-analyzer-aah18751.vercel.app/",
-    tags: ["TypeScript", "Tailwind CSS", "Python", "Flask", "OpenAI API"]
+    tags: ["TypeScript", "Tailwind CSS", "Python", "Flask", "Gemini API"]
   },
   {
     title: "Agentic UAV Mission Planner",
