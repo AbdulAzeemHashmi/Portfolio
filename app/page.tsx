@@ -213,30 +213,30 @@ function BackgroundMusic() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-30">
       <div id="youtube-audio-pipeline" className="hidden" />
       <button
         onClick={toggleMusic}
-        className="flex items-center gap-2.5 px-4 py-2.5 bg-slate-950/80 hover:bg-slate-900 text-cyan-400 border border-slate-800/80 hover:border-cyan-500/50 rounded-full shadow-2xl shadow-cyan-950/40 transition-all duration-300 backdrop-blur-md text-[11px] font-bold tracking-widest uppercase group pointer-events-auto"
+        className="flex items-center gap-2.5 px-3.5 py-2 sm:px-4 sm:py-2.5 bg-slate-950/90 hover:bg-slate-900 text-cyan-400 border border-slate-800/80 hover:border-cyan-500/50 rounded-full shadow-2xl shadow-cyan-950/40 transition-all duration-300 backdrop-blur-md text-[10px] sm:text-[11px] font-bold tracking-widest uppercase group pointer-events-auto max-w-[calc(100vw-2rem)]"
         aria-label="Toggle Background Soundtrack Engine"
       >
-        <span className="relative flex h-2 w-2 items-center justify-center">
+        <span className="relative flex h-2 w-2 items-center justify-center shrink-0">
           {isPlaying && (
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
           )}
           <span className={`relative inline-flex rounded-full h-2 w-2 ${isPlaying ? "bg-cyan-400" : "bg-slate-500"}`}></span>
         </span>
 
-        <span>{isPlaying ? "Yun Pakistan Bana Tha • On" : "Yun Pakistan Bana Tha • Off"}</span>
+        <span className="truncate">{isPlaying ? "Yun Pakistan Bana Tha • On" : "Yun Pakistan Bana Tha • Off"}</span>
 
         {isPlaying ? (
-          <div className="flex items-end gap-0.5 h-3 w-3 mb-0.5">
+          <div className="flex items-end gap-0.5 h-3 w-3 mb-0.5 shrink-0">
             <span className="bg-cyan-400 w-0.5 animate-[pulse_0.8s_infinite_alternate] h-full" />
             <span className="bg-cyan-400 w-0.5 animate-[pulse_0.5s_infinite_alternate] h-2" />
             <span className="bg-cyan-400 w-0.5 animate-[pulse_0.7s_infinite_alternate] h-3" />
           </div>
         ) : (
-          <span className="text-xs text-slate-500 opacity-70">🎵</span>
+          <span className="text-xs text-slate-500 opacity-70 shrink-0">🎵</span>
         )}
       </button>
     </div>
@@ -251,6 +251,17 @@ export default function Home() {
 
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [formStatus, setFormStatus] = useState<"IDLE" | "SUBMITTING" | "SUCCESS" | "ERROR">("IDLE");
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   useEffect(() => {
     const observerOptions = { root: null, rootMargin: "-20% 0px -60% 0px", threshold: 0 };
@@ -505,7 +516,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className={`fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${isMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"
+          <div className={`fixed inset-0 h-screen h-[100dvh] w-screen bg-slate-950 z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${isMenuOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"
             }`}>
             <ul className="flex flex-col items-center gap-8 text-xl font-bold tracking-widest">
               {NAV_LINKS.map((link) => (
