@@ -45,7 +45,6 @@ const INTERNSHIPS = [
     title: "AI Intern",
     company: "UAV Dependability Research Lab",
     period: "June 2026 - August 2026",
-    status: "Completed",
     description: "Researched and engineered AI logic models for autonomous UAV systems, conducting dependability evaluations, waypoint route optimization, and rule compliance testing.",
     skills: ["Artificial Intelligence", "Autonomous Systems", "UAV Engineering", "Python", "Model Evaluation"]
   },
@@ -53,7 +52,6 @@ const INTERNSHIPS = [
     title: "Software Engineering Intern",
     company: "CODOC PVT LTD",
     period: "July 2026 - August 2026",
-    status: "Completed",
     description: "Architecting and implementing scalable software solutions, optimizing full-stack application performance, and collaborating on modern software engineering workflows.",
     skills: ["Software Engineering", "Full-Stack Development", "TypeScript", "Next.js", "API Design"]
   }
@@ -455,25 +453,40 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <span className="text-cyan-400 font-bold tracking-widest">AAH.</span>
 
-            <ul className="hidden md:flex gap-8 text-sm font-medium">
-              {NAV_LINKS.map((link) => {
-                const lowerLink = link.toLowerCase();
-                const isActive = activeSection === lowerLink;
-                return (
-                  <li key={link}>
-                    <a
-                      href={`#${lowerLink}`}
-                      className={`transition-colors duration-300 uppercase tracking-wider relative group ${isActive ? "text-cyan-400 font-semibold" : "text-slate-300 hover:text-cyan-400"
-                        }`}
-                    >
-                      {link}
-                      <span className={`absolute -bottom-2 left-0 h-0.5 bg-cyan-400 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
-                        }`}></span>
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+            <div className="hidden md:flex items-center gap-6">
+              <ul className="flex gap-8 text-sm font-medium">
+                {NAV_LINKS.map((link) => {
+                  const lowerLink = link.toLowerCase();
+                  const isActive = activeSection === lowerLink;
+                  return (
+                    <li key={link}>
+                      <a
+                        href={`#${lowerLink}`}
+                        className={`transition-colors duration-300 uppercase tracking-wider relative group ${isActive ? "text-cyan-400 font-semibold" : "text-slate-300 hover:text-cyan-400"
+                          }`}
+                      >
+                        {link}
+                        <span className={`absolute -bottom-2 left-0 h-0.5 bg-cyan-400 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                          }`}></span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <a
+                href="/Abdul_Azeem_Hashmi_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3.5 py-1.5 text-xs font-bold tracking-wider text-cyan-300 bg-cyan-950/60 hover:bg-cyan-900/80 border border-cyan-800/80 hover:border-cyan-400 rounded-full transition-all flex items-center gap-1.5 shadow-sm shadow-cyan-950/50 uppercase"
+                aria-label="View CV PDF in new tab"
+              >
+                <span>CV</span>
+                <svg className="w-3.5 h-3.5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -506,6 +519,20 @@ export default function Home() {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/Abdul_Azeem_Hashmi_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors uppercase flex items-center gap-2 px-6 py-2.5 border border-cyan-800/80 rounded-full bg-cyan-950/60 text-base font-semibold shadow-lg shadow-cyan-950/50 mt-2"
+                >
+                  <span>View CV</span>
+                  <svg className="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -539,6 +566,20 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center z-10 w-full sm:w-auto px-4 sm:px-0">
             <a href="#projects" className="px-6 py-3 text-center bg-gradient-to-r from-cyan-500 to-indigo-500 text-slate-950 font-semibold rounded-lg hover:opacity-90 transition shadow-lg shadow-cyan-500/20 text-sm">
               View My Projects
+            </a>
+            <a
+              href="/Abdul_Azeem_Hashmi_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 text-center bg-cyan-950/60 border border-cyan-500/50 hover:bg-cyan-900/60 hover:border-cyan-400 transition text-cyan-300 font-semibold rounded-lg shadow-lg shadow-cyan-950/40 text-sm flex items-center justify-center gap-2 group backdrop-blur-sm"
+            >
+              <svg className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>View CV</span>
+              <svg className="w-3.5 h-3.5 text-cyan-400 opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
             <a href="#contact" className="px-6 py-3 text-center bg-slate-900/80 border border-slate-800 rounded-lg hover:bg-slate-800 transition text-slate-300 font-medium backdrop-blur-sm text-sm">
               Contact Me
@@ -589,9 +630,6 @@ export default function Home() {
                   <div className="flex items-center justify-between gap-3 mb-4 flex-wrap">
                     <span className="text-xs font-bold text-purple-300 bg-purple-950/50 border border-purple-800/40 px-3 py-1 rounded-full uppercase tracking-wider">
                       {exp.period}
-                    </span>
-                    <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full border ${exp.status === "Present" ? "bg-emerald-950/60 border-emerald-800/60 text-emerald-400" : "bg-slate-900 border-slate-700 text-slate-400"}`}>
-                      {exp.status === "Present" ? "• Active" : "Completed"}
                     </span>
                   </div>
 

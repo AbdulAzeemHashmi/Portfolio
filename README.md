@@ -1,18 +1,21 @@
 <div align="center">
 
   <!-- Animated Typing Banner Header -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=8A2BE2&center=true&vcenter=true&width=650&height=70&lines=Abdul+Azeem+Hashmi;AI+%26+Backend+Engineer;Full-Stack+Web+Developer;Logic+%26+Database+Architect" alt="Animated Header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00F0FF&center=true&vcenter=true&width=700&height=70&lines=Abdul+Azeem+Hashmi;Autonomous+AI+%26+Agentic+Engineer;Full-Stack+Web+Architect;BS+Artificial+Intelligence+%40+FAST+NUCES" alt="Animated Header" />
 
   <h1>⚡ Abdul Azeem Hashmi | Personal Portfolio ⚡</h1>
 
   <p align="center">
-    <b>🌌 Sleek, Modern, and Interactive Personal Portfolio built with Next.js 16, React 19, and Tailwind CSS v4 🌌</b>
+    <b>🌌 Modern, Interactive, and Ultra-Performant Portfolio Built with Next.js 16, React 19, and Tailwind CSS v4 🌌</b>
   </p>
 
-  <!-- Live Badges -->
+  <!-- Live Badges & Call to Actions -->
   <p align="center">
     <a href="https://abdulazeemhashmi.vercel.app/">
-      <img src="https://img.shields.io/badge/Live_Site-abdulazeemhashmi.vercel.app-7C3AED?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Site" />
+      <img src="https://img.shields.io/badge/Live_Portfolio-abdulazeemhashmi.vercel.app-7C3AED?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Site" />
+    </a>
+    <a href="https://abdulazeemhashmi.vercel.app/Abdul_Azeem_Hashmi_CV.pdf" target="_blank">
+      <img src="https://img.shields.io/badge/📄_View_CV-PDF_Resume-00F0FF?style=for-the-badge&logo=adobeacrobatreader&logoColor=black" alt="View CV PDF" />
     </a>
     <a href="https://github.com/AbdulAzeemHashmi/Portfolio">
       <img src="https://img.shields.io/badge/GitHub_Repo-Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
@@ -41,6 +44,7 @@ Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This w
        ├─────────────────────────────────────────────────────────────┤
        │  🧠 Autonomous AI & Agents |  ⚡ Full-Stack Web Engineering  │
        │  🤖 LLM & Prompt Tools     |  💻 Modern Web App (Next.js)  │
+       │  📄 Interactive CV Viewer  |  🎵 Dynamic Audio Controller  │
        └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -48,10 +52,11 @@ Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This w
 
 ## 🚀 Key Features
 
+* 📄 **Direct CV / Resume Viewer**: Instant access button opening `Abdul_Azeem_Hashmi_CV.pdf` in a new tab from the hero header, desktop navbar, and mobile menu.
 * 🌊 **Interactive WebGL Fluid Particle Canvas**: Dynamic, physics-driven particle simulation reacting in real-time to cursor movements.
-* 🎵 **Embedded YouTube Music Controller**: Sleek, floating music player integrated seamlessly with YouTube IFrame API.
+* 🎵 **Embedded YouTube Music Controller**: Sleek, floating background audio engine powered by YouTube IFrame API with visual equalizer animation.
 * ⚡ **Next.js 16 App Router & Turbopack**: High performance server and client rendering with fast static builds.
-* 🎨 **Glassmorphism Design & Dark Theme**: Premium dark layout featuring glowing borders, responsive typography, and smooth micro-animations.
+* 🎨 **Glassmorphism Design & Dark Theme**: Premium dark layout featuring glowing cyan/indigo borders, responsive typography, and smooth micro-animations.
 * 📱 **Fully Mobile Responsive**: Dynamic layout adaptivity across mobile, tablet, and desktop viewports.
 
 ---
@@ -73,47 +78,47 @@ Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This w
 
 ## 🧠 Services & Expertise
 
-* **🧠 Autonomous AI & Agentic Systems**: Developing autonomous digital agents, multi-tool AI workstations, and natural language mission planners powered by Gemini, OpenAI, and LangChain. Expert in Gemini API, LangChain, and agentic workflows.
-* **⚡ Full-Stack Web & API Engineering**: Building performant, responsive web applications and backend microservices using Next.js, FastAPI, Flask, and Tailwind CSS. Proficient in Next.js, TypeScript, Python, and FastAPI.
-* **⚙️ Database Architecture & Cloud Data**: Designing robust relational and document database schemas with seamless persistence and real-time logging. Comprehensive Supabase, SQLite, MySQL, and MongoDB.
+* 🧠 **Autonomous AI & Agentic Systems**: Developing autonomous digital agents, multi-tool AI workstations, and natural language mission planners powered by Gemini, OpenAI, and LangChain. Expert in Gemini API, LangChain, and agentic workflows.
+* ⚡ **Full-Stack Web & API Engineering**: Building performant, responsive web applications and backend microservices using Next.js, FastAPI, Flask, and Tailwind CSS. Proficient in Next.js, TypeScript, Python, and FastAPI.
+* ⚙️ **Database Architecture & Cloud Data**: Designing robust relational and document database schemas with seamless persistence and real-time logging. Comprehensive Supabase, SQLite, MySQL, and MongoDB.
 
 ---
 
 ## 💼 Industry & Research Internships
 
-1. **Software Engineering Intern** at **CODOC PVT LTD** *(July 2026 - Present)*
-   * Architecting and implementing scalable software solutions, optimizing full-stack application performance, and collaborating on modern software engineering workflows.
-   * 🛠️ `Software Engineering` `Full-Stack Development` `TypeScript` `Next.js` `API Design`
-
-2. **AI Intern** at **UAV Dependability Research Lab** *(June 2026 - August 2026)*
+1. 🏢 **AI Intern** at **UAV Dependability Research Lab** *(June 2026 - August 2026)*
    * Researched and engineered AI logic models for autonomous UAV systems, conducting dependability evaluations, waypoint route optimization, and rule compliance testing.
    * 🛠️ `Artificial Intelligence` `Autonomous Systems` `UAV Engineering` `Python` `Model Evaluation`
+
+2. 🏢 **Software Engineering Intern** at **CODOC PVT LTD** *(July 2026 - August 2026)*
+   * Architecting and implementing scalable software solutions, optimizing full-stack application performance, and collaborating on modern software engineering workflows.
+   * 🛠️ `Software Engineering` `Full-Stack Development` `TypeScript` `Next.js` `API Design`
 
 ---
 
 ## 📂 Featured Projects Showcase
 
-1. **Autonomous Digital Employee**
+1. 🤖 **Autonomous Digital Employee**
    * An AI-powered full-stack workstation enabling users to delegate complex tasks to an autonomous digital agent with real-time database logging and Google Gemini primary integration.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/autonomous-digital-employee) | [Live Demo](https://autonomous-digital-employee-zeta.vercel.app/)
    * 🛠️ `Next.js` `FastAPI` `LangChain` `Gemini API` `Supabase`
 
-2. **Awaaz Pakistan**
+2. 📢 **Awaaz Pakistan**
    * An advocacy and petition platform empowering professionals with AI-generated appeals, multi-lingual voice/document inputs, and automated sign-on workflows.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/Awaaz-Pakistan) | [Live Demo](https://awaaz-pakistan.vercel.app/)
    * 🛠️ `Next.js` `AI` `Tailwind CSS` `TypeScript` `Vercel`
 
-3. **README AI Enhancer**
+3. 📝 **README AI Enhancer**
    * An AI-powered documentation platform leveraging Google Gemini to analyze README weaknesses, detect missing technical sections, and generate polished rewrites.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/readme-ai-enhancer) | [Live Demo](https://readme-ai-enhancer.vercel.app/)
    * 🛠️ `Next.js` `Gemini API` `AI` `Tailwind CSS` `TypeScript`
 
-4. **AI Resume Analyzer**
+4. 📄 **AI Resume Analyzer**
    * An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using OpenAI, and provides download options in PDF/DOCX format.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer) | [Live Demo](https://ai-resume-analyzer-aah18751.vercel.app/)
    * 🛠️ `TypeScript` `Tailwind CSS` `Python` `Flask` `OpenAI API`
 
-5. **Agentic UAV Mission Planner**
+5. 🛸 **Agentic UAV Mission Planner**
    * An end-to-end mission planning simulator that processes natural language requests, generates optimized waypoint routes, and enforces multi-rule airspace compliance.
    * 🔗 [GitHub Repository](https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner)
    * 🛠️ `Python` `Streamlit` `Google Gemini` `Folium` `SQLite`
@@ -124,17 +129,18 @@ Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This w
 
 ```
 Portfolio/
-├── app/               # Next.js App Router pages and layouts
-│   ├── globals.css    # Main stylesheet & Tailwind import
-│   ├── layout.tsx     # Root HTML & Metadata structure
-│   └── page.tsx       # Interactive Portfolio homepage
-├── public/            # Static assets and icons
-├── .gitignore         # Git ignored files configuration
-├── eslint.config.mjs  # ESLint configuration
-├── next.config.ts     # Next.js server configuration
-├── package.json       # Project dependencies & scripts
-├── postcss.config.mjs # PostCSS configuration
-└── tsconfig.json      # TypeScript compiler setup
+├── app/                        # Next.js App Router pages and layouts
+│   ├── globals.css             # Main stylesheet and Tailwind configuration
+│   ├── layout.tsx              # Root HTML and Metadata structure
+│   └── page.tsx                # Interactive Portfolio homepage
+├── public/                     # Static assets, icons, and PDF files
+│   └── Abdul_Azeem_Hashmi_CV.pdf # Direct download/view CV PDF document
+├── .gitignore                  # Git ignored files configuration
+├── eslint.config.mjs           # ESLint configuration
+├── next.config.ts              # Next.js server configuration
+├── package.json                # Project dependencies and scripts
+├── postcss.config.mjs          # PostCSS configuration
+└── tsconfig.json               # TypeScript compiler setup
 ```
 
 ---
@@ -142,10 +148,10 @@ Portfolio/
 ## 💻 Local Development Setup
 
 ### 1. Prerequisites
-Ensure you have **Node.js** (v18 or higher) installed on your machine.
+Ensure you have **Node.js** (v18 or higher) installed on your system.
 
 ### 2. Clone and Install
-Clone the repo and install dependencies:
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/AbdulAzeemHashmi/Portfolio.git
@@ -158,7 +164,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to explore the local site.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the portfolio locally.
 
 ---
 
@@ -180,11 +186,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to explore t
 <a href="https://abdulazeemhashmi.vercel.app/">
   <img src="https://img.shields.io/badge/Portfolio-Live_Site-7C3AED?style=for-the-badge&logo=vercel&logoColor=white" />
 </a>
+<a href="https://abdulazeemhashmi.vercel.app/Abdul_Azeem_Hashmi_CV.pdf" target="_blank">
+  <img src="https://img.shields.io/badge/CV-View_Resume-00F0FF?style=for-the-badge&logo=adobeacrobatreader&logoColor=black" />
+</a>
 <a href="https://github.com/AbdulAzeemHashmi">
   <img src="https://img.shields.io/badge/GitHub-@AbdulAzeemHashmi-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
-<a href="mailto:abdulazeem7982@gmail.com">
-  <img src="https://img.shields.io/badge/Email-abdulazeem7982%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+<a href="mailto:abdulazeemhashmi29@gmail.com">
+  <img src="https://img.shields.io/badge/Email-abdulazeemhashmi29%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
 
 <br/>
