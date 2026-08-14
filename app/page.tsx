@@ -118,11 +118,11 @@ function BackgroundMusic() {
       playerRef.current = new (window as any).YT.Player("youtube-audio-pipeline", {
         height: "0",
         width: "0",
-        videoId: "QXJyMpxd210",
+        videoId: "zeF4Yk4kGd4",
         playerVars: {
           autoplay: 0,
           loop: 1,
-          playlist: "QXJyMpxd210",
+          playlist: "zeF4Yk4kGd4",
           controls: 0,
           disablekb: 1,
           modestbranding: 1,
@@ -227,7 +227,7 @@ function BackgroundMusic() {
           <span className={`relative inline-flex rounded-full h-2 w-2 ${isPlaying ? "bg-cyan-400" : "bg-slate-500"}`}></span>
         </span>
 
-        <span>{isPlaying ? "Ve Kamleya • On" : "Ve Kamleya • Off"}</span>
+        <span>{isPlaying ? "Yun Pakistan Bana Tha • On" : "Yun Pakistan Bana Tha • Off"}</span>
 
         {isPlaying ? (
           <div className="flex items-end gap-0.5 h-3 w-3 mb-0.5">
