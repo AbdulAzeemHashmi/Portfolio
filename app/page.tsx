@@ -114,16 +114,16 @@ const SERVICES: Service[] = [
   {
     title: "Full-Stack Web & API Engineering",
     icon: Code2,
-    desc: "Building production-grade, reactive web apps and scalable asynchronous backend APIs using Next.js, TypeScript, FastAPI, and Tailwind CSS.",
+    desc: "Building production-grade, reactive web apps and scalable asynchronous backend APIs using Next.js, TypeScript, FastAPI, Flask, and Tailwind CSS.",
     highlight: "Proficient in Next.js App Router, TypeScript, Python & RESTful APIs.",
-    tags: ["Next.js", "TypeScript", "FastAPI", "Tailwind CSS", "React"],
+    tags: ["Next.js", "TypeScript", "FastAPI", "Flask", "Tailwind CSS", "React"],
   },
   {
     title: "Database Architecture & Cloud Data",
     icon: Database,
     desc: "Designing robust relational and document database schemas with seamless persistence, real-time logging, and cloud data integrations.",
-    highlight: "Experienced with Supabase, PostgreSQL, SQLite, and MongoDB.",
-    tags: ["Supabase", "PostgreSQL", "SQLite", "MongoDB", "Prisma"],
+    highlight: "Experienced with Supabase, SQLite, MongoDB, MySQL, and Docker.",
+    tags: ["Supabase", "SQLite", "MongoDB", "MySQL", "Docker", "Vercel"],
   },
 ];
 
@@ -150,6 +150,46 @@ const INTERNSHIPS: Internship[] = [
 
 const PROJECTS: Project[] = [
   {
+    title: "Pak University Advisor",
+    category: "Web Development",
+    description:
+      "Bilingual web application helping Pakistani students find the best university based on budget, location, and degree requirements.",
+    link: "https://github.com/AbdulAzeemHashmi/pak-university-advisor",
+    liveLink: "https://pak-university-advisor.vercel.app",
+    tags: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+    featured: true,
+  },
+  {
+    title: "HEC ODL Application Orchestrator",
+    category: "AI",
+    description:
+      "Automated Open and Distance Learning application processing system for HEC with RAG, LangChain, and multi AI failover architecture.",
+    link: "https://github.com/AbdulAzeemHashmi/hec-odl-application-orchestrator",
+    liveLink: "https://hec-odl-application-orchestrator.vercel.app",
+    tags: ["TypeScript", "LangChain", "RAG", "Next.js"],
+    featured: true,
+  },
+  {
+    title: "Agentic UAV Mission Planner",
+    category: "AI",
+    description:
+      "AI powered UAV mission planning system that converts natural language commands into validated flight plans with safety checks and export options.",
+    link: "https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner",
+    liveLink: "https://agentic-uav-mission-planner-hdqzzyfj2nwqz3v4ss5wg5.streamlit.app/",
+    tags: ["Python", "AI Agents", "Gemini API", "LangChain"],
+    featured: true,
+  },
+  {
+    title: "Developer Portfolio",
+    category: "Web Development",
+    description:
+      "Interactive portfolio showcase featuring projects, skills, and contact details with fluid animations and responsive styling.",
+    link: "https://github.com/AbdulAzeemHashmi/Portfolio",
+    liveLink: "https://abdulazeemhashmi.vercel.app/",
+    tags: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
+    featured: true,
+  },
+  {
     title: "Autonomous Digital Employee",
     category: "AI",
     description:
@@ -157,7 +197,6 @@ const PROJECTS: Project[] = [
     link: "https://github.com/AbdulAzeemHashmi/autonomous-digital-employee",
     liveLink: "https://autonomous-digital-employee-zeta.vercel.app/",
     tags: ["Next.js", "FastAPI", "LangChain", "Gemini API", "Supabase"],
-    featured: true,
   },
   {
     title: "Awaaz Pakistan",
@@ -167,7 +206,6 @@ const PROJECTS: Project[] = [
     link: "https://github.com/AbdulAzeemHashmi/Awaaz-Pakistan",
     liveLink: "https://awaaz-pakistan.vercel.app/",
     tags: ["Next.js", "AI", "Tailwind CSS", "TypeScript", "Vercel"],
-    featured: true,
   },
   {
     title: "README AI Enhancer",
@@ -187,14 +225,6 @@ const PROJECTS: Project[] = [
     liveLink: "https://ai-resume-analyzer-aah18751.vercel.app/",
     tags: ["TypeScript", "Tailwind CSS", "Python", "Flask", "Gemini API"],
   },
-  {
-    title: "Agentic UAV Mission Planner",
-    category: "AI",
-    description:
-      "An end-to-end mission planning simulator that processes natural language requests, generates optimized waypoint routes, and enforces multi-rule airspace compliance.",
-    link: "https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner",
-    tags: ["Python", "Streamlit", "Google Gemini", "Folium", "SQLite"],
-  },
 ];
 
 const SKILL_CATEGORIES: SkillCategory[] = [
@@ -202,32 +232,33 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     category: "Programming Languages",
     icon: Terminal,
     desc: "Core foundations for building autonomous logic, backend algorithms, and user interfaces.",
-    list: ["Python", "TypeScript", "JavaScript", "C++", "SQL", "HTML5 / CSS3"],
+    list: ["Python", "TypeScript", "JavaScript", "C++", "SQL", "HTML5", "CSS3"],
   },
   {
-    category: "AI & Agentic Frameworks",
+    category: "AI & Agents Frameworks",
     icon: BrainCircuit,
     desc: "APIs and tooling for architecting intelligent systems, LLM agents, and prompt workflows.",
     list: [
-      "Google Gemini API",
-      "OpenAI API",
+      "Gemini API",
       "LangChain",
+      "RAG Architectures",
+      "Streamlit",
+      "Hugging Face",
       "Autonomous Agents",
       "Prompt Engineering",
-      "Streamlit",
     ],
   },
   {
-    category: "Full-Stack & Web Ecosystem",
+    category: "Frameworks & Web Ecosystem",
     icon: Code2,
     desc: "Modern frameworks and tools for shipping fast, responsive, and resilient web platforms.",
-    list: ["Next.js", "React", "FastAPI", "Flask", "Tailwind CSS", "Node.js", "REST APIs"],
+    list: ["Next.js", "React", "FastAPI", "Flask", "Tailwind CSS", "Framer Motion", "Node.js", "REST APIs"],
   },
   {
-    category: "Databases & Cloud Architecture",
+    category: "Databases, Cloud & Tools",
     icon: Database,
-    desc: "Data persistence layers, schema modeling, and DevOps deployment platforms.",
-    list: ["Supabase", "PostgreSQL", "SQLite", "MongoDB", "Git / GitHub", "Vercel"],
+    desc: "Data persistence layers, schema modeling, containerization, and deployment platforms.",
+    list: ["Supabase", "SQLite", "MongoDB", "MySQL", "Vercel", "Docker", "Git", "GitHub", "Postman"],
   },
 ];
 
@@ -330,7 +361,7 @@ export default function Home() {
                 <span className="font-bold text-sm tracking-tight text-white group-hover:text-cyan-300 transition-colors">
                   Abdul Azeem
                 </span>
-                <span className="text-[10px] text-slate-400 font-mono tracking-wider">AI & Full-Stack</span>
+                <span className="text-[10px] text-slate-400 font-mono tracking-wider">AI & Full-Stack-Developer</span>
               </div>
             </a>
 
@@ -485,7 +516,7 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white max-w-3xl leading-[1.15] mb-5">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl leading-[1.15] mb-5">
               Engineering Intelligent{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">
                 AI Agents & Full-Stack
@@ -495,9 +526,7 @@ export default function Home() {
 
             {/* Bio Description */}
             <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl leading-relaxed mb-8">
-              Hi, I'm <strong className="text-white font-semibold">Abdul Azeem Hashmi</strong> — a BS Artificial
-              Intelligence student at FAST NUCES Islamabad. I build autonomous agentic workflows, LLM-powered systems,
-              performant Next.js applications, and robust backend APIs.
+              Hi, I am <strong className="text-white font-semibold">Abdul Azeem Hashmi</strong>, an AI and Backend Engineer studying BS Artificial Intelligence at FAST NUCES, Islamabad. I build autonomous AI agents, LLM powered applications, and full stack web experiences focused on performance and modern design.
             </p>
 
             {/* CTA Buttons */}
@@ -963,7 +992,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-white">Location</h4>
-                  <p className="text-xs text-slate-400">Islamabad, Pakistan</p>
+                  <p className="text-xs text-slate-400">Rawalpindi, Pakistan</p>
                 </div>
               </div>
 
