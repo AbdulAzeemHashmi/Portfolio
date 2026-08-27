@@ -51,70 +51,63 @@ endobj
 9 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/autonomous-digital-employee)
->> /Border [ 0 0 0 ] /Rect [ 211.54 408.1 293.23 420.1 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/pak-university-advisor)
+>> /Border [ 0 0 0 ] /Rect [ 175.45 408.1 257.14 420.1 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://autonomous-digital-employee-zeta.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 306.95 408.1 354.74 420.1 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://pak-university-advisor.vercel.app)
+>> /Border [ 0 0 0 ] /Rect [ 270.86 408.1 318.65 420.1 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/Awaaz-Pakistan)
->> /Border [ 0 0 0 ] /Rect [ 141.55 358.2 223.24 370.2 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/hec-odl-application-orchestrator)
+>> /Border [ 0 0 0 ] /Rect [ 232.1 369.5 313.79 381.5 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://awaaz-pakistan.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 236.96 358.2 284.75 370.2 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://hec-odl-application-orchestrator.vercel.app)
+>> /Border [ 0 0 0 ] /Rect [ 327.51 369.5 375.3 381.5 ] /Subtype /Link /Type /Annot
 >>
 endobj
 13 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/readme-ai-enhancer)
->> /Border [ 0 0 0 ] /Rect [ 170.98 319.6 252.67 331.6 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner)
+>> /Border [ 0 0 0 ] /Rect [ 206.55 330.9 288.24 342.9 ] /Subtype /Link /Type /Annot
 >>
 endobj
 14 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://readme-ai-enhancer.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 266.39 319.6 314.18 331.6 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://agentic-uav-mission-planner-hdqzzyfj2nwqz3v4ss5wg5.streamlit.app/)
+>> /Border [ 0 0 0 ] /Rect [ 301.96 330.9 349.75 342.9 ] /Subtype /Link /Type /Annot
 >>
 endobj
 15 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer)
->> /Border [ 0 0 0 ] /Rect [ 162.66 281 244.35 293 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/Portfolio)
+>> /Border [ 0 0 0 ] /Rect [ 158.76 292.3 240.45 304.3 ] /Subtype /Link /Type /Annot
 >>
 endobj
 16 0 obj
 <<
 /A <<
-/S /URI /Type /Action /URI (https://ai-resume-analyzer-aah18751.vercel.app/)
->> /Border [ 0 0 0 ] /Rect [ 258.07 281 305.86 293 ] /Subtype /Link /Type /Annot
+/S /URI /Type /Action /URI (https://abdulazeemhashmi.vercel.app/)
+>> /Border [ 0 0 0 ] /Rect [ 254.17 292.3 301.96 304.3 ] /Subtype /Link /Type /Annot
 >>
 endobj
 17 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner)
->> /Border [ 0 0 0 ] /Rect [ 206.55 231.1 288.24 243.1 ] /Subtype /Link /Type /Annot
->>
-endobj
-18 0 obj
-<<
 /Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 
-  15 0 R 16 0 R 17 0 R ] /Contents 22 0 R /MediaBox [ 0 0 612 792 ] /Parent 21 0 R /Resources <<
+  15 0 R 16 0 R ] /Contents 21 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -122,31 +115,31 @@ endobj
 >> /Type /Page
 >>
 endobj
+18 0 obj
+<<
+/PageMode /UseNone /Pages 20 0 R /Type /Catalog
+>>
+endobj
 19 0 obj
 <<
-/PageMode /UseNone /Pages 21 0 R /Type /Catalog
+/Author (\(anonymous\)) /CreationDate (D:20260826150820+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260826150820+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (Abdul Azeem Hashmi CV) /Trapped /False
 >>
 endobj
 20 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260815183338+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260815183338+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (Abdul Azeem Hashmi CV) /Trapped /False
+/Count 1 /Kids [ 17 0 R ] /Type /Pages
 >>
 endobj
 21 0 obj
 <<
-/Count 1 /Kids [ 18 0 R ] /Type /Pages
->>
-endobj
-22 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 2596
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2417
 >>
 stream
-Gb!<P?$G9f&r,lH/*\mrc$9-e)!5Q>OE>e?LC'c#p7/Z*[K;o=Q:I6.dq=.-QK/QM!qnN4HdSD5*O+X'WTql8-+<t7r]'&t+9K&V_CsLN3%cbS_!,$.=O(<c]_Lg0.7X#9CB2*3=FGPsYM83N>[QEa:1`g*1_??0(Yl/Ojgs0-j4RHDD;29'iGu:41Cg0uPXb/)Umm2="Ns#<q%*8r?m&5E)udKn_=="#E,lJ.0ofC1mXa\-Ic'UZ0&-Mb6b">V1WA8#Gg0\i-2\5()<\5#GQ[q>="p=$P`(4;]o*,]Nr.HN%SIlq]8qGhYWVL^nF"3=71;?6)L+D%j&ho5p)nrQcfu%2r=sDV`si9>mi7:-gk"S`_nk:kVlRRYKDdd=mop834ri_qCs2(;6e+0"f<r9*mFTB!"Osi*3i&%]B&S#;FdRs\p(JEKW*I7%>Y+N53"mWhA]EX@^g+DI49&<.4^mE+WK5`t4ViicNbIK-Epc0D&RjH%7._Oi+,2Cm[Kf1W[JN=pc-ujK&tZ<eA0%&$B9k"[=&^1EpCpVF8X0B^r;3JG!<stN5prXmHe1/I4D(>FDr*U*\UBC\1XK:=>Wgm!N?8'tH@*NBI]l#NJ$*ud[aX<.gVm%/mN,QBLIeQ;n^Nl]1:;ZBhF^)P5el;bAi'uGX>7d_(9`:"9#Mnd=UNm(R`6iE^he0!M:b]t6Qet;=[3Z71#C=,4DC3S[7lfN\_Noa,b-"E1.j-#4>Y:Q=Va@q;mq_2<8';>+PilO7VF:]#U_,t@5P_N9F%(#I"j&T+t3[>K+1a9:mn+=_CUK#e5DsQ-P9m8?$dqE;gKWZ3R`.5O@TsqJT`%Ug>P`)GZ%`iWR[/,]A&j7j/>Y$T2-PHVk;#Y2Y1*QhT&9-i0Q>sn5?f1mn83YjYg.=`Z9:DI6i]c&/_]^S>dMkd$3gW_i1[c=+IojH$1j5*<i/qq55d@i7`&jP^lW>c;J5f[`jI%0K_K7g31,6V2oJQE_W!5"H4+#"2A:n\6'u;OU*C3OXF;h%QZ]UWYXld-Fk0JqEfF-mL#()(9qd7gp9OpM.!Ri.5F=b\r"B((BRnER3@S=_RR.4hN9e=^oP/)=INu:EC[u[lhlgrp,p)=;Q#ma'\4ejcr66pN:/.gA,,))rakoG:G?!J>$Q#nbq>LdKC@(c_q%CC(Q;4j/Hm"#;aDXm./[C#;]0iX^pDY7XpJNB,lq"Hl_%!gOa"XhS<-.h$.34Z2ELFTddjIoPjs2p>0FodaQFp'[V6*M?/KQ-a[tH[4H;qTg\]<6epE__:>P4/mF'#K0RC-WO]:\("cRC&-g,;?9o,uCM^<b"*)@@k\4nu?Y]tgT-;fr&/IUhRR[lH2/!AT9T['ej+YPEG@,5^jicmrT&,2]nj5m#[\6%7\o+PS7NQ9d9Pau][NI?^Dg+29<XdR&-9Q:;o*MpbgEsOMHSC?n8.8!"NP`WNOFK%(i6F"O!U,e1(hmM6/+_bc,@U2UKG,_>FHILk$UBt[&'QC'MaAOKd/1-mi;%N415ehmpl#Wl(_Fdb-6=CI1dl\?cOJI+%22G::;Dh-Md+5)G6IiUY@Z;"D6R*@&+K5sB7'_Wi*Hl%PY,1[5Jh-0l<Gq[irMlq`;<=rPWj".o?BE+knV/a!"beCH)/#nF?Y#"]^."PShp0.;p.fO&-K)KQg_02Fn3$5.@H[<P%O>oa$TSN#6pQ?p8U!K9;ao;GqXC"8)At;/h$ZGEdoR)sG"f1R>JuDf\tghnEeTpB19MI5`$e!u?3J16Un6rbqef[eOeF%!7;JZ\NJnn6md"o%03Lg@)BhI@4G[nF:^H(b9)!@mcp]'[U2lH)W!k(mA#ao*oCe2C]ncA(VB2V0ak]pOAf>T0$(!jr=73;di3ZE_'=0IEj9SkdA*GM'1$V4&mMgj(N*AoGA#)kD^`h7a<o2WOlO##P\;@J56Ihktm?Cb:M9^(+lMb'eIDVa,J?"OV+^!IP*j-9OgnAp+-[0N)OhB4W.L[JZo!nUJ0Qm>kUMtQsA6#gf)5F6b:>(/^F-0pX9r.'qd!Q4iZPfd$.SEtgctKKue5u4b+-n0O],)7BPG-XK>[TdpgNJ6C^QY$\Y)O;]g&,0D5%(Cn7#*28GA8A,&mfW1f/[!FWob@%P9Y]sP]_o(mHko.Zu\bg?EWKjlWnLXSEo4qrros^lb[8>iOqLgpup=2-mST?gJ]fDdR;H=S/Y.A?oW_)W(`q9i'=AHCPjP=Q/R!,#qAq#XW?/&T?XFLjY$lN#`W(q#0eln0UX75W1VZPGU]Uo-u@-Pc4HHI@74Eu_m1ZqB(=Ua<NHW@]:0&rboLG)2nsZ!nJ_"+\$K5\EPh5Njl-1)j+PnU8fOs?V#,oM%s?=d#g\CpV8$'L(1Stt#hO:_-h9UHcf5NX3]aJslg#&+oW<ASC3J8bs6@Sd5+s]kJ)*6QO#N4IRfcDLApM:CNHhijn!tEMCIo^b%O5QtO1.Up:mKE58ci".rsPYbPX/eV_O]&:g>]P^DTjKITdKM[bXE9gEP+D\FGbLs6*K:UQsAU**FA"FI:NR0,'_uE?e,O%m;mom'S7DQ_l/,`;(Ne5<=qM6^+<YC_UfZ\MuNha.X'J~>endstream
+Gb!;d?$G!l&:O;VQq,jA<F6$q;e<b$;f!*lVsQKm=i:@\93P?-18-'[^9ajN6k&:t5(/68&qdQ[SXm<4kDh)In^l4hLG?SU!5DcA@+c*m^iBl#JgjBFMgm@\Eb3QT#1.QF_nu`K\uDlGlO/*iWi`s'"#67M_02(mgK'%[a#&*UgOrr@*Ik?<,Ok`01kt`mCh!)O"J6k4);ZDc`9feKn$aoOrUVXDKa2i>9-:&#^p]6:fC)]l>Q[Q`E(Ro:MLR"qRO+21n.i+s."]"J)t4)<^mI=5Lo3)a]6I`J\<#Kc=SZWt*rbfJE:a\!h>;C4$1po$i:PBTAN6"3K,=eU_])_T/*I2?)\.h@Fg0/s#DV%V%M%)nY57Dlp?QOuDcjOEE1K-G%Eh1ql?,kJ2&ss/2qK&Qe2DV&Up\8>i'gaJR"su#$B?)_>=3&C1V)KWj#V]j`h3F,06FoDJ'+rBN4`ZkID0rc"em\@']^rgp2B8aYfI)qr#2&CL,M#g"2hiiH:+UTe32KJ-tUM`F^[`\R?/\n;0<`2;lHuP<*?HEIilf?d"#"9<0BAF>uN-@QjM)#?Te:eI*:LeW%</T%lZHHrEki!-f"<>-02b+HABSMc?X'7\>lXuTi$&jW7=)'.d8e97*^rQ&@e549>Jk!>Hs9P#d+h4UPQ$d&lKhbY5EPF[h#7U]F3=8+u*5^V#aX[bQV8R:LK<kBSk<?:io5\H,='_$W%n;.4Mh^S_cWS[ku"#8=E"!,a.[#mjK8ZMIV>%Qn<=erIXsaPRdiV#2Pql\fl\(9*&t4GSUt[+$LS6--^2SFI#n1FjbsqP8i04!hk"sgB/(#>_p6K(4t0F8RqBZKHqb"Lk7k'/tE=o8eP5=M.[V!A/9'MUnQ!g.ZB\;S*p*b*CnZ@ce7CYH?)*9[$au(oK$[Y#5u]a$#%jARes7]5c$/t@>l<+:Y6+S`"lL[Lrg[m;aFEN?qM3t:On.IIWq^B*P%uNq1h)+@%4S0P(TC1F!:5.QG&APL8Xc4gQkbLqQVNMcD5E;TV,j2iE$FV`7G8=Ku$:[iY!0f=5bUeAK]MHOq(qiT1G2J28E/4@YFK]#4e)H;U,m]):'V2&4nX10pZ+*f5h'Fnhl_r/d>Q+<Db8"@O;3rL,:)GU+QeeP$=*s(>/>NrjbRj_Sj*o?;lg:Z9l[sDL=Bp^H8bt_;@Jn1`3^3@/%sYDupm(mKLB[<K^\r%):eS&fD*V6"?]*r*H^$'mTWfjkhDs8UCnACiWdKG93G<Se9XDLnZl>;4/f:@_%'tpKQ'82RY_p>Xa%p7U0iGIkDuoM/3#Cnq68?gG\@\U]3sCE]pb7nN@`.:3WGWFcSIA(m-f&7E^8;_0K[RU(rgT.\P(kOW[t6[_NZ.G)PAuRGHbKR#HWBRrP@k;_Lq&=_j8bH)O,NQ&WHq7)9*=$%&D7:itnST:"QU:n^Ao^&01N(qWVed3d1_YL0XSF:Hu/bg/f+)4YPSD&`VW)^O_h0r]h%P6J>_g!D,^[5_bh(AUi7.TiB\f%%N#hM6J#8>T<Y@CBE>fu5"4(bDUr8_4iV22Pl9T:BJ][]iD1U6_!sFp`CASVJ(UdD@L6,)spi>kaJ9ZEP##\?JssN99^I:2pJ=&YeH4]O;Pfmt&d]aU%=S;t(aR\l11a8>O<K&O`erEeX)81e\]gd=YhbLe>#YM,gU,3trYq>@S*a<!cLQ10P80oUCf7dM?"7BYgE3"@fr&eU<:1HiG,/G`o-u)o>3(&W$$Leo*(__M)c-+Z_S,nj#%(`)jjThF(L!1"QU]f.I.!r/O^6^@-W=?d8gI]\Sf%C8OrEr;fcL`;BsfP:1udNGL'ccW+NW(/7aO:GCZs9F8O?,G!d;Up[V]W3ID^:sF#Ge]X6sS1Es@)l]qGNJX*g"BeT41+_YY;&$&-9?K&iPnQcg"!Gj3Ehg\bSb:0/o,Wf.E[=J$"dWnN[@mo)2WlKWm%I^=npA__^FOrSQTdVHMJVA;1]!je78+-lfJh<'Bb^g`)nld3=M:F90FCQG6_BJie1gmCU8XN+G_-!"@cNVB.Kr]]4#p6>S&N>LV,sC[9(B7A8'%69X*)-<s%d:6]i*0?^Z/KN;/Pp^YG]hbc"=TMX#6B+;q=gjB(QTG4]H]C6@)h$[J7.!Ek/&GQXVbf+35+p5*+R5l,*AYZjZ>TRq](,,4(gaX>N*m/hOQ_e+3055mg,pD6h)g#6M[9WWugq)3.fY[A2dXHEFDt7F^8R2dUWlgb[,m,d/MBV_Jdm*-C,O0I'X:M5cs4MCSCR/rgqF>G,=8+n`s\+sJ)?#GB+qb%(]8][2YI3*6q,:N0-.0?@>BiglGB>0erV?aep"UPS*P?la2-*D><Q:\A1V.83eZ*DY15I#/qg)J5UT(=K,h@idh^$lagk@6pWT.5#/DJ)OWR"YTcV568K#~>endstream
 endobj
 xref
-0 23
+0 22
 0000000000 65535 f 
 0000000061 00000 n 
 0000000112 00000 n 
@@ -157,29 +150,28 @@ xref
 0000000871 00000 n 
 0000001043 00000 n 
 0000001158 00000 n 
-0000001363 00000 n 
-0000001558 00000 n 
-0000001751 00000 n 
-0000001928 00000 n 
-0000002125 00000 n 
-0000002306 00000 n 
-0000002499 00000 n 
-0000002685 00000 n 
-0000002891 00000 n 
-0000003188 00000 n 
-0000003258 00000 n 
-0000003547 00000 n 
-0000003608 00000 n 
+0000001358 00000 n 
+0000001542 00000 n 
+0000001752 00000 n 
+0000001945 00000 n 
+0000002151 00000 n 
+0000002367 00000 n 
+0000002555 00000 n 
+0000002734 00000 n 
+0000003024 00000 n 
+0000003094 00000 n 
+0000003383 00000 n 
+0000003444 00000 n 
 trailer
 <<
 /ID 
-[<3e53fe558b90cbf86737bd765e791771><3e53fe558b90cbf86737bd765e791771>]
+[<6099db81fa6f0794c65ab3a888a0e038><6099db81fa6f0794c65ab3a888a0e038>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 20 0 R
-/Root 19 0 R
-/Size 23
+/Info 19 0 R
+/Root 18 0 R
+/Size 22
 >>
 startxref
-6296
+5953
 %%EOF
