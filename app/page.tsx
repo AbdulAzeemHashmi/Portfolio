@@ -480,7 +480,7 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-sm sm:text-lg md:text-xl lg:text-3xl xl:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-cyan-300 via-sky-300 to-indigo-400 max-w-7xl leading-tight mb-5 whitespace-nowrap drop-shadow-[0_0_25px_rgba(56,189,248,0.45)]">
+            <h1 className="text-base sm:text-lg md:text-xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-cyan-300 via-sky-300 to-indigo-400 max-w-5xl leading-tight mb-5 whitespace-nowrap drop-shadow-[0_0_15px_rgba(56,189,248,0.4)]">
               Engineering Intelligent AI Agents & Full-Stack Web Applications
             </h1>
 
