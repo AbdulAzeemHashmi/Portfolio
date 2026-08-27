@@ -480,17 +480,17 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white max-w-3xl leading-snug mb-5">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-white max-w-2xl leading-tight mb-5">
               Engineering Intelligent{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">
-                AI Agents & Full-Stack
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">
+                AI Agents & <span className="whitespace-nowrap">Full-Stack</span>
               </span>{" "}
               Web Applications
             </h1>
 
             {/* Bio Description */}
-            <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl leading-relaxed mb-8">
-              Hi, I am <strong className="text-white font-semibold">Abdul Azeem Hashmi</strong>, an AI and Backend Engineer studying BS Artificial Intelligence at FAST NUCES, Islamabad. I build autonomous AI agents, LLM powered applications, and full stack web experiences focused on performance and modern design.
+            <p className="text-sm sm:text-base text-slate-300/90 max-w-2xl leading-relaxed mb-8">
+              Hi, I am <strong className="text-white font-semibold">Abdul Azeem Hashmi</strong>, an <span className="text-cyan-300 font-medium">AI & Backend Engineer</span> studying BS Artificial Intelligence at FAST NUCES, Islamabad. I build <span className="text-slate-100 font-medium">autonomous AI agents</span>, LLM-powered applications, and <span className="text-slate-100 font-medium">full-stack web experiences</span> focused on performance and modern design.
             </p>
 
             {/* CTA Buttons */}
