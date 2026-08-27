@@ -480,13 +480,14 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-white max-w-3xl leading-tight mb-5">
-              <span>Engineering Intelligent</span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 whitespace-nowrap">
-                AI Agents & Full-Stack
-              </span>{" "}
-              <span>Web Applications</span>
+            <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-white max-w-4xl leading-tight mb-5">
+              <span className="block">Engineering Intelligent</span>
+              <span className="block">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">
+                  AI Agents & Full-Stack
+                </span>{" "}
+                <span>Web Applications</span>
+              </span>
             </h1>
 
             {/* Bio Description */}
