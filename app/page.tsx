@@ -480,12 +480,12 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl font-extrabold tracking-tight text-white max-w-5xl leading-tight mb-5 whitespace-nowrap">
-              <span className="text-slate-100">Engineering Intelligent</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-300 to-indigo-300 drop-shadow-[0_0_12px_rgba(56,189,248,0.3)]">
+            <h1 className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl font-extrabold tracking-tight max-w-6xl leading-tight mb-5 whitespace-nowrap">
+              <span className="text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]">Engineering Intelligent</span>{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-300 to-indigo-400 drop-shadow-[0_0_18px_rgba(56,189,248,0.55)]">
                 AI Agents & Full-Stack
               </span>{" "}
-              <span className="text-slate-100">Web Applications</span>
+              <span className="text-white drop-shadow-[0_0_12px_rgba(255,255,255,0.35)]">Web Applications</span>
             </h1>
 
             {/* Bio Description */}
