@@ -189,42 +189,6 @@ const PROJECTS: Project[] = [
     tags: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
     featured: true,
   },
-  {
-    title: "Autonomous Digital Employee",
-    category: "AI",
-    description:
-      "An AI-powered full-stack workstation enabling users to delegate complex tasks to an autonomous digital agent with real-time database logging and Google Gemini primary integration.",
-    link: "https://github.com/AbdulAzeemHashmi/autonomous-digital-employee",
-    liveLink: "https://autonomous-digital-employee-zeta.vercel.app/",
-    tags: ["Next.js", "FastAPI", "LangChain", "Gemini API", "Supabase"],
-  },
-  {
-    title: "Awaaz Pakistan",
-    category: "Web Development",
-    description:
-      "An advocacy and petition platform empowering professionals with AI-generated appeals, multi-lingual voice/document inputs, and automated sign-on workflows.",
-    link: "https://github.com/AbdulAzeemHashmi/Awaaz-Pakistan",
-    liveLink: "https://awaaz-pakistan.vercel.app/",
-    tags: ["Next.js", "AI", "Tailwind CSS", "TypeScript", "Vercel"],
-  },
-  {
-    title: "README AI Enhancer",
-    category: "AI",
-    description:
-      "An AI-powered documentation platform leveraging Google Gemini to analyze README weaknesses, detect missing technical sections, and generate polished rewrites.",
-    link: "https://github.com/AbdulAzeemHashmi/readme-ai-enhancer",
-    liveLink: "https://readme-ai-enhancer.vercel.app/",
-    tags: ["Next.js", "Gemini API", "AI", "Tailwind CSS", "TypeScript"],
-  },
-  {
-    title: "AI Resume Analyzer",
-    category: "AI",
-    description:
-      "An intelligent web application that detects resume weaknesses, automatically enhances formatting and content using Gemini, and provides download options in PDF/DOCX format.",
-    link: "https://github.com/AbdulAzeemHashmi/AI-Resume-Analyzer",
-    liveLink: "https://ai-resume-analyzer-aah18751.vercel.app/",
-    tags: ["TypeScript", "Tailwind CSS", "Python", "Flask", "Gemini API"],
-  },
 ];
 
 const SKILL_CATEGORIES: SkillCategory[] = [
@@ -516,7 +480,7 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl leading-[1.15] mb-5">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-white max-w-3xl leading-snug mb-5">
               Engineering Intelligent{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">
                 AI Agents & Full-Stack
