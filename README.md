@@ -11,18 +11,63 @@
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=AbdulAzeemHashmi&color=8a2be2&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
-  <img src="https://img.shields.io/github/followers/AbdulAzeemHashmi?label=FOLLOWERS&style=for-the-badge&color=00c8ff&labelColor=1a1a2e" alt="Followers"/>
-  <img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20WORK-00ff88?style=for-the-badge&labelColor=1a1a2e" alt="Open to Work"/>
+  <a href="https://abdulazeemhashmi.vercel.app/">
+    <img src="https://img.shields.io/badge/Live_Portfolio-abdulazeemhashmi.vercel.app-7C3AED?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Site" />
+  </a>
+  <a href="https://abdulazeemhashmi.vercel.app/Abdul_Azeem_Hashmi_CV.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/Resume_/_CV-PDF-00C8FF?style=for-the-badge&logo=adobeacrobatreader&logoColor=black" alt="View CV PDF" />
+  </a>
+  <a href="https://github.com/AbdulAzeemHashmi/Portfolio">
+    <img src="https://img.shields.io/badge/GitHub_Repo-Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
+  </a>
+  <a href="mailto:abdulazeemhashmi29@gmail.com">
+    <img src="https://img.shields.io/badge/Email-abdulazeemhashmi29%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
 </p>
 
 </div>
 
 ---
 
+## Overview
+
+Welcome to the central repository for **Abdul Azeem Hashmi's Portfolio**! This web application is an interactive showcase of autonomous AI engineering, full stack web development, and cloud data architectures built with **Next.js 16**, **React 19**, **Tailwind CSS**, and **Framer Motion**.
+
+### Core Metrics
+
+| Metric | Detail |
+| :--- | :--- |
+| **Shipped Projects** | 5+ Production & Open-Source Applications |
+| **Internships** | 2 Research & Software Engineering Internships |
+| **Specialization** | AI Agents, LLM Pipelines & Full-Stack Web Architecture |
+| **Education** | BS Artificial Intelligence, FAST NUCES (Batch of 2024) |
+| **Location** | Rawalpindi, Pakistan |
+
+---
+
 ## About Me
 
 Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artificial Intelligence at FAST NUCES, Islamabad. I build autonomous AI agents, LLM powered applications, and full stack web experiences focused on performance and modern design.
+
+---
+
+## Specialized Engineering Services
+
+- **Autonomous AI & Agentic Systems**: Architecting autonomous agents, multi-tool reasoning workflows, LLM pipelines, and goal-driven AI workstations powered by Gemini, OpenAI, and LangChain. Expertise in Gemini API, LangChain, Tool Calling, and Agentic RAG.
+- **Full-Stack Web & API Engineering**: Building production-grade, reactive web apps and scalable asynchronous backend APIs using Next.js, TypeScript, FastAPI, Flask, and Tailwind CSS. Proficient in Next.js App Router, TypeScript, Python, and RESTful APIs.
+- **Database Architecture & Cloud Data**: Designing robust relational and document database schemas with seamless persistence, real-time logging, and cloud data integrations. Experienced with Supabase, SQLite, MongoDB, MySQL, and Docker.
+
+---
+
+## Experience & Internships
+
+1. **AI Intern** at **UAV Dependability Research Lab** *(June 2026 - August 2026 | Islamabad, Pakistan)*
+   - Researched and engineered AI logic models for autonomous UAV systems, conducting dependability evaluations, waypoint route optimization, and rule compliance testing.
+   - Tech Stack: Artificial Intelligence, Autonomous Systems, UAV Engineering, Python, Model Evaluation
+
+2. **Software Engineering Intern** at **CODOC PVT LTD** *(July 2026 - August 2026 | Islamabad, Pakistan)*
+   - Architected and implemented scalable software solutions, optimized full-stack application performance, and collaborated on modern agile software engineering workflows.
+   - Tech Stack: Software Engineering, Full-Stack Development, TypeScript, Next.js, API Design
 
 ---
 
@@ -35,7 +80,7 @@ Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artifici
       <p>Bilingual web application helping Pakistani students find the best university based on budget, location, and degree requirements.</p>
       <p><b>Tech Stack:</b> TypeScript, Next.js, React, Tailwind CSS</p>
       <p>
-        <a href="https://pak-university-advisor.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-00C8FF?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo"/></a>
+        <a href="https://pak-university-advisor.vercel.app/"><img src="https://img.shields.io/badge/Live_Demo-00C8FF?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo"/></a>
         <a href="https://github.com/AbdulAzeemHashmi/pak-university-advisor"><img src="https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Repo"/></a>
       </p>
     </td>
@@ -44,7 +89,7 @@ Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artifici
       <p>Automated Open and Distance Learning application processing system for HEC with RAG, LangChain, and multi AI failover architecture.</p>
       <p><b>Tech Stack:</b> TypeScript, LangChain, RAG, Next.js</p>
       <p>
-        <a href="https://hec-odl-application-orchestrator.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-00C8FF?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo"/></a>
+        <a href="https://hec-odl-application-orchestrator.vercel.app/"><img src="https://img.shields.io/badge/Live_Demo-00C8FF?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo"/></a>
         <a href="https://github.com/AbdulAzeemHashmi/hec-odl-application-orchestrator"><img src="https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Repo"/></a>
       </p>
     </td>
@@ -73,7 +118,7 @@ Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artifici
 
 ---
 
-## Tech Stack
+## Technical Arsenal
 
 <div align="center">
 
@@ -86,14 +131,14 @@ Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artifici
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 
-### AI & Agents
+### AI & Agents Frameworks
 <img src="https://img.shields.io/badge/Gemini_API-8E44AD?style=for-the-badge&logo=google&logoColor=white" />
 <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=chainlink&logoColor=white" />
 <img src="https://img.shields.io/badge/RAG_Architectures-00C8FF?style=for-the-badge&logo=chainlink&logoColor=white" />
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
 <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" />
 
-### Frameworks & Web
+### Frameworks & Web Ecosystem
 <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
 <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
@@ -116,26 +161,7 @@ Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artifici
 
 ---
 
-## GitHub Analytics
-
-<div align="center">
-
-<table>
-  <tr>
-    <td><img src="https://github-stats-extended.vercel.app/api?username=AbdulAzeemHashmi&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8a2be2&icon_color=00c8ff&text_color=ffffff" alt="GitHub Stats" /></td>
-    <td><img src="https://github-stats-extended.vercel.app/api/top-langs/?username=AbdulAzeemHashmi&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8a2be2&text_color=ffffff" alt="Top Languages" /></td>
-  </tr>
-</table>
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=AbdulAzeemHashmi&bg_color=0d1117&color=8a2be2&line=00c8ff&point=ff6b6b&area=true&hide_border=true" alt="Contribution Activity" width="90%" />
-
-</div>
-
----
-
-## Connect
+## Contact & Connect
 
 <div align="center">
 
@@ -145,8 +171,14 @@ Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artifici
 <a href="https://github.com/AbdulAzeemHashmi">
   <img src="https://img.shields.io/badge/GitHub-@AbdulAzeemHashmi-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
 </a>
-<a href="mailto:abdulazeem7982@gmail.com">
-  <img src="https://img.shields.io/badge/Email-abdulazeem7982%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+<a href="mailto:abdulazeemhashmi29@gmail.com">
+  <img src="https://img.shields.io/badge/Email-abdulazeemhashmi29%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </a>
+<a href="https://wa.me/923039720693">
+  <img src="https://img.shields.io/badge/WhatsApp-%2B92_303_9720693-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" />
+</a>
+
+<br/>
+<sub>Location: <b>Rawalpindi, Pakistan</b> | Built with Next.js, Tailwind CSS & Framer Motion</sub>
 
 </div>
