@@ -176,7 +176,7 @@ const PROJECTS: Project[] = [
       "AI powered UAV mission planning system that converts natural language commands into validated flight plans with safety checks and export options.",
     link: "https://github.com/AbdulAzeemHashmi/agentic-uav-mission-planner",
     liveLink: "https://agentic-uav-mission-planner-hdqzzyfj2nwqz3v4ss5wg5.streamlit.app/",
-    tags: ["Python", "AI Agents", "Gemini API", "LangChain"],
+    tags: ["Python", "Streamlit", "AI Agents", "Gemini API"],
     featured: true,
   },
 ];
@@ -330,11 +330,10 @@ export default function Home() {
                       <li key={link.name}>
                         <a
                           href={link.href}
-                          className={`px-3 py-1.5 rounded-md transition-all duration-200 relative ${
-                            isActive
-                              ? "text-cyan-400 font-semibold bg-white/[0.04]"
-                              : "hover:text-slate-200 hover:bg-white/[0.02]"
-                          }`}
+                          className={`px-3 py-1.5 rounded-md transition-all duration-200 relative ${isActive
+                            ? "text-cyan-400 font-semibold bg-white/[0.04]"
+                            : "hover:text-slate-200 hover:bg-white/[0.02]"
+                            }`}
                         >
                           {link.name}
                           {isActive && (
@@ -759,9 +758,8 @@ export default function Home() {
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
-                    className={`relative px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                      isActive ? "text-slate-950 font-bold" : "text-slate-400 hover:text-slate-200"
-                    }`}
+                    className={`relative px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${isActive ? "text-slate-950 font-bold" : "text-slate-400 hover:text-slate-200"
+                      }`}
                   >
                     {isActive && (
                       <motion.div
