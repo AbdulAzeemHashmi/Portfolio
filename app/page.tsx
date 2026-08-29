@@ -179,16 +179,6 @@ const PROJECTS: Project[] = [
     tags: ["Python", "AI Agents", "Gemini API", "LangChain"],
     featured: true,
   },
-  {
-    title: "Developer Portfolio",
-    category: "Web Development",
-    description:
-      "Interactive portfolio showcase featuring projects, skills, and contact details with fluid animations and responsive styling.",
-    link: "https://github.com/AbdulAzeemHashmi/Portfolio",
-    liveLink: "https://abdulazeemhashmi.vercel.app/",
-    tags: ["TypeScript", "Next.js", "React", "Tailwind CSS"],
-    featured: true,
-  },
 ];
 
 const SKILL_CATEGORIES: SkillCategory[] = [
