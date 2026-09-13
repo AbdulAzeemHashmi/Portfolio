@@ -255,7 +255,7 @@ export default function Home() {
   }, []);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("abdulazeemhashmi29@gmail.com");
+    navigator.clipboard.writeText("abdulazeem7982@gmail.com");
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
   };
@@ -265,7 +265,7 @@ export default function Home() {
     setFormStatus("SUBMITTING");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/abdulazeemhashmi29@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/abdulazeem7982@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -905,10 +905,10 @@ export default function Home() {
                   </button>
                 </div>
                 <a
-                  href="mailto:abdulazeemhashmi29@gmail.com"
+                  href="mailto:abdulazeem7982@gmail.com"
                   className="text-sm font-semibold text-white hover:text-cyan-300 transition-colors break-all"
                 >
-                  abdulazeemhashmi29@gmail.com
+                  abdulazeem7982@gmail.com
                 </a>
               </div>
 

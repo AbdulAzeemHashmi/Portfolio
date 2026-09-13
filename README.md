@@ -20,8 +20,8 @@
   <a href="https://github.com/AbdulAzeemHashmi/Portfolio">
     <img src="https://img.shields.io/badge/GitHub_Repo-Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
   </a>
-  <a href="mailto:abdulazeemhashmi29@gmail.com">
-    <img src="https://img.shields.io/badge/Email-abdulazeemhashmi29%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  <a href="mailto:abdulazeem7982@gmail.com">
+    <img src="https://img.shields.io/badge/Email-abdulazeem7982%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
 
@@ -164,8 +164,8 @@ Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artifici
 <a href="https://github.com/AbdulAzeemHashmi">
   <img src="https://img.shields.io/badge/GitHub-@AbdulAzeemHashmi-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
 </a>
-<a href="mailto:abdulazeemhashmi29@gmail.com">
-  <img src="https://img.shields.io/badge/Email-abdulazeemhashmi29%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+<a href="mailto:abdulazeem7982@gmail.com">
+  <img src="https://img.shields.io/badge/Email-abdulazeem7982%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </a>
 <a href="https://wa.me/923039720693">
   <img src="https://img.shields.io/badge/WhatsApp-%2B92_303_9720693-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" />
