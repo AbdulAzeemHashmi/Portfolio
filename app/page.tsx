@@ -1001,7 +1001,7 @@ export default function Home() {
                       required
                       disabled={formStatus === "SUBMITTING"}
                       className="w-full bg-slate-950/60 border border-slate-700/80 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-slate-200 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
-                      placeholder="e.g. Sarah Connor"
+                      placeholder="Your name"
                     />
                   </div>
                   <div>
@@ -1013,7 +1013,7 @@ export default function Home() {
                       required
                       disabled={formStatus === "SUBMITTING"}
                       className="w-full bg-slate-950/60 border border-slate-700/80 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-slate-200 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
-                      placeholder="sarah@example.com"
+                      placeholder="name@gmail.com"
                     />
                   </div>
                 </div>
