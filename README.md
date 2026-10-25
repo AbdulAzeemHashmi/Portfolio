@@ -98,6 +98,17 @@ Hi, I am **Abdul Azeem Hashmi**, an AI and Backend Engineer studying BS Artifici
   </tr>
   <tr>
     <td width="100%" valign="top">
+      <h3>Jimmy Morning Chronicle</h3>
+      <p>Personal digital broadsheet newspaper featuring an autonomous four-agent editorial workflow, adaptive learning from reader habits, audio narration, and Gemini-powered Q&A.</p>
+      <p><b>Tech Stack:</b> Next.js, Supabase, Gemini API, AI Agents</p>
+      <p>
+        <a href="https://personal-morning-paper.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-00C8FF?style=flat-square&logo=vercel&logoColor=white" alt="Live Demo"/></a>
+        <a href="https://github.com/AbdulAzeemHashmi/personal-morning-paper"><img src="https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Repo"/></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" valign="top">
       <h3>Agentic UAV Mission Planner</h3>
       <p>AI powered UAV mission planning system that converts natural language commands into validated flight plans with safety checks and export options.</p>
       <p><b>Tech Stack:</b> Python, Streamlit, AI Agents, Gemini API</p>

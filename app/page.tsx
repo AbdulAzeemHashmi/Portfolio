@@ -170,6 +170,16 @@ const PROJECTS: Project[] = [
     featured: true,
   },
   {
+    title: "Jimmy Morning Chronicle",
+    category: "AI",
+    description:
+      "Personal digital broadsheet newspaper featuring an autonomous four-agent editorial workflow, adaptive learning from reader habits, audio narration, and Gemini-powered Q&A.",
+    link: "https://github.com/AbdulAzeemHashmi/personal-morning-paper",
+    liveLink: "https://personal-morning-paper.vercel.app",
+    tags: ["Next.js", "Supabase", "Gemini API", "AI Agents"],
+    featured: true,
+  },
+  {
     title: "Agentic UAV Mission Planner",
     category: "AI",
     description:
